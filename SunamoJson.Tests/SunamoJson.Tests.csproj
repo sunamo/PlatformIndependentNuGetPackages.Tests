@@ -5,24 +5,24 @@
     <IsPackable>false</IsPackable>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Remove="Nunit\Dog.cs" />
-    <Compile Remove="Nunit\JsonParserTests.cs" />
+    <Compile Remove="Nunit\Dog.cs"></Compile>
+    <Compile Remove="Nunit\JsonParserTests.cs"></Compile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Data\Dog.cs" />
-    <None Include="Nunit\JsonParserTests.cs" />
+    <None Include="Data\Dog.cs"></None>
+    <None Include="Nunit\JsonParserTests.cs"></None>
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.5.0" />
-    <PackageReference Include="xunit" Version="2.4.0" />
-    <PackageReference Include="xunit.extensibility.core" Version="2.4.1" />
-    <PackageReference Include="xunit.runner.visualstudio" Version="2.4.0" />
-    <PackageReference Include="coverlet.collector" Version="1.2.0" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.5.0"></PackageReference>
+    <PackageReference Include="xunit" Version="2.4.0"></PackageReference>
+    <PackageReference Include="xunit.extensibility.core" Version="2.4.1"></PackageReference>
+    <PackageReference Include="xunit.runner.visualstudio" Version="2.4.0"></PackageReference>
+    <PackageReference Include="coverlet.collector" Version="1.2.0"></PackageReference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\sunamo.Tests\TestValues\TestValues.csproj" />
-    <ProjectReference Include="..\..\sunamoWithoutDep\SunamoJson\SunamoJson.csproj" />
-    <ProjectReference Include="..\..\sunamo\shared\shared.csproj" />
-    <ProjectReference Include="..\..\sunamo\sunamo\sunamo.csproj" />
+    <ProjectReference Include="..\..\sunamo.Tests\TestValues\TestValues.csproj"></ProjectReference>
+    <ProjectReference Include="..\..\..\sunamoWithoutDep\SunamoJson\SunamoJson.csproj"></ProjectReference>
+    <ProjectReference Include="..\..\..\sunamo\shared\shared.csproj"></ProjectReference>
+    <ProjectReference Include="..\..\..\sunamo\sunamo\sunamo.csproj"></ProjectReference>
   </ItemGroup>
 </Project>

@@ -6,16 +6,16 @@
     <CodeAnalysisRuleSet>../../sunamo/sunamo.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="15.7.0" />
-    <PackageReference Include="xunit" Version="2.3.1" />
-    <PackageReference Include="xunit.extensibility.core" Version="2.4.1" />
-    <PackageReference Include="xunit.runner.visualstudio" Version="2.3.1" />
-    <DotNetCliToolReference Include="dotnet-xunit" Version="2.3.1" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="15.7.0"></PackageReference>
+    <PackageReference Include="xunit" Version="2.3.1"></PackageReference>
+    <PackageReference Include="xunit.extensibility.core" Version="2.4.1"></PackageReference>
+    <PackageReference Include="xunit.runner.visualstudio" Version="2.3.1"></PackageReference>
+    <DotNetCliToolReference Include="dotnet-xunit" Version="2.3.1"></DotNetCliToolReference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\sunamo.Tests\TestValues\TestValues.csproj" />
-    <ProjectReference Include="..\..\sunamo\shared\shared.csproj" />
-    <ProjectReference Include="..\..\sunamoWithoutDep\SunamoYaml\SunamoYaml.csproj" />
-    <ProjectReference Include="..\..\sunamo\sunamo\sunamo.csproj" />
+    <ProjectReference Include="..\..\sunamo.Tests\TestValues\TestValues.csproj"></ProjectReference>
+    <ProjectReference Include="..\..\..\sunamo\shared\shared.csproj"></ProjectReference>
+    <ProjectReference Include="..\..\..\sunamoWithoutDep\SunamoYaml\SunamoYaml.csproj"></ProjectReference>
+    <ProjectReference Include="..\..\..\sunamo\sunamo\sunamo.csproj"></ProjectReference>
   </ItemGroup>
 </Project>
