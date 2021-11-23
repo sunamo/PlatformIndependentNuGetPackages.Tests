@@ -41,7 +41,7 @@ namespace SunamoTray.Tests
             var cm = forms.ContextMenuHelper.Get("Quit", WpfApp.Shutdown);
 
             // .ico must be set up to Resource
-            Dictionary<string, Action> contextMenuItems = new Dictionary<string, Action>();
+            Dictionary<string, Action> contextSuMenuItems = new Dictionary<string, Action>();
             NotifyIconHelper.Create( SetCancelClosing, ResourcesH.ci.GetStream(ThisApp.Name + ".ico"), delegate (object sen, EventArgs args)
             {
                 this.Show();
@@ -67,7 +67,7 @@ namespace SunamoTray.Tests
             //Must check before - during shutdowning down is miAlwaysOnTop null
         //if (!e.Cancel)
         //    {
-        //        CheckMenuItemTopMost();
+        //        CheckSuMenuItemTopMost();
         //    }
             if (userControlClosing != null)
             {
