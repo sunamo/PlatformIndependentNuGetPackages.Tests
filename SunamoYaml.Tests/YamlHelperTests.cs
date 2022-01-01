@@ -79,7 +79,7 @@ namespace SunamoYaml.Tests
             var serializer = new Serializer();
             StringWriter sw = new StringWriter();
             serializer.Serialize(sw, list);
-            File.WriteAllText(path, sw.ToString());
+            TF.WriteAllText(path, sw.ToString());
         }
     }
 }

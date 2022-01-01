@@ -1,7 +1,6 @@
-﻿<?xml version='1.0' encoding='utf-8'?>
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-   <TargetFramework>net48</TargetFramework>
+    <TargetFramework>net48</TargetFramework>
     <IsPackable>false</IsPackable>
   </PropertyGroup>
   <ItemGroup>
@@ -15,6 +14,5 @@
   <ItemGroup>
     <ProjectReference Include="..\..\..\sunamoWithoutDep\SunamoExceptions\SunamoExceptions.csproj"></ProjectReference>
     <ProjectReference Include="..\..\..\sunamoWithoutDep\SunamoMime\SunamoMime.csproj"></ProjectReference>
-   
   </ItemGroup>
 </Project>
