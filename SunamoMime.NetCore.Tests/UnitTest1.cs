@@ -13,7 +13,7 @@ namespace SunamoMime.NetCore.Tests
             public void FileType_NetCore_Test()
             {
                 SunamoMimeHelper.Init();
-                var f = @"d:\_Test\sunamo\win\Helpers\MImeHelper\GetMimeFromFile\Real";
+                var f = @"D:\_Test\sunamo\win\Helpers\MImeHelper\GetMimeFromFile\Real";
                 //application/octet-stream>
                 Assert.AreEqual("jpg", SunamoMimeHelper.FileType(TF.ReadAllBytes(f + AllExtensions.jpg).ToArray()));
                 Assert.AreEqual("webp", SunamoMimeHelper.FileType(TF.ReadAllBytes(f + AllExtensions.webp).ToArray()));

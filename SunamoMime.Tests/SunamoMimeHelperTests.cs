@@ -12,7 +12,7 @@ namespace SunamoMime.Tests
         public void FileTypeTest()
         {
             SunamoMimeHelper.Init();
-            var f = @"d:\_Test\sunamo\win\Helpers\MImeHelper\GetMimeFromFile\Real";
+            var f = @"D:\_Test\sunamo\win\Helpers\MImeHelper\GetMimeFromFile\Real";
             //application/octet-stream>
             Assert.Equal("jpg", SunamoMimeHelper.FileType(TF.ReadAllBytes(f + AllExtensions.jpg).ToArray()));
             Assert.Equal("webp", SunamoMimeHelper.FileType(TF.ReadAllBytes(f + AllExtensions.webp).ToArray()));

@@ -8,7 +8,7 @@ namespace SunamoVcf.Tests
         [Fact]
         public void VcfHelperParseTest()
         {
-            var l = VcfHelper.Parse(@"d:\_Test\sunamo\SunamoVcf\contacts.vcf");
+            var l = VcfHelper.Parse(@"D:\_Test\sunamo\SunamoVcf\contacts.vcf");
 
             int i = 0;
         }
