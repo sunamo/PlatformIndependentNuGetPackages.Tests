@@ -1,4 +1,4 @@
-﻿namespace Dates
+namespace Dates
 {
     /// <summary>
     /// The frequency interval between occurrences in a <see cref="DatePeriod" />.

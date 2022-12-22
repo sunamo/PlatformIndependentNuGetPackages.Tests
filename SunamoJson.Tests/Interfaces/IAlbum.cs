@@ -1,4 +1,4 @@
-﻿public interface IAlbum
+public interface IAlbum
 {
     string name { get; set; }
 }

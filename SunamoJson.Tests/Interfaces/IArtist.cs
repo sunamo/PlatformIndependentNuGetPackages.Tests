@@ -1,4 +1,4 @@
-﻿public interface IArtist
+public interface IArtist
 {
     string name { get; set; }
 }

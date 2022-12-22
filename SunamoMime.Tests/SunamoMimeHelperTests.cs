@@ -1,4 +1,4 @@
-﻿using SunamoExceptions;
+using SunamoExceptions;
 using System;
 using System.IO;
 using Xunit;

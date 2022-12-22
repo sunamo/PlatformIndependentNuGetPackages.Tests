@@ -1,4 +1,4 @@
-﻿using System.Runtime.Serialization;
+using System.Runtime.Serialization;
 
 public class SpotifyTrackFull : SpotifyTrackSimplified
 {

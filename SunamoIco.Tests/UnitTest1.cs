@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Drawing;
 using System.IO;
 using sunamo.Essential;
@@ -14,7 +14,7 @@ namespace SunamoIco.Tests
             ThisApp.Name = "SunamoIco.Tests";
             AppData.ci.CreateAppFoldersIfDontExists();
 
-            var input = @"E:\Documents\vs\Projects\sunamo.cz\sunamo.cz\_\i\Apps\IconsOfApp\12.png";
+            var input = @"E:\vs\Projects\sunamo.cz\sunamo.cz\_\i\Apps\IconsOfApp\12.png";
             var folder = AppData.ci.GetFolder(AppFolders.Output);
             Bitmap bmp = new Bitmap(input);
 
