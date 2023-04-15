@@ -64,7 +64,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SearchTextBox", "..\..\suna
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SunamoMail", "..\..\sunamo\SunamoMail\SunamoMail.csproj", "{2314983E-D721-4B8A-A9D1-BA94A68CFD51}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "win", "..\..\sunamo\win\win.csproj", "{733E62D8-0D2C-4A1C-A7D9-DDC815097CA3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "win", "..\..\sunamo\win\win.csproj", "{733E62D8-0D2C-4A1C-A7D9-DDC815097CA3}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SunamoVcf", "..\..\sunamoWithoutDep\SunamoVcf\SunamoVcf.csproj", "{53512887-DBF2-4958-8A3C-2805921078AD}"
 EndProject
@@ -74,7 +74,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SunamoZip", "..\..\sunamoWi
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SunamoBitLocker", "..\..\sunamoWithoutDep\SunamoBitLocker\SunamoBitLocker.csproj", "{DAA8F304-563E-482C-A32F-D7AEB662E6FC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SunamoBitLocker.Tests", "SunamoBitLocker.Tests\SunamoBitLocker.Tests.csproj", "{09244A20-6A66-4162-B02B-B9003E450BA2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SunamoBitLocker.Tests", "SunamoBitLocker.Tests\SunamoBitLocker.Tests.csproj", "{09244A20-6A66-4162-B02B-B9003E450BA2}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SunamoTesseract.Tests", "SunamoTesseract.Tests\SunamoTesseract.Tests.csproj", "{6FEE8E25-321F-4B94-8FD7-4586F45FC295}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SunamoOctokit.Tests", "SunamoOctokit.Tests\SunamoOctokit.Tests.csproj", "{2846E309-A113-4B20-8886-F40116EB755B}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SunamoOctokit", "..\..\sunamoWithoutDep\SunamoOctokit\SunamoOctokit.csproj", "{2B1A5D08-4C95-43B4-8437-08C82602DB05}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -380,6 +386,30 @@ Global
 		{09244A20-6A66-4162-B02B-B9003E450BA2}.Release|Any CPU.Build.0 = Release|Any CPU
 		{09244A20-6A66-4162-B02B-B9003E450BA2}.Release|x86.ActiveCfg = Release|x86
 		{09244A20-6A66-4162-B02B-B9003E450BA2}.Release|x86.Build.0 = Release|x86
+		{6FEE8E25-321F-4B94-8FD7-4586F45FC295}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6FEE8E25-321F-4B94-8FD7-4586F45FC295}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6FEE8E25-321F-4B94-8FD7-4586F45FC295}.Debug|x86.ActiveCfg = Debug|x86
+		{6FEE8E25-321F-4B94-8FD7-4586F45FC295}.Debug|x86.Build.0 = Debug|x86
+		{6FEE8E25-321F-4B94-8FD7-4586F45FC295}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6FEE8E25-321F-4B94-8FD7-4586F45FC295}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6FEE8E25-321F-4B94-8FD7-4586F45FC295}.Release|x86.ActiveCfg = Release|x86
+		{6FEE8E25-321F-4B94-8FD7-4586F45FC295}.Release|x86.Build.0 = Release|x86
+		{2846E309-A113-4B20-8886-F40116EB755B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2846E309-A113-4B20-8886-F40116EB755B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2846E309-A113-4B20-8886-F40116EB755B}.Debug|x86.ActiveCfg = Debug|x86
+		{2846E309-A113-4B20-8886-F40116EB755B}.Debug|x86.Build.0 = Debug|x86
+		{2846E309-A113-4B20-8886-F40116EB755B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2846E309-A113-4B20-8886-F40116EB755B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2846E309-A113-4B20-8886-F40116EB755B}.Release|x86.ActiveCfg = Release|x86
+		{2846E309-A113-4B20-8886-F40116EB755B}.Release|x86.Build.0 = Release|x86
+		{2B1A5D08-4C95-43B4-8437-08C82602DB05}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2B1A5D08-4C95-43B4-8437-08C82602DB05}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2B1A5D08-4C95-43B4-8437-08C82602DB05}.Debug|x86.ActiveCfg = Debug|x86
+		{2B1A5D08-4C95-43B4-8437-08C82602DB05}.Debug|x86.Build.0 = Debug|x86
+		{2B1A5D08-4C95-43B4-8437-08C82602DB05}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2B1A5D08-4C95-43B4-8437-08C82602DB05}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2B1A5D08-4C95-43B4-8437-08C82602DB05}.Release|x86.ActiveCfg = Release|x86
+		{2B1A5D08-4C95-43B4-8437-08C82602DB05}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
