@@ -1,8 +1,3 @@
-using System;
-using System.Collections.Generic;
-using System.Text;
-using Xunit;
-
 public class Utf8JsonTests
 {
     static JavascriptSerialization js = null;

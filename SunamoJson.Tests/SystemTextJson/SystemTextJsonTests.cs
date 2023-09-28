@@ -1,6 +1,3 @@
-using System;
-
-using Xunit;
 using static Utf8Json.JsonSerializer;
 
 namespace SunamoJson.Tests

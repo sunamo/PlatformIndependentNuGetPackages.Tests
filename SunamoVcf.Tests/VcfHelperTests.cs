@@ -1,6 +1,3 @@
-using System;
-using Xunit;
-
 namespace SunamoVcf.Tests
 {
     public class VcfHelperTests

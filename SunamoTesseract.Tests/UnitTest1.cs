@@ -6,12 +6,11 @@ namespace SunamoTesseract.Tests
         [TestMethod]
         public void TestMethod1()
         {
-            public static void Test()
-        {
+
             Stopwatch stopwatch = new Stopwatch();
             stopwatch.Start();
-            List<string> testFiles = FS.GetFiles(@"D:\Documents\BitBucket\How-to-use-tesseract-ocr-4.0-with-csharp\samples\a\",
-                "*", SearchOption.TopDirectoryOnly);
+            List<string> testFiles = Directory.GetFiles(@"D:\Documents\BitBucket\How-to-use-tesseract-ocr-4.0-with-csharp\samples\a\",
+                "*", SearchOption.TopDirectoryOnly).ToList();
             TesseractArgs a = new TesseractArgs
             { lang = TessearactLang.ces, inputFiles = testFiles, writingOnConsole = true, outputFiles = null };
             ProcessFiles(a);
@@ -24,7 +23,12 @@ namespace SunamoTesseract.Tests
             string output = string.Empty;
             string tempOutputFile = Path.GetTempPath() + Guid.NewGuid();
             string tempImageFile = Path.GetTempFileName();
+
         }
+
+        private void ProcessFiles(TesseractArgs a)
+        {
+            throw new NotImplementedException();
         }
     }
 }

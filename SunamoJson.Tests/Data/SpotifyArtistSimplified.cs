@@ -1,6 +1,3 @@
-using System;
-using System.Runtime.Serialization;
-
 public class SpotifyArtistSimplified : IArtist
 {
     [DataMember(Name = "name")]
