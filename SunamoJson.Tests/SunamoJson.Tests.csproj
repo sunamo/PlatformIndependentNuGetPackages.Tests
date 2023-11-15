@@ -4,14 +4,6 @@
     <IsPackable>false</IsPackable>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Remove="Nunit\Dog.cs"></Compile>
-    <Compile Remove="Nunit\JsonParserTests.cs"></Compile>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Data\Dog.cs"></None>
-    <None Include="Nunit\JsonParserTests.cs"></None>
-  </ItemGroup>
-  <ItemGroup>
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.7.1"></PackageReference>
     <PackageReference Include="xunit" Version="2.5.0"></PackageReference>
     <PackageReference Include="xunit.extensibility.core" Version="2.5.0"></PackageReference>
@@ -31,9 +23,9 @@
     <ProjectReference Include="..\..\..\sunamo\sunamo\sunamo.csproj"></ProjectReference>
   </ItemGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
-    <DefineConstants>$(DefineConstants)</DefineConstants>
+    <DefineConstants>$(DefineConstants);ASYNC</DefineConstants>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
-    <DefineConstants>$(DefineConstants)</DefineConstants>
+    <DefineConstants>$(DefineConstants);ASYNC</DefineConstants>
   </PropertyGroup>
 </Project>

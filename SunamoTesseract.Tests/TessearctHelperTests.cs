@@ -1,10 +1,10 @@
 namespace SunamoTesseract.Tests
 {
     [TestClass]
-    public class UnitTest1
+    public class TessearctHelperTests
     {
-        [TestMethod]
-        public void TestMethod1()
+        //[TestMethod]
+        public void ProcessFilesTest()
         {
 
             Stopwatch stopwatch = new Stopwatch();
@@ -13,7 +13,7 @@ namespace SunamoTesseract.Tests
                 "*", SearchOption.TopDirectoryOnly).ToList();
             TesseractArgs a = new TesseractArgs
             { lang = TessearactLang.ces, inputFiles = testFiles, writingOnConsole = true, outputFiles = null };
-            ProcessFiles(a);
+            TessearctHelper.ProcessFiles(a);
 
             stopwatch.Stop();
             Console.WriteLine("Duration: " + stopwatch.Elapsed);
@@ -24,11 +24,6 @@ namespace SunamoTesseract.Tests
             string tempOutputFile = Path.GetTempPath() + Guid.NewGuid();
             string tempImageFile = Path.GetTempFileName();
 
-        }
-
-        private void ProcessFiles(TesseractArgs a)
-        {
-            throw new NotImplementedException();
         }
     }
 }

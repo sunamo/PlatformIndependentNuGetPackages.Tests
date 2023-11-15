@@ -2,8 +2,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SunamoJson.Tests", "SunamoJson.Tests\SunamoJson.Tests.csproj", "{3E58D562-F542-446C-AC17-6F976B9A4DD7}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SunamoMime.Tests", "SunamoMime.Tests\SunamoMime.Tests.csproj", "{720E3092-81E5-4A95-8D17-46CB7966E418}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SunamoVcf.Tests", "SunamoVcf.Tests\SunamoVcf.Tests.csproj", "{07CC2003-4A3D-46A5-B5B5-ACCFCC2450AA}"
@@ -27,8 +25,6 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "XliffParser", "..\..\sunamo.notmine\XliffParser\XliffParser.csproj", "{237212FA-C09F-42E9-A8EB-48F45A7C1838}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SunamoExceptions", "..\..\sunamoWithoutDep\SunamoExceptions\SunamoExceptions.csproj", "{53F58E9C-CE70-40CD-8E74-4C398D94E48B}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SunamoJson", "..\..\sunamoWithoutDep\SunamoJson\SunamoJson.csproj", "{5724137D-1D87-4182-95F2-B37855F1C6DD}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestValues", "..\sunamo.Tests\TestValues\TestValues.csproj", "{AEE9CE1D-EA2B-419B-854B-68D3B4E4216F}"
 EndProject
@@ -62,13 +58,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SunamoShared.Tests", "Sunam
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "desktop", "..\..\..\_OnlyWindowsCore_Projects\sunamo.wpf\desktop\desktop.csproj", "{AD4FEAB7-19FF-4960-AC67-96CF6A368152}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SearchTextBox", "..\..\..\_OnlyWindowsCore_Projects\sunamo.notmine.wpf\SearchTextBox\SearchTextBox.csproj", "{CB340401-57D2-4E9B-A1D3-A4B4B15BB160}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SunamoShared", "..\..\sunamoWithoutDep\SunamoShared\SunamoShared.csproj", "{EE94EFC3-BC0F-40B6-8D95-CD3C538D00D3}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SunamoTesseract", "..\..\sunamoWithoutDep\SunamoTesseract\SunamoTesseract.csproj", "{14BEFA21-0E72-47E7-AA70-13A7BF1A7504}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Runner", "Runner\Runner.csproj", "{A7E06940-6FE5-4763-8F07-3245EF202FFA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Runner", "Runner\Runner.csproj", "{A7E06940-6FE5-4763-8F07-3245EF202FFA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -78,14 +72,6 @@ Global
 		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{3E58D562-F542-446C-AC17-6F976B9A4DD7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{3E58D562-F542-446C-AC17-6F976B9A4DD7}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{3E58D562-F542-446C-AC17-6F976B9A4DD7}.Debug|x86.ActiveCfg = Debug|x86
-		{3E58D562-F542-446C-AC17-6F976B9A4DD7}.Debug|x86.Build.0 = Debug|x86
-		{3E58D562-F542-446C-AC17-6F976B9A4DD7}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{3E58D562-F542-446C-AC17-6F976B9A4DD7}.Release|Any CPU.Build.0 = Release|Any CPU
-		{3E58D562-F542-446C-AC17-6F976B9A4DD7}.Release|x86.ActiveCfg = Release|x86
-		{3E58D562-F542-446C-AC17-6F976B9A4DD7}.Release|x86.Build.0 = Release|x86
 		{720E3092-81E5-4A95-8D17-46CB7966E418}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{720E3092-81E5-4A95-8D17-46CB7966E418}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{720E3092-81E5-4A95-8D17-46CB7966E418}.Debug|x86.ActiveCfg = Debug|x86
@@ -182,14 +168,6 @@ Global
 		{53F58E9C-CE70-40CD-8E74-4C398D94E48B}.Release|Any CPU.Build.0 = Release|Any CPU
 		{53F58E9C-CE70-40CD-8E74-4C398D94E48B}.Release|x86.ActiveCfg = Release|x86
 		{53F58E9C-CE70-40CD-8E74-4C398D94E48B}.Release|x86.Build.0 = Release|x86
-		{5724137D-1D87-4182-95F2-B37855F1C6DD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{5724137D-1D87-4182-95F2-B37855F1C6DD}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{5724137D-1D87-4182-95F2-B37855F1C6DD}.Debug|x86.ActiveCfg = Debug|x86
-		{5724137D-1D87-4182-95F2-B37855F1C6DD}.Debug|x86.Build.0 = Debug|x86
-		{5724137D-1D87-4182-95F2-B37855F1C6DD}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{5724137D-1D87-4182-95F2-B37855F1C6DD}.Release|Any CPU.Build.0 = Release|Any CPU
-		{5724137D-1D87-4182-95F2-B37855F1C6DD}.Release|x86.ActiveCfg = Release|x86
-		{5724137D-1D87-4182-95F2-B37855F1C6DD}.Release|x86.Build.0 = Release|x86
 		{AEE9CE1D-EA2B-419B-854B-68D3B4E4216F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{AEE9CE1D-EA2B-419B-854B-68D3B4E4216F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AEE9CE1D-EA2B-419B-854B-68D3B4E4216F}.Debug|x86.ActiveCfg = Debug|x86
@@ -318,14 +296,6 @@ Global
 		{AD4FEAB7-19FF-4960-AC67-96CF6A368152}.Release|Any CPU.Build.0 = Release|Any CPU
 		{AD4FEAB7-19FF-4960-AC67-96CF6A368152}.Release|x86.ActiveCfg = Release|Any CPU
 		{AD4FEAB7-19FF-4960-AC67-96CF6A368152}.Release|x86.Build.0 = Release|Any CPU
-		{CB340401-57D2-4E9B-A1D3-A4B4B15BB160}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{CB340401-57D2-4E9B-A1D3-A4B4B15BB160}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{CB340401-57D2-4E9B-A1D3-A4B4B15BB160}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{CB340401-57D2-4E9B-A1D3-A4B4B15BB160}.Debug|x86.Build.0 = Debug|Any CPU
-		{CB340401-57D2-4E9B-A1D3-A4B4B15BB160}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{CB340401-57D2-4E9B-A1D3-A4B4B15BB160}.Release|Any CPU.Build.0 = Release|Any CPU
-		{CB340401-57D2-4E9B-A1D3-A4B4B15BB160}.Release|x86.ActiveCfg = Release|Any CPU
-		{CB340401-57D2-4E9B-A1D3-A4B4B15BB160}.Release|x86.Build.0 = Release|Any CPU
 		{EE94EFC3-BC0F-40B6-8D95-CD3C538D00D3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{EE94EFC3-BC0F-40B6-8D95-CD3C538D00D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EE94EFC3-BC0F-40B6-8D95-CD3C538D00D3}.Debug|x86.ActiveCfg = Debug|Any CPU

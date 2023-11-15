@@ -6,4 +6,3 @@ global using System.Runtime.Serialization;
 global using System.Text;
 global using System;
 global using Xunit;
-global using NUnit.Framework;

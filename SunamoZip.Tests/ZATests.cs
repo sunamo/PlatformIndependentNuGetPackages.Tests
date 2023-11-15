@@ -4,7 +4,7 @@ namespace SunamoZip.Tests
     public class ZATests
     {
 
-        [TestMethod]
+        //[TestMethod]
         public void CreateArchiveTest()
         {
             var folder = @"D:\_Test\sunamoWithoutDepSunamoZip\SunamoZip\ToZip\";

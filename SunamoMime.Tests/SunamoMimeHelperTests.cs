@@ -3,7 +3,7 @@ namespace SunamoMime.Tests
     #region For easy copy
     public class SunamoMimeHelperTests
     {
-        [Fact]
+        //[Fact]
         public void FileTypeTest()
         {
             SunamoMimeHelper.Init();

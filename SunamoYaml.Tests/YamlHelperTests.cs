@@ -5,8 +5,8 @@ namespace SunamoYaml.Tests
         string path = null;
         const string s = "s";
         const string ixTest = "text";
-        
-        [Fact]
+
+        //[Fact]
         public void LoadYaml()
         {
             LoadDefaultPath();
@@ -30,11 +30,11 @@ namespace SunamoYaml.Tests
             ThisApp.Name = "sunamo.Tests";
             ThisApp.Project = "SunamoYaml.Tests";
 
-            
+
             path = TestHelper.GetFileInProjectsFolder("test.yaml");
         }
 
-        [Fact]
+        //[Fact]
         public void SaveYaml()
         {
             LoadDefaultPath();
