@@ -7,12 +7,12 @@ namespace SunamoYaml.Tests
         const string ixTest = "text";
 
         //[Fact]
-        public void LoadYaml()
+        public async Task LoadYaml()
         {
             LoadDefaultPath();
 
             // Setup the input
-            var input = new StringReader(FS.ReadAllText(path));
+            var input = new StringReader(await FS.ReadAllText(path));
 
             // Load the stream
             var yaml = new YamlStream();
@@ -29,7 +29,6 @@ namespace SunamoYaml.Tests
         {
             ThisApp.Name = "sunamo.Tests";
             ThisApp.Project = "SunamoYaml.Tests";
-
 
             path = TestHelper.GetFileInProjectsFolder("test.yaml");
         }

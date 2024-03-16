@@ -1,0 +1,17 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\sunamoWithoutLocalDep\SunamoClipboard\SunamoClipboard.csproj" />
+    <ProjectReference Include="..\..\..\sunamoWithoutLocalDep\SunamoCl\SunamoCl.csproj" />
+    <ProjectReference Include="..\..\..\sunamoWithoutLocalDep\SunamoDebugIO\SunamoDebugIO.csproj" />
+    <ProjectReference Include="..\..\..\sunamoWithoutLocalDep\SunamoExceptions\SunamoExceptions.csproj" />
+    <ProjectReference Include="..\..\..\sunamoWithoutLocalDep\SunamoWinStd\SunamoWinStd.csproj" />
+  </ItemGroup>
+
+</Project>

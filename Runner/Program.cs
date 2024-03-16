@@ -1,10 +1,28 @@
+using SunamoCollections.Tests;
+using SunamoCollectionsGeneric.Tests;
+using SunamoFileSystem.Tests;
+using SunamoWinStdTests;
+
 namespace Runner;
 
-internal class Program
+public class Program
 {
     static void Main(string[] args)
     {
-        ReClasserTests r = new ReClasserTests();
-        r.FixMeUpTest();
+        //CsProjInstanceTests csProjInstanceTests = new CsProjInstanceTests();
+        //csProjInstanceTests.AddSunamoSharedPlusOtherAndThenAddAnother_EveryMustBeUnique();
+
+        PHWinTests pHWinTests = new PHWinTests();
+        //pHWinTests.OpenInBrowserTest();
+        //pHWinTests.CodiumTest();
+
+        //CATests ca = new CATests();
+        //ca.CompareListResultTest();
+
+        CAGTests cag = new CAGTests();
+        //cag.CompareListTest();
+
+        FSTests fs = new FSTests();
+        fs.GetFilesTest();
     }
 }

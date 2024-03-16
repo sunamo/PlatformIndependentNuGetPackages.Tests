@@ -1,0 +1,22 @@
+using SunamoCsproj.Items;
+
+namespace SunamoCsproj.Tests.csproj;
+
+public class CsprojHelperTests
+{
+    [Fact]
+    public void ItemsInItemGroupTest()
+    {
+        var d = CsprojHelper.ItemsInItemGroup(ItemGroupTagName.PackageReference, @"E:\vs\Projects\_WhenNeedToEditAllCorruptedSlns\CommandsToAllCsprojs.Cmd\CommandsToAllCsprojs.Cmd\CommandsToAllCsprojs.Cmd.csproj");
+        var d2 = CsprojHelper.ItemsInItemGroup(ItemGroupTagName.ProjectReference, @"E:\vs\Projects\_WhenNeedToEditAllCorruptedSlns\CommandsToAllCsprojs.Cmd\CommandsToAllCsprojs.Cmd\CommandsToAllCsprojs.Cmd.csproj");
+
+    }
+
+    [Fact]
+    public async Task RemoveDuplicatesInItemGroupTest()
+    {
+
+        var newCsprojContent = await CsprojHelper.RemoveDuplicatedProjectAndPackageReferences(@"D:\_Test\sunamoWithoutLocalDep\SunamoCsproj\DetectDuplicatedNugetPackages.csproj", null);
+        await File.WriteAllTextAsync(@"E:\vs\Projects\_tests\CompareTwoFiles\CompareTwoFiles\xml\1.xml", newCsprojContent);
+    }
+}

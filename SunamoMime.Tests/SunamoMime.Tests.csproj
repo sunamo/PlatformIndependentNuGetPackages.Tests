@@ -1,20 +1,21 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <TargetFramework>net7.0-windows</TargetFramework>
+    <TargetFramework>net8.0-windows</TargetFramework>
     <IsPackable>false</IsPackable>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.7.1"></PackageReference>
-    <PackageReference Include="xunit" Version="2.5.0"></PackageReference>
-    <PackageReference Include="xunit.runner.visualstudio" Version="2.5.0">
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.8.0"></PackageReference>
+    <PackageReference Include="xunit" Version="2.6.5"></PackageReference>
+    <PackageReference Include="xunit.runner.visualstudio" Version="2.5.6">
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
       <PrivateAssets>all</PrivateAssets>
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\sunamoWithoutDep\SunamoExceptions\SunamoExceptions.csproj"></ProjectReference>
-    <ProjectReference Include="..\..\..\sunamoWithoutDep\SunamoMime\SunamoMime.csproj"></ProjectReference>
-    <ProjectReference Include="..\..\..\sunamoWithoutDep\SunamoShared\SunamoShared.csproj" />
+    <PackageReference Include="SunamoExceptions" Version="24.1.11.1" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\sunamoWithoutLocalDep\SunamoMime\SunamoMime.csproj" />
   </ItemGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
     <DefineConstants>$(DefineConstants);ASYNC</DefineConstants>
