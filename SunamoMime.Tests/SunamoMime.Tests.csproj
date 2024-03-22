@@ -14,9 +14,6 @@
   <ItemGroup>
     <PackageReference Include="SunamoExceptions" Version="24.1.11.1" />
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\..\..\sunamoWithoutLocalDep\SunamoMime\SunamoMime.csproj" />
-  </ItemGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
     <DefineConstants>$(DefineConstants);ASYNC</DefineConstants>
   </PropertyGroup>

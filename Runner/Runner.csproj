@@ -10,7 +10,6 @@
     <ProjectReference Include="..\SunamoCollectionsGeneric.Tests\SunamoCollectionsGeneric.Tests.csproj" />
     <ProjectReference Include="..\SunamoCsproj.Tests\SunamoCsproj.Tests.csproj" />
     <ProjectReference Include="..\SunamoFileSystem.Tests\SunamoFileSystem.Tests.csproj" />
-    <ProjectReference Include="..\win.std.Tests\SunamoWinStd.Tests.csproj" />
   </ItemGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
     <DefineConstants>$(DefineConstants);ASYNC</DefineConstants>

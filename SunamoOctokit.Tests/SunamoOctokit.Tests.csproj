@@ -14,11 +14,6 @@
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\..\..\Credentials\CredTokens\CredTokens.csproj" />
-    <ProjectReference Include="..\..\..\sunamoWithoutLocalDep\SunamoOctokit\SunamoOctokit.csproj" />
-    
-  </ItemGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
     <DefineConstants>$(DefineConstants);ASYNC</DefineConstants>
   </PropertyGroup>

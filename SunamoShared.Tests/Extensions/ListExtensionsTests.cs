@@ -1,11 +1,10 @@
-namespace sunamo.Tests.Extensions
+namespace sunamo.Tests.Extensions;
+
+public class ListExtensionsTests
 {
-    public class ListExtensionsTests
+    [Fact]
+    public void Partitions()
     {
-        [Fact]
-        public void Partitions()
-        {
-            
-        }
+        
     }
 }

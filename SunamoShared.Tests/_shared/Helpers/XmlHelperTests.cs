@@ -1,28 +1,27 @@
-namespace shared.Tests
+namespace shared.Tests;
+
+public class XmlHelperTests
 {
-    public class XmlHelperTests
-    {
-        [Fact]
-        public
+    [Fact]
+    public
 #if ASYNC
-    async Task
+async Task
 #else
-    void
+void
 #endif
-   ParseAndRemoveNamespacesTest()
-        {
-            var file = @"D:\_Test\sunamo\SunamoDevCode\ParseAndRemoveNamespacesTest\a.xlf";
-            var c =
+ParseAndRemoveNamespacesTest()
+    {
+        var file = @"D:\_Test\sunamo\SunamoDevCode\ParseAndRemoveNamespacesTest\a.xlf";
+        var c =
 #if ASYNC
-    await
+await
 #endif
- TF.ReadAllText(file);
-            XmlNamespacesHolder h = new XmlNamespacesHolder();
+TF.ReadAllText(file);
+        XmlNamespacesHolder h = new XmlNamespacesHolder();
 
 
-            XmlDocument x = null;
+        XmlDocument x = null;
 
-            x = h.ParseAndRemoveNamespacesXmlDocument(c, x.NameTable);
-        }
+        x = h.ParseAndRemoveNamespacesXmlDocument(c, x.NameTable);
     }
 }

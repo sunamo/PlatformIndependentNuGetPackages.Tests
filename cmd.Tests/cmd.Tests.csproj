@@ -15,8 +15,6 @@
     <ProjectReference Include="..\..\..\sunamoWithoutLocalDep\SunamoCmd\SunamoCmd.csproj" />
     
     <ProjectReference Include="..\..\..\sunamoWithoutLocalDep\SunamoPercentCalculator\SunamoPercentCalculator.csproj" />
-    
-    <ProjectReference Include="..\TestValues\TestValues.csproj" />
   </ItemGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
     <DefineConstants>$(DefineConstants);ASYNC</DefineConstants>

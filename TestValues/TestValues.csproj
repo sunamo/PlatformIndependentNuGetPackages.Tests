@@ -8,9 +8,6 @@
     <PackageReference Include="SunamoExceptions" Version="24.2.6.3" />
     <PackageReference Include="xunit.extensibility.core" Version="2.6.6"></PackageReference>
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\..\..\sunamoWithoutLocalDep\SunamoStringReplace\SunamoStringReplace.csproj" />
-  </ItemGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
     <DefineConstants>$(DefineConstants);ASYNC</DefineConstants>
   </PropertyGroup>

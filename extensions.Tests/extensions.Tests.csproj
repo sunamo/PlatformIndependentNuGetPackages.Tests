@@ -13,10 +13,6 @@
       <Version>3.1.1</Version>
     </PackageReference>
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\TestValues.Sql\TestValues.Sql.csproj" />
-    <ProjectReference Include="..\TestValues\TestValues.csproj" />
-  </ItemGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
     <DefineConstants>$(DefineConstants);ASYNC</DefineConstants>
   </PropertyGroup>

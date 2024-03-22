@@ -1,4 +1,6 @@
-public class XHManipulationWithoutMockTests : XmlTestsBase
+using SunamoFileIO;
+
+public class XHManipulationWithoutMockTests //: XmlTestsBase
 {
     //[Fact]
     public
@@ -9,20 +11,20 @@ public class XHManipulationWithoutMockTests : XmlTestsBase
 #endif
  RemoveFirstElementTest()
     {
-        var content =
-#if ASYNC
-    await
-#endif
- TF.ReadAllText(pathXlf);
+        //        var content =
+        //#if ASYNC
+        //    await
+        //#endif
+        // TF.ReadAllText(pathXlf);
 
-        var xd = XDocument.Parse(content);
-        // return zero
-        var descendants = xd.Descendants("trans-unit");
-        foreach (var item in descendants)
-        {
-            item.Remove();
-        }
+        //        var xd = XDocument.Parse(content);
+        //        // return zero
+        //        var descendants = xd.Descendants("trans-unit");
+        //        foreach (var item in descendants)
+        //        {
+        //            item.Remove();
+        //        }
 
-        var outer = xd.ToString();
+        //        var outer = xd.ToString();
     }
 }

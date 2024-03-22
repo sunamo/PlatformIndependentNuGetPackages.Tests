@@ -1,3 +1,6 @@
+using SunamoReflection;
+using SunamoShared;
+
 namespace sunamo.Tests;
 public class TestClass
 {

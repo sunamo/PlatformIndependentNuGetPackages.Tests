@@ -21,7 +21,6 @@
     <PackageReference Include="SunamoExtensions" Version="24.1.10.1" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\sunamoWithoutLocalDep\SunamoCsv\SunamoCsv.csproj" />
     <ProjectReference Include="..\..\..\sunamoWithoutLocalDep\SunamoFileIO\SunamoFileIO.csproj" />
   </ItemGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">

@@ -1,3 +1,5 @@
+using SunamoConverters.Converts;
+
 public class ConvertCamelConventionWithNumbersTests
 {
     [Fact]

@@ -1,29 +1,28 @@
-namespace sunamo.Tests.Storage
+namespace sunamo.Tests.Storage;
+
+public class ApplicationDataTextTests
 {
-    public class ApplicationDataTextTests
-    {
-        //[Fact]
-        public
+    //[Fact]
+    public
 #if ASYNC
-    async Task
+async Task
 #else
-    void
+void
 #endif
- ParseTest()
-        {
-            string testFile = @"D:\_Test\ConsoleApp1\ConsoleApp1\ApplicationDataText.txt";
+ParseTest()
+    {
+        string testFile = @"D:\_Test\ConsoleApp1\ConsoleApp1\ApplicationDataText.txt";
 
-            var headers = CA.ToListString("Copy", "Dont copy to");
-            CA.AddSuffix(headers, AllStrings.colon);
+        var headers = CA.ToListString("Copy", "Dont copy to");
+        CA.AddSuffix(headers, AllStrings.colon);
 
-            var value1 = CA.ToListString("Shared");
+        var value1 = CA.ToListString("Shared");
 
-            var dict =
+        var dict =
 #if ASYNC
-    await
+await
 #endif
- ApplicationDataText.Parse(testFile, headers);
-            Assert.Equal<string>(value1, dict[headers[0]]);
-        }
+ApplicationDataText.Parse(testFile, headers);
+        Assert.Equal<string>(value1, dict[headers[0]]);
     }
 }

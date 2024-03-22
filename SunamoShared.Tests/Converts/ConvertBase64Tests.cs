@@ -1,3 +1,5 @@
+using SunamoConverters.Converts;
+
 public class ConvertBase64Tests
 {
     [Fact]

@@ -1,7 +1,6 @@
-namespace sunamo.Tests.Generator.Text
-{
-    public class TextOutputGeneratorTests
-    {
+namespace sunamo.Tests.Generator.Text;
 
-    }
+public class TextOutputGeneratorTests
+{
+
 }
