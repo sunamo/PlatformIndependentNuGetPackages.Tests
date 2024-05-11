@@ -1,4 +1,4 @@
-﻿using SunamoWinStd;
+using SunamoWinStd;
 using System.IO;
 
 namespace SunamoWinStdTests;
@@ -21,5 +21,3 @@ public class PHWinTests
         await PHWin.Codium(path);
     }
 }
-
-

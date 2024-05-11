@@ -1,6 +1,3 @@
-using SunamoExceptions.InSunamoIsDerivedFrom;
-using SunamoFileExtensions;
-
 namespace SunamoMime.Tests
 {
     #region For easy copy

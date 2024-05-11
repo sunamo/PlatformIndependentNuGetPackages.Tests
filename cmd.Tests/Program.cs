@@ -1,8 +1,3 @@
-using SunamoCmd.Args;
-using SunamoCmd.Helpers;
-using SunamoPercentCalculator;
-using SunamoShared;
-
 namespace cmd.Tests
 {
     class Program

@@ -1,5 +1,3 @@
-﻿using SunamoFileSystem.Tests;
-
 namespace RunnerFS;
 
 internal class Program

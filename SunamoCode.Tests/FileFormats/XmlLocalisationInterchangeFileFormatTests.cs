@@ -1,3 +1,6 @@
+using SunamoDevCode.FileFormats;
+using SunamoValues.Values;
+
 public class XmlLocalisationInterchangeFileFormatTests
 {
     /// <summary>

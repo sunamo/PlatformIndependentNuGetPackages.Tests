@@ -1,15 +1,3 @@
-﻿using SunamoCl.SunamoCmd;
-using SunamoCl.SunamoCmdArgs_Cmd;
-using SunamoDelegates;
-using SunamoPlatformUwpInterop.Args;
-using SunamoWinStd;
-using SunamoWinStd.Helpers;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
 namespace SunamoCl.Tests.SunamoCmd;
 internal class CmdBootstrapTests
 {

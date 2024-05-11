@@ -1,5 +1,3 @@
-
-
 //public class CryptHelperTests
 //{
 //    public class RijndaelStringTests

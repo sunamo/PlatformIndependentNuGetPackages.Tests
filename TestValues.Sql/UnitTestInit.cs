@@ -1,5 +1,3 @@
-using SunamoEnums.Enums;
-
 public class UnitTestInit
 {
     public bool cryptData = false;

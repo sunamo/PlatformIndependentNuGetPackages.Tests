@@ -1,3 +1,5 @@
+using SunamoShared.Http;
+
 public class HttpRequestHelperTests
 {
     [Fact]

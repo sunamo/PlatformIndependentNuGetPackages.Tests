@@ -1,5 +1,3 @@
-using SunamoFileSystem;
-
 namespace SunamoSqlite.Tests
 {
     public class UnitTest1WithoutMocking

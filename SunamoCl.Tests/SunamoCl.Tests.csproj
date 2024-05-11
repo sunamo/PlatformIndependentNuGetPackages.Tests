@@ -1,15 +1,18 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
-
+<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <TargetFramework>net8.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
   </PropertyGroup>
-
   <ItemGroup>
     <ProjectReference Include="..\..\..\sunamoWithoutLocalDep\SunamoClipboard\SunamoClipboard.csproj" />
     <ProjectReference Include="..\..\..\sunamoWithoutLocalDep\SunamoDebugIO\SunamoDebugIO.csproj" />
     <ProjectReference Include="..\..\..\sunamoWithoutLocalDep\SunamoExceptions\SunamoExceptions.csproj" />
   </ItemGroup>
-
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DefineConstants>$(DefineConstants);SunamoCl.Tests</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DefineConstants>$(DefineConstants);SunamoCl.Tests</DefineConstants>
+  </PropertyGroup>
 </Project>

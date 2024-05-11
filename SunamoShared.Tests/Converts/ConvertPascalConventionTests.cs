@@ -1,3 +1,5 @@
+using SunamoShared.Tests._sunamo;
+
 public class ConvertPascalConventionTests
 {
     string[] tests = {

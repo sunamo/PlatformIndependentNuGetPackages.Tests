@@ -1,44 +1,46 @@
-namespace SunamoDevCode.Tests.Helpers
+using SunamoDevCode.Helpers;
+using SunamoStringGetLines;
+
+namespace SunamoDevCode.Tests.Helpers;
+
+public class CSharpHelperTests
 {
-    public class CSharpHelperTests
+    [Fact]
+    public void RemoveCommentsTest()
     {
-        [Fact]
-        public void RemoveCommentsTest()
-        {
-            const string input = @"a
+        const string input = @"a
 //b
 c
 d /*e*/
 /*haf
 baf*/
 f";
-            List<string> expected = SHGetLines.GetLines(@"a
+        List<string> expected = SHGetLines.GetLines(@"a
 c
 d
 
 f");
-            var actual = CSharpHelper.RemoveComments(SHGetLines.GetLines(input), true, true);
-            actual.Should().BeEquivalentTo(expected);
-        }
-        [Fact]
-        public void RemoveComments2Test()
-        {
-            const string input = @"a
+        var actual = CSharpHelper.RemoveComments(SHGetLines.GetLines(input), true, true);
+        actual.Should().BeEquivalentTo(expected);
+    }
+    [Fact]
+    public void RemoveComments2Test()
+    {
+        const string input = @"a
 //b
 c
 d /*e*/
 /*haf
 baf*/
 f";
-            // d have space on end
-            const string expected = @"a
+        // d have space on end
+        const string expected = @"a
 
 c
 d 
 
 f";
-            var actual = CSharpHelper.RemoveBlockComments(input);
-            Assert.Equal(expected, actual);
-        }
+        var actual = CSharpHelper.RemoveBlockComments(input);
+        Assert.Equal(expected, actual);
     }
 }

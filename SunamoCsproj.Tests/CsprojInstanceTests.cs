@@ -19,7 +19,7 @@ public class CsprojInstanceTests : SwdRepoNames
 
         const string SunamoShared = "SunamoShared";
 
-        var csi = new CsprojInstance() { xd = xd };
+        var csi = new CsprojInstance(xd);
         csi.CreateNewPackageReference(SunamoShared, "*");
         csi.CreateNewPackageReference(SunamoInterfaces, "*");
 

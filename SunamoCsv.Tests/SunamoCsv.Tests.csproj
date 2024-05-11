@@ -4,10 +4,12 @@
     <IsPackable>false</IsPackable>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.8.0"></PackageReference>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.8.0">
+    </PackageReference>
     <PackageReference Include="SunamoExceptions" Version="24.1.11.1" />
     <PackageReference Include="SunamoShared" Version="24.1.12.1" />
-    <PackageReference Include="xunit" Version="2.6.5"></PackageReference>
+    <PackageReference Include="xunit" Version="2.6.5">
+    </PackageReference>
     <PackageReference Include="xunit.runner.visualstudio" Version="2.5.6">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
@@ -24,9 +26,9 @@
     <ProjectReference Include="..\..\..\sunamoWithoutLocalDep\SunamoFileIO\SunamoFileIO.csproj" />
   </ItemGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
-    <DefineConstants>$(DefineConstants);ASYNC</DefineConstants>
+    <DefineConstants>$(DefineConstants);ASYNC;SunamoCsv.Tests</DefineConstants>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
-    <DefineConstants>$(DefineConstants);ASYNC</DefineConstants>
+    <DefineConstants>$(DefineConstants);ASYNC;SunamoCsv.Tests</DefineConstants>
   </PropertyGroup>
 </Project>

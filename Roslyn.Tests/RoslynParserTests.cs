@@ -1,5 +1,3 @@
-using SunamoRoslyn;
-
 public class RoslynParserTests
 {
     [Fact]

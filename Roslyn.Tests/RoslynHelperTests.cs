@@ -1,7 +1,3 @@
-
-
-using SunamoRoslyn;
-
 public class RoslynHelperTests
 {
     [Fact]

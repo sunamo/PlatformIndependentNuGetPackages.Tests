@@ -1,5 +1,3 @@
-using SunamoFileIO;
-
 public class XHManipulationWithoutMockTests //: XmlTestsBase
 {
     //[Fact]

@@ -1,6 +1,7 @@
-using SunamoEnums.Enums;
-using SunamoStringReplace;
-using SunamoValues;
+
+using SunamoTestValues;
+using SunamoTestValues._sunamo;
+using TestValues._sunamo;
 
 /// <summary>
 /// Right format of paths are:
@@ -9,6 +10,8 @@ using SunamoValues;
 /// </summary>
 public class TestHelper
 {
+
+
     public static void Init()
     {
         Init("sunamo");

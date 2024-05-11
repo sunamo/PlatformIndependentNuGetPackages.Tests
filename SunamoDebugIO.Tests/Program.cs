@@ -1,6 +1,3 @@
-﻿using SunamoPlatformUwpInterop.AppData;
-using SunamoThisApp;
-
 namespace SunamoDebugIO.Tests
 {
     internal class Program : ProgramShared

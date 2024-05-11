@@ -1,3 +1,7 @@
+using SunamoEnums;
+using SunamoEnums.Enums;
+using SunamoShared.Tests._sunamo;
+
 namespace sunamo.Tests.Helpers.FileSystem;
 
 public partial class FSTests
@@ -39,12 +43,12 @@ public partial class FSTests
         string input = bp + "abc(1).txt";
         string result = "";
         string expected = bp + "abc.txt";
-        result = FS.GetNameWithoutSeries(input, true, out hasSerie, Enums.SerieStyle.Brackets, out serie);
+        result = FS.GetNameWithoutSeries(input, true, out hasSerie, SerieStyle.Brackets, out serie);
         Assert.Equal(expected, result);
         Assert.True(hasSerie);
         Assert.Equal(1, serie);
 
-        result = FS.GetNameWithoutSeries(input, true, out hasSerie, Enums.SerieStyle.All, out serie);
+        result = FS.GetNameWithoutSeries(input, true, out hasSerie, SerieStyle.All, out serie);
         Assert.Equal(expected, result);
         Assert.True(hasSerie);
         Assert.Equal(1, serie);
@@ -64,12 +68,12 @@ public partial class FSTests
         string input = bp + "abc-1.txt";
         string result = "";
         string expected = bp + "abc.txt";
-        result = FS.GetNameWithoutSeries(input, true, out hasSerie, Enums.SerieStyle.Dash, out serie);
+        result = FS.GetNameWithoutSeries(input, true, out hasSerie, SerieStyle.Dash, out serie);
         Assert.Equal(expected, result);
         Assert.True(hasSerie);
         Assert.Equal(1, serie);
 
-        result = FS.GetNameWithoutSeries(input, true, out hasSerie, Enums.SerieStyle.All, out serie);
+        result = FS.GetNameWithoutSeries(input, true, out hasSerie, SerieStyle.All, out serie);
         Assert.Equal(expected, result);
         Assert.True(hasSerie);
         Assert.Equal(1, serie);
@@ -90,12 +94,12 @@ public partial class FSTests
         string result = "";
         string expected = bp + @"MainPage.xaml.cs";
 
-        result = FS.GetNameWithoutSeries(input, false, out hasSerie, Enums.SerieStyle.Underscore, out serie);
+        result = FS.GetNameWithoutSeries(input, false, out hasSerie, SerieStyle.Underscore, out serie);
         Assert.Equal(expected, result);
         Assert.True(hasSerie);
         Assert.Equal(8, serie);
 
-        result = FS.GetNameWithoutSeries(input, false, out hasSerie, Enums.SerieStyle.All, out serie);
+        result = FS.GetNameWithoutSeries(input, false, out hasSerie, SerieStyle.All, out serie);
         Assert.Equal(expected, result);
         Assert.True(hasSerie);
         Assert.Equal(8, serie);
@@ -115,14 +119,14 @@ public partial class FSTests
         string input = @"DSC00711.JPG";
         string result = "";
         string expected = @"DSC00711.jpg";
-        result = FS.GetNameWithoutSeries(input, false, out hasSerie, Enums.SerieStyle.Brackets, out serie);
+        result = FS.GetNameWithoutSeries(input, false, out hasSerie, SerieStyle.Brackets, out serie);
         Assert.Equal(expected, result);
         Assert.False(hasSerie);
         Assert.Equal(-1, serie);
 
         input = bp + "abc.txt";
         expected = bp + "abc.txt";
-        result = FS.GetNameWithoutSeries(input, true, out hasSerie, Enums.SerieStyle.Dash, out serie);
+        result = FS.GetNameWithoutSeries(input, true, out hasSerie, SerieStyle.Dash, out serie);
         Assert.Equal(expected, result);
         Assert.False(hasSerie);
         Assert.Equal(-1, serie);

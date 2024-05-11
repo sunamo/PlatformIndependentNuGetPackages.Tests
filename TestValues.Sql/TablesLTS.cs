@@ -1,6 +1,3 @@
-using SunamoI18N.Values;
-using SunamoValues;
-
 /// <summary>
 /// LearnTransactSQL
 /// </summary>

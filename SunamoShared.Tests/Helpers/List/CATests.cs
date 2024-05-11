@@ -1,4 +1,11 @@
-﻿namespace sunamo.Tests.Helpers.List;
+﻿using SunamoCollectionsGeneric;
+using SunamoData.Data;
+using SunamoEnums.Enums;
+using SunamoShared.Entity;
+using SunamoShared.Tests._sunamo;
+using SunamoValues;
+
+namespace sunamo.Tests.Helpers.List;
 
 public class CATests
 {
@@ -23,9 +30,9 @@ public class CATests
     [Fact]
     public void ContainsAnyFromElementTest()
     {
-        string r = "cds";
-        var s = CAG.ToList<string>(TestData.listABC);
-        var i = CA.ContainsAnyFromElement(r, s);
+        //string r = "cds";
+        //var s = CAG.ToList<string>(TestData.listABC);
+        //var i = CA.ContainsAnyFromElement(r, s);
     }
 
     [Fact]

@@ -1,14 +1,12 @@
-using SunamoWinStd;
-
 namespace win.std.Tests;
 
-[TestClass]
+
 public class GitHelperTests
 {
-    [TestMethod]
+    [Fact]
     public void NameOfRepoFromOriginUriTest()
     {
         string actual = GitHelper.NameOfRepoFromOriginUri(@"https://github.com/sunamo/sunamoWithoutLocalDep.git");
-        Assert.AreEqual("sunamoWithoutLocalDep", actual);
+        Assert.Equal("sunamoWithoutLocalDep", actual);
     }
 }

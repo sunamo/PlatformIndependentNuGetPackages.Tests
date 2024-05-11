@@ -1,5 +1,6 @@
 //using SunamoInit;
-using SunamoStringGetLines;
+
+using SunamoCollections.Tests._sunamo;
 
 namespace SunamoCollections.Tests;
 

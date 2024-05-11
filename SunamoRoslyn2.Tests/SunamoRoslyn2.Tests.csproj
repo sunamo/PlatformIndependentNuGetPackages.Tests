@@ -1,14 +1,11 @@
 <Project Sdk="Microsoft.NET.Sdk">
-
   <PropertyGroup>
     <TargetFramework>net8.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-
     <IsPackable>false</IsPackable>
     <IsTestProject>true</IsTestProject>
   </PropertyGroup>
-
   <ItemGroup>
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.6.0" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
@@ -23,9 +20,13 @@
     </PackageReference>
     <PackageReference Include="YamlDotNet" Version="15.1.2" />
   </ItemGroup>
-
   <ItemGroup>
     <ProjectReference Include="..\..\..\sunamoWithoutLocalDep\SunamoRoslyn2_LaterMergeToSunamoRoslyn\SunamoRoslyn2_LaterMergeToSunamoRoslyn.csproj" />
   </ItemGroup>
-
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DefineConstants>$(DefineConstants);SunamoRoslyn2.Tests</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DefineConstants>$(DefineConstants);SunamoRoslyn2.Tests</DefineConstants>
+  </PropertyGroup>
 </Project>

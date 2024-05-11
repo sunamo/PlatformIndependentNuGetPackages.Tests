@@ -1,5 +1,3 @@
-using SunamoExceptions.OnlyInSE;
-
 partial class FirstHalfAnalyzer
 {
     static Type type = typeof(FirstHalfAnalyzer);

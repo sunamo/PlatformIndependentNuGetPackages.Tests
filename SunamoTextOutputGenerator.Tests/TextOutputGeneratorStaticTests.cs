@@ -1,10 +1,9 @@
-﻿using SunamoCollections;
-
 namespace SunamoTextOutputGenerator.Tests;
 
-internal class Program
+public class TextOutputGeneratorStaticTests
 {
-    static void Main(string[] args)
+    [Fact]
+    public void CompareListTest()
     {
         var tog = new TextOutputGenerator();
 

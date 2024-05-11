@@ -1,8 +1,3 @@
-using SunamoCollectionsGeneric;
-using SunamoData.Data;
-using SunamoEnums.Enums;
-using SunamoSqlServer.MSSQL;
-
 namespace shared.Tests
 {
     /// <summary>

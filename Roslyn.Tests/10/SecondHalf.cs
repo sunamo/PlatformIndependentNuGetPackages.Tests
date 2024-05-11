@@ -1,5 +1,3 @@
-using SunamoExceptions.OnlyInSE;
-
 public partial class RoslynLearn
 {
     static Type type = typeof(RoslynLearn);

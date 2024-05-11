@@ -5,6 +5,24 @@ namespace SunamoCsproj.Tests.csproj;
 public class CsprojHelperTests
 {
     [Fact]
+    public void ParseNamespaceFromCsFileTest()
+    {
+        var actual1 = CsprojHelper.ParseNamespaceFromCsFile(@"using a;
+
+namespace c {
+}");
+
+        var actual2 = CsprojHelper.ParseNamespaceFromCsFile(@"using a;
+
+namespace c;
+
+class A{}");
+
+        Assert.Equal("c", actual1);
+        Assert.Equal("c", actual2);
+    }
+
+    [Fact]
     public void ItemsInItemGroupTest()
     {
         var d = CsprojHelper.ItemsInItemGroup(ItemGroupTagName.PackageReference, @"E:\vs\Projects\_WhenNeedToEditAllCorruptedSlns\CommandsToAllCsprojs.Cmd\CommandsToAllCsprojs.Cmd\CommandsToAllCsprojs.Cmd.csproj");
