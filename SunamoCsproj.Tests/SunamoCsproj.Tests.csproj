@@ -21,6 +21,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\..\sunamoWithoutLocalDep\SunamoCsproj\SunamoCsproj.csproj" />
+    <ProjectReference Include="..\..\..\_WhenNeedToEditAllCorruptedSlns\ToNugets\SunamoCsproj\SunamoCsproj.csproj" />
   </ItemGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
     <DefineConstants>$(DefineConstants);ASYNC;SunamoCsproj.Tests</DefineConstants>

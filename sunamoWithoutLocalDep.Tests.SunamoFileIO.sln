@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SunamoFileIO", "..\..\sunam
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SunamoFileIO.Tests", "SunamoFileIO.Tests\SunamoFileIO.Tests.csproj", "{322E2B72-8445-4A41-8379-43568FB90EDA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SunamoFileIO.Tests2", "SunamoFileIO.Tests2\SunamoFileIO.Tests2.csproj", "{3FD8C75B-DC41-4553-A0DB-241AAC6FFBF3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{322E2B72-8445-4A41-8379-43568FB90EDA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{322E2B72-8445-4A41-8379-43568FB90EDA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{322E2B72-8445-4A41-8379-43568FB90EDA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3FD8C75B-DC41-4553-A0DB-241AAC6FFBF3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3FD8C75B-DC41-4553-A0DB-241AAC6FFBF3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3FD8C75B-DC41-4553-A0DB-241AAC6FFBF3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3FD8C75B-DC41-4553-A0DB-241AAC6FFBF3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

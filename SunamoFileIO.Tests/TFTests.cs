@@ -38,6 +38,8 @@ public class TFTests
         var path = @"D:\_Test\sunamoWithoutLocalDep\SunamoFileIO\AllNN.cs";
         var o = await File.ReadAllLinesAsync(path);
         var l = await TF.ReadAllLines(path);
+
+        
     }
 
     [Fact]
@@ -51,6 +53,12 @@ public class TFTests
     }
 
     [Fact]
+    public async Task ReadAllLinesTest_CantRemoveEmptyLines()
+    {
+        var a = await TF.ReadAllLines(@"E:\vs\Projects\sunamoWithoutLocalDep\SunamoCl\SunamoCmd\CmdBootStrap.cs");
+    }
+
+        [Fact]
     public async Task WriteAllLinesTest()
     {
         var l = new List<string>(["a", "", "b"]);
