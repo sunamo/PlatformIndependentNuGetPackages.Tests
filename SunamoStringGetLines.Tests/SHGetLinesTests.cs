@@ -27,7 +27,6 @@ public class SHGetLinesTests
         var l = SHGetLines.GetLines(o);
         //var l = await TF.ReadAllLines(path);
     }
-    //
 
     [Fact]
     public async Task ReadAllLinesTest_ProblematicFiles()
@@ -37,5 +36,17 @@ public class SHGetLinesTests
         var o = await File.ReadAllTextAsync(path);
         var l = SHGetLines.GetLines(o);
         //var l = await TF.ReadAllLines(path);
+    }
+
+    [Fact]
+    public async Task GetLinesTest_VariousNewLinesDelimiter()
+    {
+        var input = "a\nc{0}\rd\r\ne";
+        //var input1 = string.Format(input, "\r\n");
+        var input2 = string.Format(input, "");
+
+        //var r = SHGetLines.GetLines(input1);
+        var r2 = SHGetLines.GetLines(input2);
+
     }
 }
