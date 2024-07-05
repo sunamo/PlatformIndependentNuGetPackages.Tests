@@ -7,5 +7,4 @@ global using System.Threading.Tasks;
 global using System;
 global using Xunit;
 global using FluentAssertions;
-global using SunamoExceptions;
 //global using Microsoft.VisualStudio.TestTools.UnitTesting;

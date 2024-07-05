@@ -1,5 +1,4 @@
-using SunamoDevCode.FileFormats;
-using SunamoValues.Values;
+
 
 public class XmlLocalisationInterchangeFileFormatTests
 {
@@ -9,9 +8,9 @@ public class XmlLocalisationInterchangeFileFormatTests
     [Fact]
     public void ReplaceRlDataToSessionI18nTest()
     {
-        var RLDataEn = SunamoNotTranslateAble.RLDataEn;
-        var SessI18nShort = SunamoNotTranslateAble.SessI18nShort;
-        var RLDataCs = SunamoNotTranslateAble.RLDataCs;
+        var RLDataEn = ""; // SunamoNotTranslateAble.RLDataEn;
+        var SessI18nShort = ""; //  SunamoNotTranslateAble.SessI18nShort;
+        var RLDataCs = ""; //  SunamoNotTranslateAble.RLDataCs;
 
         var input = "abc sess.i18n(XlfKeys.a) def sess.i18n(XlfKeys.abc) ghi sess.i18n(XlfKeys.a) jkl";
         var expected = "abc sess.i18n(XlfKeys.a) def sess.i18n(XlfKeys.abc) ghi sess.i18n(XlfKeys.a) jkl";

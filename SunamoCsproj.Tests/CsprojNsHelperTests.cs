@@ -22,7 +22,7 @@ public class CsprojNsHelper
         var inputL = SHGetLines.GetLines(input);
 
         List<string> allNamespaces = new List<string>();
-        var actual = await CsprojNsHelper.ParseSharpIfToFirstCodeElement(null, inputL, allNamespaces);
+        var actual = await CsprojNsHelper.ParseSharpIfToFirstCodeElement(null, inputL, allNamespaces, false);
 
         // nutno si povšimnout že mi to dává pryč všechny prázdné řádky
         Assert.Equal(SHGetLines.GetLines(@"using System.Threading.Tasks;
@@ -57,7 +57,7 @@ public class CsprojNsHelper
 
         // Nutno předat vše mezi #if, #endif protože jinak by mi to nevrátilo ani všechny řádky před
         List<string> allNamespaces = new List<string>(new string[] { "SunamoString", "SunamoCsproj" });
-        var actual = await CsprojNsHelper.ParseSharpIfToFirstCodeElement(null, inputL, allNamespaces);
+        var actual = await CsprojNsHelper.ParseSharpIfToFirstCodeElement(null, inputL, allNamespaces, false);
 
         // nutno si povšimnout že mi to dává pryč všechny prázdné řádky
         Assert.Equal(SHGetLines.GetLines(@"using System.Threading.Tasks;
@@ -93,7 +93,7 @@ public class CsprojNsHelper
         var inputL = SHGetLines.GetLines(input);
 
         List<string> allNamespaces = new List<string>(new string[] { "SunamoString", "SunamoCsproj" });
-        var actual = await CsprojNsHelper.ParseSharpIfToFirstCodeElement(null, inputL, allNamespaces);
+        var actual = await CsprojNsHelper.ParseSharpIfToFirstCodeElement(null, inputL, allNamespaces, false);
 
         // nutno si povšimnout že mi to dává pryč všechny prázdné řádky
         Assert.Equal(SHGetLines.GetLines(@"using System.Threading.Tasks;

@@ -79,7 +79,7 @@ public class TestHelper
             folder += modeOfFeature;
         }
 
-        FS.GetFiles(folder, copyFilesRecursively).ToList().ForEach(d => FS.TryDeleteFile(d));
+        FSGetFiles.GetFiles(folder, copyFilesRecursively).ToList().ForEach(d => FS.TryDeleteFile(d));
         if (copyFilesRecursively)
         {
             FS.CopyAllFilesRecursively(folderFrom, folder, FileMoveCollisionOption.Overwrite);
@@ -89,7 +89,7 @@ public class TestHelper
             FS.CopyAllFiles(folderFrom, folder, FileMoveCollisionOption.Overwrite);
         }
 
-        var files = FS.GetFiles(folder);
+        var files = FSGetFiles.GetFiles(folder);
 
         if (replace_Original)
         {
@@ -175,6 +175,6 @@ public class TestHelper
     /// </summary>
     public static string GetFileInProjectsFolder(string fileRelativeToProjectPath)
     {
-        return FS.Combine(DefaultPaths.vsProjects, ThisApp.Name, ThisApp.Project, fileRelativeToProjectPath);
+        return FS.Combine(BasePathsHelper.vsProjects, ThisApp.Name, ThisApp.Project, fileRelativeToProjectPath);
     }
 }

@@ -10,7 +10,7 @@ public partial class FSTests
     public void GetAbsolutePathTest()
     {
         var line = @"..\_ut2\sunamo.Tests2\TestValues\TestValues.csproj";
-        var p = FS.GetAbsolutePath(DefaultPaths.vs, line);
+        var p = FS.GetAbsolutePath(BasePathsHelper.vs, line);
         //E:\vs\Projects\..\_ut2\sunamo.Tests2\TestValues\TestValues.csproj
     }
 
@@ -18,7 +18,7 @@ public partial class FSTests
     public void GetAbsolutePath2Test()
     {
         var line = @"..\_ut2\sunamo.Tests2\TestValues\TestValues.csproj";
-        var p = FS.GetAbsolutePath2(DefaultPaths.vs, line);
+        var p = FS.GetAbsolutePath2(BasePathsHelper.vs, line);
         //E:\vs\Projects
     }
 

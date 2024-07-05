@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SunamoDevCode", "..\..\suna
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SunamoDevCode.Tests", "SunamoCode.Tests\SunamoDevCode.Tests.csproj", "{533C17B2-A0E1-4285-ACF8-CD17502F385A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RunnerDevCode", "RunnerDevCode\RunnerDevCode.csproj", "{2CE9FE0A-BAC5-4668-B0DE-4E7CADA82C97}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -31,6 +33,14 @@ Global
 		{533C17B2-A0E1-4285-ACF8-CD17502F385A}.Release|Any CPU.Build.0 = Release|Any CPU
 		{533C17B2-A0E1-4285-ACF8-CD17502F385A}.Release|x86.ActiveCfg = Release|Any CPU
 		{533C17B2-A0E1-4285-ACF8-CD17502F385A}.Release|x86.Build.0 = Release|Any CPU
+		{2CE9FE0A-BAC5-4668-B0DE-4E7CADA82C97}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2CE9FE0A-BAC5-4668-B0DE-4E7CADA82C97}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2CE9FE0A-BAC5-4668-B0DE-4E7CADA82C97}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{2CE9FE0A-BAC5-4668-B0DE-4E7CADA82C97}.Debug|x86.Build.0 = Debug|Any CPU
+		{2CE9FE0A-BAC5-4668-B0DE-4E7CADA82C97}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2CE9FE0A-BAC5-4668-B0DE-4E7CADA82C97}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2CE9FE0A-BAC5-4668-B0DE-4E7CADA82C97}.Release|x86.ActiveCfg = Release|Any CPU
+		{2CE9FE0A-BAC5-4668-B0DE-4E7CADA82C97}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
