@@ -1,4 +1,4 @@
-﻿namespace SunamoRegex.Tests;
+namespace RunnerBazosCrawler;
 
 internal class Program
 {
