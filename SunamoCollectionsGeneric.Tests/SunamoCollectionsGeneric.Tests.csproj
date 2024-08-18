@@ -19,12 +19,12 @@
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\sunamoWithoutLocalDep\SunamoCollectionsGeneric\SunamoCollectionsGeneric.csproj" />
+    <ProjectReference Include="..\..\..\PlatformIndependentNuGetPackages\SunamoCollectionsGeneric\SunamoCollectionsGeneric.csproj" />
   </ItemGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
-    <DefineConstants>$(DefineConstants);SunamoCollectionsGeneric.Tests</DefineConstants>
+    <DefineConstants>$(DefineConstants);SunamoCollectionsGeneric.Tests;SunamoCollectionsGeneric.Tests.csproj</DefineConstants>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
-    <DefineConstants>$(DefineConstants);SunamoCollectionsGeneric.Tests</DefineConstants>
+    <DefineConstants>$(DefineConstants);SunamoCollectionsGeneric.Tests;SunamoCollectionsGeneric.Tests.csproj</DefineConstants>
   </PropertyGroup>
 </Project>

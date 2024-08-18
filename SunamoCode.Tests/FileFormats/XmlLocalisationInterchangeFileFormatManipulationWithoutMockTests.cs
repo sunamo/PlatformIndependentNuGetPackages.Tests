@@ -1,3 +1,5 @@
+
+
 //namespace SunamoDevCode.Tests.FileFormats;
 //public class XmlLocalisationInterchangeFileFormatManipulationWithoutMockTests : XmlTestsBase
 //{
@@ -25,7 +27,7 @@
 //    await
 //#endif
 // XmlLocalisationInterchangeFileFormat.GetTransUnits(base.pathXlf);
-//        //XmlLocalisationInterchangeFileFormat.RemoveDuplicatesInXlfFile(base.pathXlf);
+//        //XmlLocalisationInterchangeFileFormatSH.RemoveDuplicatesInXlfFile(base.pathXlf);
 
 //        // Dont know how this is possible but this is working
 //        foreach (var item in xlfData.trans_units)

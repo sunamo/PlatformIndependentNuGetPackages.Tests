@@ -1,6 +1,3 @@
-using SunamoWinStd;
-using System.IO;
-
 namespace SunamoWinStdTests;
 
 [TestClass]

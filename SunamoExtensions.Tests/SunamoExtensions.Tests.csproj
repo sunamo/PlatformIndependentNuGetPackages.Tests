@@ -20,12 +20,12 @@
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\sunamoWithoutLocalDep\SunamoExtensions\SunamoExtensions.csproj" />
+    <ProjectReference Include="..\..\..\PlatformIndependentNuGetPackages\SunamoExtensions\SunamoExtensions.csproj" />
   </ItemGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
-    <DefineConstants>$(DefineConstants);SunamoExtensions.Tests</DefineConstants>
+    <DefineConstants>$(DefineConstants);SunamoExtensions.Tests;SunamoExtensions.Tests.csproj</DefineConstants>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
-    <DefineConstants>$(DefineConstants);SunamoExtensions.Tests</DefineConstants>
+    <DefineConstants>$(DefineConstants);SunamoExtensions.Tests;SunamoExtensions.Tests.csproj</DefineConstants>
   </PropertyGroup>
 </Project>

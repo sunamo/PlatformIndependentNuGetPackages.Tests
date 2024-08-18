@@ -1,5 +1,3 @@
-﻿using SunamoPS.Tests;
-
 namespace RunnerPS;
 
 internal class Program

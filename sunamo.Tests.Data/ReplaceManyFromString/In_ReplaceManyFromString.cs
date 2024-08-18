@@ -1,5 +1,5 @@
+
 namespace sunamo.Tests.Data.ReplaceManyFromString;
-{
     public class ConsoleApp1ResearchTests
     {
         [TestMethod]
@@ -76,7 +76,7 @@ namespace sunamo.Tests.Data.ReplaceManyFromString;
 5";
             string expected = "1 110";
             string actual = Program.OccupationOfCollegeRooms(data, building, numberOfRooms);
-            ClipboardHelper.SetText(actual);
+            ClipboardService.SetText(actual);
 
             Assert.Equal(expected, actual);
 

@@ -1,7 +1,13 @@
 ﻿namespace SunamoPlatformUwpInterop.Tests;
 
-public class AppDataTests //: ProgramShared
+using SunamoPlatformUwpInterop._public.SunamoEnums.Enums;
+using SunamoPlatformUwpInterop.AppData;
+using SunamoPlatformUwpInterop.Args;
+
+public class AppDataTests : TestsBase //: ProgramShared
 {
+
+
     [Fact]
     public void Test1()
     {
@@ -16,10 +22,17 @@ public class AppDataTests //: ProgramShared
          * 
          */
         //ThisApp.Name = "Test";
-        ////CreatePathToFiles(AppData.AppData.ci.GetFileString);
-
-        //AppData.AppData.ci.CreateAppFoldersIfDontExists(new SunamoPlatformUwpInterop.Args.CreateAppFoldersIfDontExistsArgs { });
+        //CreatePathToFiles(AppData.AppData.ci.GetFileString);
 
 
+
+        var d = AppData.ci.GetFolder(AppFolders.Cache);
+        var f = AppData.ci.GetFile(AppFolders.Crypted, "a");
+    }
+
+    [Fact]
+    public void ReadFileOfSettingsListTest()
+    {
+        var c = AppData.ci.ReadFileOfSettingsBool("a.txt");
     }
 }

@@ -1,4 +1,4 @@
-// Compilation direct to memory and run
+
 
 public partial class RoslynLearn
 {

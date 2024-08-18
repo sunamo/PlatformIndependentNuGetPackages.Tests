@@ -1,4 +1,4 @@
-//using static CsFileFilter;
+
 
 //public class CsFileFilterTests
 //{

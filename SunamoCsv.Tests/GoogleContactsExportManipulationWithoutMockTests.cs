@@ -1,19 +1,4 @@
 namespace SunamoCsv.Tests
-{
-    /*
-
-Google's export format:
-první řádek s daty má vyparsováno 21 položek ale mnoho z nich je ,
-V hlavičce je 56 buňek
-v excelu je hlavička addresse [35] ale v c# [21]
-když to otevřu jako textový soubor mám zde také 34 čárek, tz. že knihovna parsuje dobře ale ten Google Export je nějaký divný
-
-Outlook's export format:
-v records je fields někdy 13, někdy 45
-headers je 88
-
-bude lepší použít vcf, u jakéhokoliv csv nejsou definovnány žádné standardy: https://stackoverflow.com/a/25767703/9327173
-     */
 
     public class GoogleContactsExportManipulationWithoutMockTests
     {

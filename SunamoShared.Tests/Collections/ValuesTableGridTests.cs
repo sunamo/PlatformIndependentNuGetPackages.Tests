@@ -1,9 +1,4 @@
-//using SunamoCollectionsGeneric;
-//using SunamoCollectionsGeneric.Collections;
-//using SunamoTextOutputGenerator;
 
-
-//namespace sunamo.Tests.Collections;
 
 //public class ValuesTableGridTests
 //{

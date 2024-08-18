@@ -22,9 +22,9 @@
   <Import Project="..\packages\TidyHtml5ManagedRepack.1.1.4\build\TidyHtml5ManagedRepack.targets" Condition="Exists('..\packages\TidyHtml5ManagedRepack.1.1.4\build\TidyHtml5ManagedRepack.targets')">
   </Import>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
-    <DefineConstants>$(DefineConstants);ASYNC;SunamoTidy.Tests</DefineConstants>
+    <DefineConstants>$(DefineConstants);ASYNC;SunamoTidy.Tests;SunamoTidy.Tests.csproj</DefineConstants>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
-    <DefineConstants>$(DefineConstants);ASYNC;SunamoTidy.Tests</DefineConstants>
+    <DefineConstants>$(DefineConstants);ASYNC;SunamoTidy.Tests;SunamoTidy.Tests.csproj</DefineConstants>
   </PropertyGroup>
 </Project>

@@ -30,9 +30,9 @@
     <PackageReference Include="SunamoExceptions" Version="24.1.11.1" />
   </ItemGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
-    <DefineConstants>$(DefineConstants);ASYNC;sunamo.Tests.Data</DefineConstants>
+    <DefineConstants>$(DefineConstants);ASYNC;sunamo.Tests.Data;sunamo.Tests.Data.csproj</DefineConstants>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
-    <DefineConstants>$(DefineConstants);ASYNC;sunamo.Tests.Data</DefineConstants>
+    <DefineConstants>$(DefineConstants);ASYNC;sunamo.Tests.Data;sunamo.Tests.Data.csproj</DefineConstants>
   </PropertyGroup>
 </Project>

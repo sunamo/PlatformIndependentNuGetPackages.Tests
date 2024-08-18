@@ -8,3 +8,4 @@ global using System;
 global using Xunit;
 global using FluentAssertions;
 //global using Microsoft.VisualStudio.TestTools.UnitTesting;
+global using SunamoStringGetLines;

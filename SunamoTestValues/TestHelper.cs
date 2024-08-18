@@ -1,7 +1,4 @@
 
-using SunamoTestValues;
-using SunamoTestValues._sunamo;
-using TestValues._sunamo;
 
 /// <summary>
 /// Right format of paths are:

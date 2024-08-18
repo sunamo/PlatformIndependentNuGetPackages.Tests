@@ -1,5 +1,5 @@
 namespace SunamoYaml.Tests
-{
+
     public class YamlHelperTests
     {
         string path = null;

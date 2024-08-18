@@ -1,6 +1,5 @@
 namespace SunamoMime.Tests
-{
-    #region For easy copy
+
     public class SunamoMimeHelperTests
     {
         //[Fact]
@@ -9,8 +8,8 @@ namespace SunamoMime.Tests
             SunamoMimeHelper.Init();
             var f = @"D:\_Test\sunamo\win\Helpers\MImeHelper\GetMimeFromFile\Real";
             //application/octet-stream>
-            Assert.Equal("jpg", SunamoMimeHelper.FileType((await TFSE.ReadAllBytes(f + AllExtensions.jpg)).ToArray()));
-            Assert.Equal("webp", SunamoMimeHelper.FileType((await TFSE.ReadAllBytes(f + AllExtensions.webp)).ToArray()));
+            Assert.Equal("jpg", SunamoMimeHelper.FileType((await TF.ReadAllBytes(f + AllExtensions.jpg)).ToArray()));
+            Assert.Equal("webp", SunamoMimeHelper.FileType((await TF.ReadAllBytes(f + AllExtensions.webp)).ToArray()));
         }
     }
     #endregion

@@ -7,7 +7,7 @@
     <IsTestProject>true</IsTestProject>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="..\..\..\sunamoWithoutLocalDep\SunamoValues\AllStrings.cs" Link="_linked\AllStrings.cs" />
+    <Compile Include="..\..\..\PlatformIndependentNuGetPackages\SunamoValues\AllStrings.cs" Link="_linked\AllStrings.cs" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.8.0" />
@@ -27,9 +27,9 @@
     <Folder Include="_linked\" />
   </ItemGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
-    <DefineConstants>$(DefineConstants);ASYNC;SunamoCollections.Tests</DefineConstants>
+    <DefineConstants>$(DefineConstants);ASYNC;SunamoCollections.Tests;SunamoCollections.Tests.csproj</DefineConstants>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
-    <DefineConstants>$(DefineConstants);ASYNC;SunamoCollections.Tests</DefineConstants>
+    <DefineConstants>$(DefineConstants);ASYNC;SunamoCollections.Tests;SunamoCollections.Tests.csproj</DefineConstants>
   </PropertyGroup>
 </Project>

@@ -11,7 +11,7 @@ public class SHGetLinesTests
     [Fact]
     public async Task ReadAllLinesTest_AllN()
     {
-        var path = @"D:\_Test\sunamoWithoutLocalDep\SunamoFileIO\AllNN.cs";
+        var path = @"D:\_Test\PlatformIndependentNuGetPackages\SunamoFileIO\AllNN.cs";
         var o = await File.ReadAllTextAsync(path);
         var l = SHGetLines.GetLines(o);
         //var l = await TF.ReadAllLines(path);
@@ -20,7 +20,7 @@ public class SHGetLinesTests
     [Fact]
     public async Task ReadAllLinesTest_AllRn()
     {
-        var bp = @"D:\_Test\sunamoWithoutLocalDep\SunamoFileIO\";
+        var bp = @"D:\_Test\PlatformIndependentNuGetPackages\SunamoFileIO\";
         var path = bp + "AllRnRn.cs";
         // TF.ReadAllLines vrací 26 řádků, ReadAllLinesAsync 29
         var o = await File.ReadAllTextAsync(path);
@@ -31,7 +31,7 @@ public class SHGetLinesTests
     [Fact]
     public async Task ReadAllLinesTest_ProblematicFiles()
     {
-        var path = @"E:\vs\Projects\sunamoWithoutLocalDep\SunamoLang\SunamoI18N\AppLangHelper.cs";
+        var path = @"E:\vs\Projects\PlatformIndependentNuGetPackages\SunamoLang\SunamoI18N\AppLangHelper.cs";
         // TF.ReadAllLines vrací 26 řádků, ReadAllLinesAsync 29
         var o = await File.ReadAllTextAsync(path);
         var l = SHGetLines.GetLines(o);

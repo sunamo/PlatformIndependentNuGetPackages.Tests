@@ -1,10 +1,17 @@
-
-using SunamoStringGetLines;
+using SunamoDevCode.SunamoCSharp;
+using System.IO;
 
 namespace SunamoDevCode.Tests.Helpers;
 
 public class CSharpHelperTests
 {
+    [Fact]
+    public async Task IsEmptyCommentedOrOnlyWithNamespaceTest()
+    {
+        var d = (await File.ReadAllLinesAsync(@"E:\vs\Projects\PlatformIndependentNuGetPackages\SunamoData\_sunamo\SunamoExceptions\_AddedToAllCsproj\CASunamoExceptions.cs")).ToList();
+        var b = CSharpHelper.IsEmptyCommentedOrOnlyWithNamespace("", d, null, new List<string>());
+    }
+
     [Fact]
     public void RemoveCommentsTest()
     {

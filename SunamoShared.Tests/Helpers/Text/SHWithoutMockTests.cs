@@ -15,7 +15,7 @@ ReplaceManyFromStringTest()
         //[Fact] -> [Fact]
         //            testString = "Assert.AreEqual<*> -> CollectionAssert.AreEqual";
 
-        //            string file = @"E:\vs\Projects\sunamoWithoutLocalDep.Tests\sunamo.Tests.Data\ReplaceManyFromString\In_ReplaceManyFromString.cs";
+        //            string file = @"E:\vs\Projects\PlatformIndependentNuGetPackages.Tests\sunamo.Tests.Data\ReplaceManyFromString\In_ReplaceManyFromString.cs";
         //            var s =
         //#if ASYNC
         //    await

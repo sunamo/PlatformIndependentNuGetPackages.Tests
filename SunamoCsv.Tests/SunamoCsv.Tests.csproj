@@ -23,12 +23,12 @@
     <PackageReference Include="SunamoExtensions" Version="24.1.10.1" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\sunamoWithoutLocalDep\SunamoFileIO\SunamoFileIO.csproj" />
+    <ProjectReference Include="..\..\..\PlatformIndependentNuGetPackages\SunamoFileIO\SunamoFileIO.csproj" />
   </ItemGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
-    <DefineConstants>$(DefineConstants);ASYNC;SunamoCsv.Tests</DefineConstants>
+    <DefineConstants>$(DefineConstants);ASYNC;SunamoCsv.Tests;SunamoCsv.Tests.csproj</DefineConstants>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
-    <DefineConstants>$(DefineConstants);ASYNC;SunamoCsv.Tests</DefineConstants>
+    <DefineConstants>$(DefineConstants);ASYNC;SunamoCsv.Tests;SunamoCsv.Tests.csproj</DefineConstants>
   </PropertyGroup>
 </Project>

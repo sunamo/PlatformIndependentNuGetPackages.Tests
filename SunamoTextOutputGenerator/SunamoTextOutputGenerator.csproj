@@ -19,9 +19,9 @@
     </PackageReference>
   </ItemGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
-    <DefineConstants>$(DefineConstants);ASYNC;SunamoTextOutputGenerator</DefineConstants>
+    <DefineConstants>$(DefineConstants);ASYNC;SunamoTextOutputGenerator;SunamoTextOutputGenerator.csproj</DefineConstants>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
-    <DefineConstants>$(DefineConstants);ASYNC;SunamoTextOutputGenerator</DefineConstants>
+    <DefineConstants>$(DefineConstants);ASYNC;SunamoTextOutputGenerator;SunamoTextOutputGenerator.csproj</DefineConstants>
   </PropertyGroup>
 </Project>

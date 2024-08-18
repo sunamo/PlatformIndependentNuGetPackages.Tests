@@ -14,12 +14,12 @@
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\sunamoWithoutLocalDep\SunamoDevCode\SunamoDevCode.csproj" />
+    <ProjectReference Include="..\..\..\PlatformIndependentNuGetPackages\SunamoDevCode\SunamoDevCode.csproj" />
   </ItemGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
-    <DefineConstants>$(DefineConstants);ASYNC;SunamoDevCode.Tests</DefineConstants>
+    <DefineConstants>$(DefineConstants);ASYNC;SunamoDevCode.Tests;SunamoDevCode.Tests.csproj</DefineConstants>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
-    <DefineConstants>$(DefineConstants);ASYNC;SunamoDevCode.Tests</DefineConstants>
+    <DefineConstants>$(DefineConstants);ASYNC;SunamoDevCode.Tests;SunamoDevCode.Tests.csproj</DefineConstants>
   </PropertyGroup>
 </Project>

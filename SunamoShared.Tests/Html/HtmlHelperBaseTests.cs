@@ -4,7 +4,7 @@ public  class HtmlHelperBaseTests
 {
     protected HtmlNode documentNode;
     protected HtmlNode bodyNode;
-    public const string testFile = @"E:\vs\Projects\sunamoWithoutLocalDep.Tests\sunamo.Tests\HtmlHelperTestPage.html";
+    public const string testFile = @"E:\vs\Projects\PlatformIndependentNuGetPackages.Tests\sunamo.Tests\HtmlHelperTestPage.html";
 
     public readonly string cssClassC = "c";
     public readonly string cssClassA = "a";

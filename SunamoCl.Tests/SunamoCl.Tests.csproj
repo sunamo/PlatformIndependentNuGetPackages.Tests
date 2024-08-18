@@ -4,15 +4,16 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
   </PropertyGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\..\..\sunamoWithoutLocalDep\SunamoClipboard\SunamoClipboard.csproj" />
-    <ProjectReference Include="..\..\..\sunamoWithoutLocalDep\SunamoDebugIO\SunamoDebugIO.csproj" />
-    <ProjectReference Include="..\..\..\sunamoWithoutLocalDep\SunamoExceptions\SunamoExceptions.csproj" />
-  </ItemGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
-    <DefineConstants>$(DefineConstants);SunamoCl.Tests</DefineConstants>
+    <DefineConstants>$(DefineConstants);SunamoCl.Tests;SunamoCl.Tests.csproj</DefineConstants>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
-    <DefineConstants>$(DefineConstants);SunamoCl.Tests</DefineConstants>
+    <DefineConstants>$(DefineConstants);SunamoCl.Tests;SunamoCl.Tests.csproj</DefineConstants>
   </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="xunit.extensibility.core" Version="2.9.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\PlatformIndependentNuGetPackages\SunamoCl\SunamoCl.csproj" />
+  </ItemGroup>
 </Project>

@@ -1,6 +1,3 @@
-using SunamoShared.Tests._sunamo;
-using SunamoValues.Constants;
-
 namespace sunamo.Tests.Helpers.Html;
 
 /// <summary>
@@ -8,7 +5,7 @@ namespace sunamo.Tests.Helpers.Html;
 /// </summary>
 public class HtmlHelperManipulationWithoutMockGoogleFormTests
 {
-    const string testFile = @"E:\vs\Projects\sunamoWithoutLocalDep.Tests\sunamo.Tests\HtmlHelperGoogleFormTestPage.html";
+    const string testFile = @"E:\vs\Projects\PlatformIndependentNuGetPackages.Tests\sunamo.Tests\HtmlHelperGoogleFormTestPage.html";
     HtmlNode hd;
     const string mainQuestionTitle = "ss-q-title";
     const string additionalQuestionTitle = "ss-q-help ss-secondary-text";

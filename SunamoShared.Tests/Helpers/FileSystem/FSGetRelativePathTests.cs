@@ -8,7 +8,7 @@ public partial class FSTests
     {
         // potřebuji z A1 abych viděl A2
         var a1 = @"E:\vs\Projects\EverythingClient\"; //c.csproj
-        var a2 = @"E:\vs\Projects\sunamoWithoutLocalDep\sunamo\sunamo.csproj";
+        var a2 = @"E:\vs\Projects\PlatformIndependentNuGetPackages\sunamo\sunamo.csproj";
 
 
         // 1/ 
@@ -34,7 +34,7 @@ public partial class FSTests
     {
         // In difference with GetRelativePathTest missing \ on end
         var a1 = @"E:\vs\Projects\EverythingClient";
-        var a2 = @"E:\vs\Projects\sunamoWithoutLocalDep\sunamo\sunamo.csproj";
+        var a2 = @"E:\vs\Projects\PlatformIndependentNuGetPackages\sunamo\sunamo.csproj";
 
         var expected = @"..\sunamo\sunamo\sunamo.csproj";
 
@@ -55,8 +55,8 @@ public partial class FSTests
     [Fact]
     public void GetRelativePathTest3()
     {
-        var a1 = @"E:\vs\Projects\sunamoWithoutLocalDep";
-        var a2 = @"E:\vs\Projects\sunamoWithoutLocalDep\SunamoCef\SunamoCef.csproj";
+        var a1 = @"E:\vs\Projects\PlatformIndependentNuGetPackages";
+        var a2 = @"E:\vs\Projects\PlatformIndependentNuGetPackages\SunamoCef\SunamoCef.csproj";
 
         var expected = @"SunamoCef\SunamoCef.csproj";
 
@@ -72,7 +72,7 @@ public partial class FSTests
     public void GetRelativePathTest4()
     {
         var a1 = @"E:\vs\Projects\SunamoCzAdmin";
-        var a2 = @"E:\vs\Projects\sunamoWithoutLocalDep.notmine.web\SearchTextBox.web\SearchTextBox.web.csproj";
+        var a2 = @"E:\vs\Projects\PlatformIndependentNuGetPackages.notmine.web\SearchTextBox.web\SearchTextBox.web.csproj";
 
         var expected = @"..\sunamo.notmine.web\SearchTextBox.web\SearchTextBox.web.csproj";
 

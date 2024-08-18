@@ -13,15 +13,15 @@
     <PackageReference Include="xunit.runner.visualstudio" Version="2.5.3" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\sunamoWithoutLocalDep\SunamoStringGetLines\SunamoStringGetLines.csproj" />
+    <ProjectReference Include="..\..\..\PlatformIndependentNuGetPackages\SunamoStringGetLines\SunamoStringGetLines.csproj" />
   </ItemGroup>
   <ItemGroup>
     <Using Include="Xunit" />
   </ItemGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
-    <DefineConstants>$(DefineConstants);SunamoStringGetLines.Tests</DefineConstants>
+    <DefineConstants>$(DefineConstants);SunamoStringGetLines.Tests;SunamoStringGetLines.Tests.csproj</DefineConstants>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
-    <DefineConstants>$(DefineConstants);SunamoStringGetLines.Tests</DefineConstants>
+    <DefineConstants>$(DefineConstants);SunamoStringGetLines.Tests;SunamoStringGetLines.Tests.csproj</DefineConstants>
   </PropertyGroup>
 </Project>

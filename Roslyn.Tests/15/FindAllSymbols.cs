@@ -1,7 +1,4 @@
-/*
- * Only with searching is slower than SymbolFinder
- * 
- */
+
 
 public partial class RoslynLearn
 {

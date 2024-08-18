@@ -25,9 +25,9 @@
     <ProjectReference Include="..\TestValues\TestValues.csproj" />
   </ItemGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
-    <DefineConstants>$(DefineConstants);ASYNC;SunamoShared.Tests</DefineConstants>
+    <DefineConstants>$(DefineConstants);ASYNC;SunamoShared.Tests;SunamoShared.Tests.csproj</DefineConstants>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
-    <DefineConstants>$(DefineConstants);ASYNC;SunamoShared.Tests</DefineConstants>
+    <DefineConstants>$(DefineConstants);ASYNC;SunamoShared.Tests;SunamoShared.Tests.csproj</DefineConstants>
   </PropertyGroup>
 </Project>

@@ -1,4 +1,4 @@
-
+using SunamoDevCode.FileFormats;
 
 public class XmlLocalisationInterchangeFileFormatTests
 {

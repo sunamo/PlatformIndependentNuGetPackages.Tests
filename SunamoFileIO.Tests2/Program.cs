@@ -1,6 +1,3 @@
-﻿
-using SunamoFileIO;
-
-var a = await TF.ReadAllLines(@"E:\vs\Projects\sunamoWithoutLocalDep\SunamoCl\SunamoCmd\CmdBootStrap.cs");
+var a = await TF.ReadAllLines(@"E:\vs\Projects\PlatformIndependentNuGetPackages\SunamoCl\SunamoCmd\CmdBootStrap.cs");
 // See https://aka.ms/new-console-template for more information
 Console.WriteLine("Hello, World!");

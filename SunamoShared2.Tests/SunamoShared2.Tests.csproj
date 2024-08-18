@@ -19,12 +19,12 @@
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\sunamoWithoutLocalDep\SunamoShared\SunamoShared.csproj" />
+    <ProjectReference Include="..\..\..\PlatformIndependentNuGetPackages\SunamoShared\SunamoShared.csproj" />
   </ItemGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
-    <DefineConstants>$(DefineConstants);ASYNC;SunamoShared2.Tests</DefineConstants>
+    <DefineConstants>$(DefineConstants);ASYNC;SunamoShared2.Tests;SunamoShared2.Tests.csproj</DefineConstants>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
-    <DefineConstants>$(DefineConstants);ASYNC;SunamoShared2.Tests</DefineConstants>
+    <DefineConstants>$(DefineConstants);ASYNC;SunamoShared2.Tests;SunamoShared2.Tests.csproj</DefineConstants>
   </PropertyGroup>
 </Project>

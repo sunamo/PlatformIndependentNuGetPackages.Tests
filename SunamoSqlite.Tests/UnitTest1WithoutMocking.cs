@@ -1,5 +1,5 @@
 namespace SunamoSqlite.Tests
-{
+
     public class UnitTest1WithoutMocking
     {
         const string tableName = "table2";

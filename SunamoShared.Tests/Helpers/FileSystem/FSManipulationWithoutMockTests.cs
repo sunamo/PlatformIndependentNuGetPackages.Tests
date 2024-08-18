@@ -41,9 +41,9 @@ public class FSManipulationWithoutMockTests
     //[Fact]
     public void GetFilesMoreMascAsyncTest()
     {
-        FS.TryDeleteDirectoryOrFile(@"E:\vs\Projects\sunamoWithoutLocalDep.cz\apps.sunamo.cz\_\Content");
+        FS.TryDeleteDirectoryOrFile(@"E:\vs\Projects\PlatformIndependentNuGetPackages.cz\apps.sunamo.cz\_\Content");
 
-        var folder = @"E:\vs\Projects\sunamoWithoutLocalDep.cz\";
+        var folder = @"E:\vs\Projects\PlatformIndependentNuGetPackages.cz\";
         string mask = AllStrings.ast;
         var so = SearchOption.AllDirectories;
         var gfmo = new GetFilesMoreMascArgs { deleteFromDriveWhenCannotBeResolved = true };

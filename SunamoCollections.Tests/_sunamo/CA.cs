@@ -1,13 +1,5 @@
-﻿using SunamoPercentCalculator;
-using SunamoTextOutputGenerator;
-using SunamoValues;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
 namespace SunamoCollections.Tests._sunamo;
+
 internal class CA
 {
     public static string CompareListResult(bool alsoFileNames, string nameForFirstFolder, string nameForSecondFolder, string nameOfSolution, List<string> files1, List<string> files2, List<string> inBoth)

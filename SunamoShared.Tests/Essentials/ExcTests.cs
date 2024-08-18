@@ -1,5 +1,3 @@
-using SunamoExceptions.OnlyInSE;
-
 public class ExcTests
 {
     [Fact]

@@ -1,3 +1,5 @@
+
+
 public class XHManipulationWithoutMockTests //: XmlTestsBase
 {
     //[Fact]

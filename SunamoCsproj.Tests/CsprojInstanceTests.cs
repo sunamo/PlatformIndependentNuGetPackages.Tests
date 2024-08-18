@@ -4,7 +4,7 @@ public class CsprojInstanceTests : SwdRepoNames
     [Fact]
     public async Task RemoveSingleItemGroupTest()
     {
-        CsprojInstance csp = new CsprojInstance(await File.ReadAllTextAsync(@"E:\vs\Projects\sunamoWithoutLocalDep\SunamoAsync\SunamoAsync.csproj"));
+        CsprojInstance csp = new CsprojInstance(await File.ReadAllTextAsync(@"E:\vs\Projects\PlatformIndependentNuGetPackages\SunamoAsync\SunamoAsync.csproj"));
 
         csp.RemoveSingleItemGroup("SunamoArgs", Items.ItemGroupTagName.PackageReference);
     }
@@ -36,5 +36,11 @@ public class CsprojInstanceTests : SwdRepoNames
         // Act
 
         // Assert
+    }
+
+    [Fact]
+    public void AddTagsForNugetReadmeFile()
+    {
+        var csi = new CsprojInstance();
     }
 }

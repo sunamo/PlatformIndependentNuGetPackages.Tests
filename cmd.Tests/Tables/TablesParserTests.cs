@@ -1,5 +1,5 @@
 namespace cmd.Tests.Tables
-{
+
     class TablesParserTests
     {
         public void ToStringTable()

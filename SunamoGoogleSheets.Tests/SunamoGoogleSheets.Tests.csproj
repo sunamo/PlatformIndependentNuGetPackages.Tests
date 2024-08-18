@@ -8,6 +8,7 @@
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.6.0" />
+    <PackageReference Include="TextCopy" Version="6.2.1" />
     <PackageReference Include="xunit" Version="2.4.2" />
     <PackageReference Include="xunit.runner.visualstudio" Version="2.4.5">
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
@@ -19,12 +20,12 @@
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\sunamoWithoutLocalDep\SunamoGoogleSheets\SunamoGoogleSheets.csproj" />
+    <ProjectReference Include="..\..\..\PlatformIndependentNuGetPackages\SunamoGoogleSheets\SunamoGoogleSheets.csproj" />
   </ItemGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
-    <DefineConstants>$(DefineConstants);SunamoGoogleSheets.Tests</DefineConstants>
+    <DefineConstants>$(DefineConstants);SunamoGoogleSheets.Tests;SunamoGoogleSheets.Tests.csproj</DefineConstants>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
-    <DefineConstants>$(DefineConstants);SunamoGoogleSheets.Tests</DefineConstants>
+    <DefineConstants>$(DefineConstants);SunamoGoogleSheets.Tests;SunamoGoogleSheets.Tests.csproj</DefineConstants>
   </PropertyGroup>
 </Project>

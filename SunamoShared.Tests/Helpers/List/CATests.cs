@@ -1,10 +1,3 @@
-﻿using SunamoCollectionsGeneric;
-using SunamoData.Data;
-using SunamoEnums.Enums;
-using SunamoShared.Entity;
-using SunamoShared.Tests._sunamo;
-using SunamoValues;
-
 namespace sunamo.Tests.Helpers.List;
 
 public class CATests
@@ -165,13 +158,13 @@ a b c";
         var inputLines = SHGetLines.GetLines(input);
 
         // first line
-        var c = CA.ReturnWhichContains(inputLines, "a d", ContainsCompareMethod.SplitToWords);
+        var c = CA.ReturnWhichContains(inputLines, "a d", ContainsCompareMethodSH.SplitToWords);
         // first line
         var c2 = CA.ReturnWhichContains(inputLines, "a !c", ContainsCompareMethod.Negations);
         // nothing
         var c3 = CA.ReturnWhichContains(inputLines, "a d", ContainsCompareMethod.WholeInput);
         // second line
-        var c4 = CA.ReturnWhichContains(inputLines, "a c", ContainsCompareMethod.SplitToWords);
+        var c4 = CA.ReturnWhichContains(inputLines, "a c", ContainsCompareMethodSH.SplitToWords);
 
         int i = 0;
     }

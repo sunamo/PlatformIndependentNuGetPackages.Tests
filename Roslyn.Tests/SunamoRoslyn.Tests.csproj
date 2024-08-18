@@ -28,9 +28,9 @@
     </PackageReference>
   </ItemGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
-    <DefineConstants>$(DefineConstants);ASYNC;SunamoRoslyn.Tests</DefineConstants>
+    <DefineConstants>$(DefineConstants);ASYNC;SunamoRoslyn.Tests;SunamoRoslyn.Tests.csproj</DefineConstants>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
-    <DefineConstants>$(DefineConstants);ASYNC;SunamoRoslyn.Tests</DefineConstants>
+    <DefineConstants>$(DefineConstants);ASYNC;SunamoRoslyn.Tests;SunamoRoslyn.Tests.csproj</DefineConstants>
   </PropertyGroup>
 </Project>

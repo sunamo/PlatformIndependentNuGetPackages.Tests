@@ -1,5 +1,3 @@
-﻿using SunamoCsproj.Tests.csproj;
-
 namespace RunnerCsproj;
 
 internal class Program

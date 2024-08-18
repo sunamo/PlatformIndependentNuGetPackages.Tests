@@ -21,12 +21,12 @@
     <PackageReference Include="YamlDotNet" Version="15.1.2" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\sunamoWithoutLocalDep\SunamoRoslyn2_LaterMergeToSunamoRoslyn\SunamoRoslyn2_LaterMergeToSunamoRoslyn.csproj" />
+    <ProjectReference Include="..\..\..\PlatformIndependentNuGetPackages\SunamoRoslyn2_LaterMergeToSunamoRoslyn\SunamoRoslyn2_LaterMergeToSunamoRoslyn.csproj" />
   </ItemGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
-    <DefineConstants>$(DefineConstants);SunamoRoslyn2.Tests</DefineConstants>
+    <DefineConstants>$(DefineConstants);SunamoRoslyn2.Tests;SunamoRoslyn2.Tests.csproj</DefineConstants>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
-    <DefineConstants>$(DefineConstants);SunamoRoslyn2.Tests</DefineConstants>
+    <DefineConstants>$(DefineConstants);SunamoRoslyn2.Tests;SunamoRoslyn2.Tests.csproj</DefineConstants>
   </PropertyGroup>
 </Project>

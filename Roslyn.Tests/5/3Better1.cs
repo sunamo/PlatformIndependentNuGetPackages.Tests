@@ -1,4 +1,5 @@
-/*
+
+
  * public class Sample
             {
                public void Foo()
@@ -24,7 +25,7 @@ public partial class _3Better1
             //Construct an EmptyStatementSyntax with a missing semicolon
             return node.WithSemicolonToken(
                 SyntaxFactory.MissingToken(SyntaxKind.SemicolonToken)
-                    .WithLeadingTrivia(node.SemicolonToken.LeadingTrivia)
+                    .WithLeadingTrivia(node.SemicolonTokenSH.LeadingTrivia)
                     .WithTrailingTrivia(node.SemicolonToken.TrailingTrivia));
         }
     }

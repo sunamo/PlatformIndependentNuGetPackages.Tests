@@ -1,3 +1,5 @@
+using SunamoCl.SunamoCmdArgs_Cmd;
+
 namespace SunamoCl.Tests.SunamoCmd;
 internal class CmdBootstrapTests
 {
@@ -42,16 +44,9 @@ zkusil jsem nainstlaovat všechny po jednom ale bez výsledku
 
         var args = new string[0];
 
-        var runnedAction = await CmdBootStrap.Run(
-#if DEBUG
-true,
-#else
-false,
-#endif
-new SunamoExceptions.AIInitArgs { }, appName, ClipboardHelperWinStd.Instance, RunInDebug, AddGroupOfActions, allActions, true, null
-            , CustomInit, new Action(PHWin.AssignSearchInAll), null, null, args, null, p.groupsOfActions, null, null, null, null, null, new CreateAppFoldersIfDontExistsArgs { }, p.allActionsAsync, true);
+
     }
-    public static Dictionary<string, VoidVoid> allActions = new Dictionary<string, VoidVoid>();
+    public static Dictionary<string, Action> allActions = new Dictionary<string, Action>();
 
     static void CustomInit()
     {
@@ -63,8 +58,8 @@ new SunamoExceptions.AIInitArgs { }, appName, ClipboardHelperWinStd.Instance, Ru
 
     }
 
-    private static Dictionary<string, TaskVoid> AddGroupOfActions()
+    private static Dictionary<string, Func<Task>> AddGroupOfActions()
     {
-        return new Dictionary<string, TaskVoid>();
+        return new Dictionary<string, Func<Task>>();
     }
 }

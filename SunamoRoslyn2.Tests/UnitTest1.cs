@@ -1,7 +1,5 @@
 namespace SunamoRoslyn2.Tests;
 
-
-
 public class UnitTest1
 {
     [Fact]

@@ -1,9 +1,8 @@
-﻿
 namespace SunamoFileIO.Tests;
 
 public class TFTests
 {
-    const string bp = @"D:\_Test\sunamoWithoutLocalDep\SunamoFileIO\";
+    const string bp = @"D:\_Test\PlatformIndependentNuGetPackages\SunamoFileIO\";
 
     static string FilePath(string fnwoe)
     {
@@ -35,7 +34,7 @@ public class TFTests
     [Fact]
     public async Task ReadAllLinesTest_AllN()
     {
-        var path = @"D:\_Test\sunamoWithoutLocalDep\SunamoFileIO\AllNN.cs";
+        var path = @"D:\_Test\PlatformIndependentNuGetPackages\SunamoFileIO\AllNN.cs";
         var o = await File.ReadAllLinesAsync(path);
         var l = await TF.ReadAllLines(path);
 
@@ -55,7 +54,7 @@ public class TFTests
     [Fact]
     public async Task ReadAllLinesTest_CantRemoveEmptyLines()
     {
-        var a = await TF.ReadAllLines(@"E:\vs\Projects\sunamoWithoutLocalDep\SunamoCl\SunamoCmd\CmdBootStrap.cs");
+        var a = await TF.ReadAllLines(@"E:\vs\Projects\PlatformIndependentNuGetPackages\SunamoCl\SunamoCmd\CmdBootStrap.cs");
     }
 
         [Fact]

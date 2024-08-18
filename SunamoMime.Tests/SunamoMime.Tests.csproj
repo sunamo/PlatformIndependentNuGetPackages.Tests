@@ -17,9 +17,9 @@
     <PackageReference Include="SunamoExceptions" Version="24.1.11.1" />
   </ItemGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
-    <DefineConstants>$(DefineConstants);ASYNC;SunamoMime.Tests</DefineConstants>
+    <DefineConstants>$(DefineConstants);ASYNC;SunamoMime.Tests;SunamoMime.Tests.csproj</DefineConstants>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
-    <DefineConstants>$(DefineConstants);ASYNC;SunamoMime.Tests</DefineConstants>
+    <DefineConstants>$(DefineConstants);ASYNC;SunamoMime.Tests;SunamoMime.Tests.csproj</DefineConstants>
   </PropertyGroup>
 </Project>

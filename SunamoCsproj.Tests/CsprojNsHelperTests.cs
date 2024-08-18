@@ -1,11 +1,3 @@
-﻿using SunamoCsproj.Tests._sunamo;
-using SunamoStringGetLines;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
 namespace SunamoCsproj.Tests;
 public class CsprojNsHelperTests
 {
@@ -111,7 +103,7 @@ SunamoCsproj
     [Fact]
     public async Task WriteNewTest()
     {
-        const string bp = @"D:\_Test\sunamoWithoutLocalDep\SunamoCsproj\";
+        const string bp = @"D:\_Test\PlatformIndependentNuGetPackages\SunamoCsproj\";
         await CsprojNsHelper.WriteNew(new List<string>(new String[] { "S1", "S2" }), bp + @"WriteNewTest.cs", SHGetLines.GetLines(@"using System.Threading.Tasks;
  
 namespace

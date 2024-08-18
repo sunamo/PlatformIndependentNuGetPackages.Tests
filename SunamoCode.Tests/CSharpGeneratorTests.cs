@@ -1,7 +1,3 @@
-﻿
-
-using Xunit;
-
 namespace SunamoDevCode.Tests;
 
 public class CSharpGeneratorTests

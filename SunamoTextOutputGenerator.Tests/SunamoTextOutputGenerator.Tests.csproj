@@ -19,12 +19,12 @@
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\sunamoWithoutLocalDep\SunamoTextOutputGenerator\SunamoTextOutputGenerator.csproj" />
+    <ProjectReference Include="..\..\..\PlatformIndependentNuGetPackages\SunamoTextOutputGenerator\SunamoTextOutputGenerator.csproj" />
   </ItemGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
-    <DefineConstants>$(DefineConstants);SunamoTextOutputGenerator.Tests</DefineConstants>
+    <DefineConstants>$(DefineConstants);SunamoTextOutputGenerator.Tests;SunamoTextOutputGenerator.Tests.csproj</DefineConstants>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
-    <DefineConstants>$(DefineConstants);SunamoTextOutputGenerator.Tests</DefineConstants>
+    <DefineConstants>$(DefineConstants);SunamoTextOutputGenerator.Tests;SunamoTextOutputGenerator.Tests.csproj</DefineConstants>
   </PropertyGroup>
 </Project>

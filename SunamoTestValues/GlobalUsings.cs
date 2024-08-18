@@ -5,3 +5,6 @@ global using System.Linq;
 global using System;
 global using System.Threading.Tasks;
 global using TestValues._sunamo;
+global using SunamoTestValues._sunamo;
+global using SunamoTestValues;
+global using System.Text;

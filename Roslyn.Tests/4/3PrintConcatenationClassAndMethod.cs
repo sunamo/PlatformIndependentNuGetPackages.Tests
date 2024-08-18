@@ -1,8 +1,4 @@
-/*
- Output:
- MyClass.MyMethod
-MyOtherClass.MyMethod
- */
+
 
 public partial class RoslynLearn
 {

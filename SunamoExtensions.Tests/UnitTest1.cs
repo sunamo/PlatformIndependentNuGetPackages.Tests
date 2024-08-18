@@ -1,5 +1,3 @@
-using SunamoStringGetLines;
-
 namespace SunamoExtensions.Tests;
 
 public class ListStringExtensionsTests

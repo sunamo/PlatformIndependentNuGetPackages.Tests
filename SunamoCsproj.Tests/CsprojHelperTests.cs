@@ -1,5 +1,3 @@
-using SunamoCsproj.Items;
-
 namespace SunamoCsproj.Tests.csproj;
 
 public class CsprojHelperTests
@@ -7,8 +5,8 @@ public class CsprojHelperTests
     [Fact]
     public async Task PropertyGroupItemContentTest()
     {
-        //var d = await CsprojHelper.PropertyGroupItemContent(@"E:\vs\Projects\_ut2\sunamoWithoutLocalDep.Tests\SunamoCsproj.Tests\SunamoCsproj.Tests.csproj", "Description");
-        var d2 = await CsprojHelper.PropertyGroupItemContent(@"E:\vs\Projects\sunamoWithoutLocalDep\SunamoCsproj\SunamoCsproj.csproj", "Description");
+        //var d = await CsprojHelper.PropertyGroupItemContent(@"E:\vs\Projects\_ut2\PlatformIndependentNuGetPackages.Tests\SunamoCsproj.Tests\SunamoCsproj.Tests.csproj", "Description");
+        var d2 = await CsprojHelper.PropertyGroupItemContent(@"E:\vs\Projects\PlatformIndependentNuGetPackages\SunamoCsproj\SunamoCsproj.csproj", "Description");
     }
 
     [Fact]
@@ -41,7 +39,7 @@ class A{}", null);
     public async Task RemoveDuplicatesInItemGroupTest()
     {
 
-        var newCsprojContent = await CsprojHelper.RemoveDuplicatedProjectAndPackageReferences(@"D:\_Test\sunamoWithoutLocalDep\SunamoCsproj\DetectDuplicatedNugetPackages.csproj", null);
+        var newCsprojContent = await CsprojHelper.RemoveDuplicatedProjectAndPackageReferences(@"D:\_Test\PlatformIndependentNuGetPackages\SunamoCsproj\DetectDuplicatedNugetPackages.csproj", null);
         await File.WriteAllTextAsync(@"E:\vs\Projects\_tests\CompareTwoFiles\CompareTwoFiles\xml\1.xml", newCsprojContent);
     }
 }

@@ -4,15 +4,15 @@
     <Version>24.3.29.2</Version>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="..\..\..\sunamoWithoutLocalDep\SunamoEnums\Enums\FileMoveCollisionOption.cs" Link="_linked\Enums\FileMoveCollisionOption.cs" />
+    <Compile Include="..\..\..\PlatformIndependentNuGetPackages\SunamoEnums\Enums\FileMoveCollisionOption.cs" Link="_linked\Enums\FileMoveCollisionOption.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="_linked\Enums\" />
   </ItemGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
-    <DefineConstants>$(DefineConstants);ASYNC;SunamoTestValues</DefineConstants>
+    <DefineConstants>$(DefineConstants);ASYNC;SunamoTestValues;SunamoTestValues.csproj</DefineConstants>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
-    <DefineConstants>$(DefineConstants);ASYNC;SunamoTestValues</DefineConstants>
+    <DefineConstants>$(DefineConstants);ASYNC;SunamoTestValues;SunamoTestValues.csproj</DefineConstants>
   </PropertyGroup>
 </Project>
