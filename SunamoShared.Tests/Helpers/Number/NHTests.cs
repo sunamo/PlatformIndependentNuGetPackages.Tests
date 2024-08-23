@@ -1,5 +1,5 @@
-namespace sunamo.Tests.Helpers.Numbers;
 
+namespace sunamo.Tests.Helpers.Numbers;
 public class NHTests
 {
     public readonly static List<int> input = CAG.ToList<int>(4, 0);// 4, 4, 4, 3, 0, 0, 0, 0);
@@ -18,7 +18,7 @@ public class NHTests
             var median3 = NH.Median<int>(input3);
             var median4 = NH.Median<int>(input4);
             var median5 = NH.Median<int>(input5);
-            //DebugLogger.Instance.WriteLine(median);
+            ////DebugLogger.Instance.WriteLine(median);
         }
 
         // 3
@@ -30,7 +30,7 @@ public class NHTests
             var median3 = NH.Median2<int>(input3);
             var median4 = NH.Median2<int>(input4);
             var median5 = NH.Median2<int>(input5);
-            //DebugLogger.Instance.WriteLine(median);
+            ////DebugLogger.Instance.WriteLine(median);
         }
     }
     public class Double
@@ -40,7 +40,7 @@ public class NHTests
         public void MedianTest()
         {
             var median = NH.Median<double>(input2);
-            //DebugLogger.Instance.WriteLine(median);
+            ////DebugLogger.Instance.WriteLine(median);
         }
 
         // 3.4
@@ -48,7 +48,7 @@ public class NHTests
         public void Median2Test()
         {
             var median = NH.Median2<double>(input2);
-            //DebugLogger.Instance.WriteLine(median);
+            ////DebugLogger.Instance.WriteLine(median);
         }
     }
 

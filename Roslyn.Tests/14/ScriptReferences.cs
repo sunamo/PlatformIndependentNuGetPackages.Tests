@@ -1,3 +1,5 @@
+
+
 public partial class RoslynLearn
 {
     static async Task _ScriptReferences()
@@ -20,7 +22,7 @@ public partial class RoslynLearn
         var yList = (IList)y.Value;
         foreach (var val in yList)
         {
-            //DebugLogger.Instance.WriteLine(val + AllStrings.space); // Prints 1 2 3
+            ////DebugLogger.Instance.WriteLine(val + AllStrings.space); // Prints 1 2 3
         }
 
     }

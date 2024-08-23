@@ -1,3 +1,5 @@
+
+
 public partial class RoslynLearn
 {
     static async Task _RunAsync1()
@@ -7,8 +9,8 @@ public partial class RoslynLearn
         ScriptVariable x = state.GetVariable("x");
         ScriptVariable y = state.GetVariable("y");
 
-        //DebugLogger.Instance.WriteLine($"{x.Name} : {x.Value} : {x.Type} "); // x : 5
-        //DebugLogger.Instance.WriteLine($"{y.Name} : {y.Value} : {y.Type} "); // y : 3
+        ////DebugLogger.Instance.WriteLine($"{x.Name} : {x.Value} : {x.Type} "); // x : 5
+        ////DebugLogger.Instance.WriteLine($"{y.Name} : {y.Value} : {y.Type} "); // y : 3
 
     }
 }

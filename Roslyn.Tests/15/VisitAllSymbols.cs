@@ -13,7 +13,7 @@ public partial class RoslynLearn
     {
         public override void VisitNamespace(INamespaceSymbol symbol)
         {
-            //DebugLogger.Instance.WriteLine(symbol);
+            ////DebugLogger.Instance.WriteLine(symbol);
 
             foreach (var childSymbol in symbol.GetMembers())
             {
@@ -25,7 +25,7 @@ public partial class RoslynLearn
 
         public override void VisitNamedType(INamedTypeSymbol symbol)
         {
-            //DebugLogger.Instance.WriteLine(symbol);
+            ////DebugLogger.Instance.WriteLine(symbol);
 
             foreach (var childSymbol in symbol.GetTypeMembers())
             {

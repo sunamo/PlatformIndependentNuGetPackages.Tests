@@ -1,3 +1,5 @@
+
+
 public class UHTests
 {
     const string uri = @"https://lyrics.sunamo.cz/Me/Login.aspx?ReturnUrl=https://lyrics.sunamo.cz/Artist/walk-the-moon";
@@ -30,7 +32,7 @@ public class UHTests
     [Fact]
     public void GetHostTest()
     {
-        var actual = UH.GetHost(uri);DebugLogger.Instance.WriteLine("GetHost" + ": " + actual);
+        var actual = UH.GetHost(uri);//DebugLogger.Instance.WriteLine("GetHost" + ": " + actual);
 
     }
 
@@ -54,7 +56,7 @@ Pokud správně užívám UrlEncode/Decode ani plus ve vstupním řetězci nemů
     [Fact]
     public void GetDirectoryNameTest()
     {
-        var actual = UH.GetDirectoryName(uri);DebugLogger.Instance.WriteLine("GetDirectoryNameTest" + ": " + actual);
+        var actual = UH.GetDirectoryName(uri);//DebugLogger.Instance.WriteLine("GetDirectoryNameTest" + ": " + actual);
     }
 
     /// <summary>
@@ -63,7 +65,7 @@ Pokud správně užívám UrlEncode/Decode ani plus ve vstupním řetězci nemů
     [Fact]
     public void GetFileNameWithoutExtensionTest()
     {
-        var actual = UH.GetFileNameWithoutExtension(uri);DebugLogger.Instance.WriteLine("GetFileNameWithoutExtension" + ": " + actual);
+        var actual = UH.GetFileNameWithoutExtension(uri);//DebugLogger.Instance.WriteLine("GetFileNameWithoutExtension" + ": " + actual);
     }
 
     /// <summary>
@@ -72,7 +74,7 @@ Pokud správně užívám UrlEncode/Decode ani plus ve vstupním řetězci nemů
     [Fact]
     public void GetExtensionTest()
     {
-        var actual = UH.GetExtension(uri);DebugLogger.Instance.WriteLine("GetExtension" + ": " + actual);
+        var actual = UH.GetExtension(uri);//DebugLogger.Instance.WriteLine("GetExtension" + ": " + actual);
     }
 
     /// <summary>
@@ -81,7 +83,7 @@ Pokud správně užívám UrlEncode/Decode ani plus ve vstupním řetězci nemů
     [Fact]
     public void GetQueryAsHttpRequestTest()
     {
-        var actual = UH.GetQueryAsHttpRequest(urio);DebugLogger.Instance.WriteLine("GetQueryAsHttpRequest" + ": " + actual);
+        var actual = UH.GetQueryAsHttpRequest(urio);//DebugLogger.Instance.WriteLine("GetQueryAsHttpRequest" + ": " + actual);
     }
 
     /// <summary>
@@ -90,7 +92,7 @@ Pokud správně užívám UrlEncode/Decode ani plus ve vstupním řetězci nemů
     [Fact]
     public void GetPageNameFromUriTest()
     {
-        var actual = UH.GetPageNameFromUri(urio);DebugLogger.Instance.WriteLine("GetPageNameFromUriTest" + ": " + actual);
+        var actual = UH.GetPageNameFromUri(urio);//DebugLogger.Instance.WriteLine("GetPageNameFromUriTest" + ": " + actual);
     }
 
     /// <summary>
@@ -99,7 +101,7 @@ Pokud správně užívám UrlEncode/Decode ani plus ve vstupním řetězci nemů
     [Fact]
     public void GetProtocolStringTest()
     {
-        var actual = UH.GetProtocolString( urio);DebugLogger.Instance.WriteLine("GetProtocolStringTest" + ": " + actual);
+        var actual = UH.GetProtocolString( urio);//DebugLogger.Instance.WriteLine("GetProtocolStringTest" + ": " + actual);
     }
 
     /// <summary>

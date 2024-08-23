@@ -28,7 +28,7 @@ public partial class RoslynLearn
         {
             foreach (var diagnostic in emitResult.Diagnostics)
             {
-                //DebugLogger.Instance.WriteLine(diagnostic.ToString());
+                ////DebugLogger.Instance.WriteLine(diagnostic.ToString());
             }
         }
 

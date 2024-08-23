@@ -1,3 +1,5 @@
+
+
 public partial class RoslynLearn
 {
     [Fact]
@@ -12,7 +14,7 @@ public partial class RoslynLearn
         {
             foreach (var document in project.Documents)
             {
-                //DebugLogger.Instance.WriteLine(project.Name + "\t\t\t" + document.Name);
+                ////DebugLogger.Instance.WriteLine(project.Name + "\t\t\t" + document.Name);
             }
         }
 

@@ -23,19 +23,19 @@ internal class Program
         //TFCsFormatTests tFCsFormatTests = new TFCsFormatTests();
         //await tFCsFormatTests.WriteAllLinesTest();
 
-        //FoldersWithSolutionsInstanceTests t = new FoldersWithSolutionsInstanceTests();
-        //t.ReloadTest();
+        FoldersWithSolutionsInstanceTests t = new FoldersWithSolutionsInstanceTests();
+        t.ReloadTest();
 
         //var t = new CSharpHelperTests();
         //await t.IsEmptyCommentedOrOnlyWithNamespaceTest();
 
-        var d = FSGetFilesDC.GetFilesDC(pinp, "XlfKeys.cs", SearchOption.AllDirectories, new GetFilesDCArgs { OnlyIn_Sunamo = true });
+        //var d = FSGetFilesDC.GetFilesDC(pinp, "XlfKeys.cs", SearchOption.AllDirectories, new GetFilesDCArgs { OnlyIn_Sunamo = true });
 
-        foreach (var item in d)
-        {
-            var l = (await File.ReadAllLinesAsync(item)).ToList();
-            CSharpHelper.SetValuesAsNamesToConsts(l);
-            await File.WriteAllLinesAsync(item, l);
-        }
+        //foreach (var item in d)
+        //{
+        //    var l = (await File.ReadAllLinesAsync(item)).ToList();
+        //    CSharpHelper.SetValuesAsNamesToConsts(l);
+        //    await File.WriteAllLinesAsync(item, l);
+        //}
     }
 }

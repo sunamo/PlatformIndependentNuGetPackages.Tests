@@ -41,7 +41,7 @@
 //        generator.List(atLeastOne, "At least one", new TextOutputGeneratorArgs(true, true));
 
 //#if DEBUG
-//        //DebugLogger.Instance.WriteLine(generator.ToString());
+//        ////DebugLogger.Instance.WriteLine(generator.ToString());
 //#endif
 //    }
 //}

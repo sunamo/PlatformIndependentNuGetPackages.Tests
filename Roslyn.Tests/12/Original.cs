@@ -1,4 +1,6 @@
-﻿public partial class RoslynLearn
+
+
+public partial class RoslynLearn
 {
     [Fact]
     public void _Original2()
@@ -7,11 +9,11 @@
         char key = 'A'; //CL.ReadKey().KeyChar;
         if (key == 'A')
         {
-            //DebugLogger.Instance.WriteLine("You pressed A");
+            ////DebugLogger.Instance.WriteLine("You pressed A");
         }
         else
         {
-            //DebugLogger.Instance.WriteLine("You didn't press A");
+            ////DebugLogger.Instance.WriteLine("You didn't press A");
         }
 
     }

@@ -4,7 +4,7 @@
             {
                public void Foo()
                {
-                  //DebugLogger.Instance.WriteLine();
+                  ////DebugLogger.Instance.WriteLine();
 
                   #region SomeRegion
                   //Some other code
@@ -38,7 +38,7 @@ public partial class _3Better1
             {
                public void Foo()
                {
-                  //DebugLogger.Instance.WriteLine();
+                  ////DebugLogger.Instance.WriteLine();
 ;
                   #region SomeRegion
                   //Some other code
@@ -49,7 +49,7 @@ public partial class _3Better1
 
         var rewriter = new EmtpyStatementRemoval();
         var result = rewriter.Visit(tree.GetRoot());
-        //DebugLogger.Instance.WriteLine(result.ToFullString());
+        ////DebugLogger.Instance.WriteLine(result.ToFullString());
     }
 
 

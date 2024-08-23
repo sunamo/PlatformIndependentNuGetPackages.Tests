@@ -23,9 +23,9 @@ public partial class RoslynLearn
         //Find the type that contains this method
         var containingType = MyMethod.Ancestors().OfType<TypeDeclarationSyntax>().First();
 
-        //DebugLogger.Instance.WriteLine(containingType.Identifier.ToString());
+        ////DebugLogger.Instance.WriteLine(containingType.Identifier.ToString());
         // Return whole method content source
-        //DebugLogger.Instance.WriteLine(MyMethod.ToString());
+        ////DebugLogger.Instance.WriteLine(MyMethod.ToString());
 
     }
 }

@@ -24,8 +24,8 @@ public partial class RoslynLearn
         var MyClass = syntaxRoot.DescendantNodes().OfType<ClassDeclarationSyntax>().First();
         var MyMethod = syntaxRoot.DescendantNodes().OfType<MethodDeclarationSyntax>().First();
 
-        //DebugLogger.Instance.WriteLine(MyClass.Identifier.ToString());
-        //DebugLogger.Instance.WriteLine(MyMethod.Identifier.ToString());
+        ////DebugLogger.Instance.WriteLine(MyClass.Identifier.ToString());
+        ////DebugLogger.Instance.WriteLine(MyMethod.Identifier.ToString());
     }
 
 

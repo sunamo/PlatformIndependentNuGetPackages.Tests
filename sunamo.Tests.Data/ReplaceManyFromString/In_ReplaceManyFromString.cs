@@ -27,7 +27,7 @@ namespace sunamo.Tests.Data.ReplaceManyFromString;
             }
 
             bool anyError;
-            string actual = Program.GenerateCommandForGitAdd(TypedDebugLogger.Instance, folder, filesBad, out anyError, extension);
+            string actual = Program.GenerateCommandForGitAdd(Typed//DebugLogger.Instance, folder, filesBad, out anyError, extension);
 
             Assert.Equal(expected, actual);
         }

@@ -7,4 +7,9 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\PlatformIndependentNuGetPackages\SunamoGitConfig\SunamoGitConfig.csproj" />
+    <ProjectReference Include="..\SunamoGitConfig.Tests\SunamoGitConfig.Tests.csproj" />
+  </ItemGroup>
+
 </Project>

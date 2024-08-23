@@ -1,4 +1,4 @@
-// Test whether point in code is reachable
+
 
 public partial class RoslynLearn
 {
@@ -12,7 +12,7 @@ public partial class RoslynLearn
                 {
                     return;
                     if(x == 0)                                  //-+     Start is unreachable
-                        System.//DebugLogger.Instance.WriteLine(""Hello"");    // |
+                        System.////DebugLogger.Instance.WriteLine(""Hello"");    // |
                     L1:                                            //-+    End is unreachable
                 }
             }
@@ -30,8 +30,8 @@ public partial class RoslynLearn
 
         //ControlFlowAnalysis result = model.AnalyzeControlFlow(firstIf, label1);
 
-        //DebugLogger.Instance.WriteLine(result.StartPointIsReachable);    //False
-        //DebugLogger.Instance.WriteLine(result.EndPointIsReachable);      //False
+        ////DebugLogger.Instance.WriteLine(result.StartPointIsReachable);    //False
+        ////DebugLogger.Instance.WriteLine(result.EndPointIsReachable);      //False
 
     }
 }

@@ -1,17 +1,4 @@
-/*
-	CompilationUnit
-		ClassDeclaration
-			MethodDeclaration
-				PredefinedType
-				ParameterList
-				Block
-			MethodDeclaration
-				PredefinedType
-				ParameterList
-					Parameter
-						PredefinedType
-				Block
- */
+
 
 /// Return methods which contains at least one parameter
 public partial class RoslynLearn
@@ -30,7 +17,7 @@ public partial class RoslynLearn
         {
             Tabs++;
             var indents = new String('\t', Tabs);
-            //DebugLogger.Instance.WriteLine(indents + node.Kind());
+            ////DebugLogger.Instance.WriteLine(indents + node.Kind());
             base.Visit(node);
             Tabs--;
         }
@@ -38,7 +25,7 @@ public partial class RoslynLearn
         public override void VisitToken(SyntaxToken token)
         {
             var indents = new String('\t', Tabs);
-            //DebugLogger.Instance.WriteLine(indents + token);
+            ////DebugLogger.Instance.WriteLine(indents + token);
             base.VisitToken(token);
         }
     }

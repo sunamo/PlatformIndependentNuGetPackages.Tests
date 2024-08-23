@@ -11,8 +11,8 @@ public partial class RoslynLearn
         //{
         //    public static void Main()
         //    {
-        //        //DebugLogger.Instance.WriteLine(""Hello World!"");
-        //        //DebugLogger.Instance.ReadLine();
+        //        ////DebugLogger.Instance.WriteLine(""Hello World!"");
+        //        ////DebugLogger.Instance.ReadLine();
         //    }   
         //}");
 

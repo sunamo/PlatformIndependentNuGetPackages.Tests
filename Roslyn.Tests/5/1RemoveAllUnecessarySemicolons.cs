@@ -1,9 +1,10 @@
-/*
+
+
  *             public class Sample
             {
                public void Foo()
                {
-                  //DebugLogger.Instance.WriteLine();
+                  ////DebugLogger.Instance.WriteLine();
                 }
             }
  */
@@ -31,7 +32,7 @@ public partial class RoslynLearn
             {
                public void Foo()
                {
-                  //DebugLogger.Instance.WriteLine();
+                  ////DebugLogger.Instance.WriteLine();
                   ;
                 }
             }");
@@ -39,7 +40,7 @@ public partial class RoslynLearn
         var rewriter = new EmtpyStatementRemoval();
         // change source code to other look - without empty statements
         var result = rewriter.Visit(tree.GetRoot());
-        //DebugLogger.Instance.WriteLine(result.ToFullString());
+        ////DebugLogger.Instance.WriteLine(result.ToFullString());
     }
 
 

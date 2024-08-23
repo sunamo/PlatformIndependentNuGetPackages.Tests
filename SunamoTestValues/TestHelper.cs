@@ -172,6 +172,6 @@ public class TestHelper
     /// </summary>
     public static string GetFileInProjectsFolder(string fileRelativeToProjectPath)
     {
-        return FS.Combine(BasePathsHelper.vsProjects, ThisApp.Name, ThisApp.Project, fileRelativeToProjectPath);
+        return FS.Combine(DefaultPaths.eVsProjects, ThisApp.Name, ThisApp.Project, fileRelativeToProjectPath);
     }
 }

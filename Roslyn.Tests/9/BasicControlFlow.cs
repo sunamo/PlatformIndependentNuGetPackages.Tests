@@ -1,3 +1,5 @@
+
+
 public partial class RoslynLearn
 {
     // Analyze control flow - where code is changing directing
@@ -30,8 +32,8 @@ public partial class RoslynLearn
         var firstFor = tree.GetRoot().DescendantNodes().OfType<ForStatementSyntax>().Single();
         ControlFlowAnalysis result = model.AnalyzeControlFlow(firstFor.Statement);
 
-        //DebugLogger.Instance.WriteLine(result.Succeeded);            //True
-        //DebugLogger.Instance.WriteLine(result.ExitPoints.Count());    //2 - continue, and break
+        ////DebugLogger.Instance.WriteLine(result.Succeeded);            //True
+        ////DebugLogger.Instance.WriteLine(result.ExitPoints.Count());    //2 - continue, and break
 
     }
 }

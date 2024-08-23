@@ -1,9 +1,12 @@
-﻿namespace RunnerRegex;
+﻿using SunamoRegex.Tests;
+
+namespace RunnerRegex;
 
 internal class Program
 {
     static void Main(string[] args)
     {
-        Console.WriteLine("Hello, World!");
+        var d = new QuestionMarkTests();
+        d.b();
     }
 }

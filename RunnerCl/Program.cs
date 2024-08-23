@@ -2,6 +2,7 @@
 namespace RunnerCl;
 using SunamoCl;
 using SunamoCl.SunamoCmd;
+using SunamoCl.SunamoCmd.Helpers;
 using SunamoCl.SunamoCmdArgs_Cmd;
 using SunamoCl.Tests._sunamo;
 using SunamoCl.Tests.SunamoCmdArgs_Cmd;
@@ -40,13 +41,13 @@ internal partial class Program
 
         await CmdBootStrap.RunWithRunArgs(new SunamoCl.SunamoCmd.Args.RunArgs()
         {
-            IsDebug = false,
+            IsDebug = true,
             askUserIfRelease = true,
             ProgramSharedCreatePathToFiles = ProgramSharedCreatePathToFiles,
             AddGroupOfActions = AddGroupOfActions,
-            args = CollectionsHelperTo.ToArray<string>(),
+            args = args,
             CatchUnhandledException = false,
-            //runInDebug = RunI
+            runInDebug = RunInDebugAsync
             //pAllActions = p.allActions,
             //groupsOfActionsFromProgramCommon = p.groupsOfActions,
             //pAllActionsAsync = p.allActionsAsync
@@ -59,5 +60,20 @@ internal partial class Program
     static async Task RunInDebugAsync()
     {
         await Task.Delay(1000);
+
+        var cl = new CLProgressBar();
+
+        Console.WriteLine("Before progress bar");
+        cl.LyricsHelper_OverallSongs(10);
+
+        for (int i = 0; i < 10; i++)
+        {
+            cl.LyricsHelper_AnotherSong();
+            await Task.Delay(1000);
+        }
+
+        cl.LyricsHelper_WriteProgressBarEnd();
+
+
     }
 }

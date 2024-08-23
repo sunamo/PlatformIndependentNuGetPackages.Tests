@@ -7,4 +7,9 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\PlatformIndependentNuGetPackages\SunamoRegex\SunamoRegex.csproj" />
+    <ProjectReference Include="..\SunamoRegex.Tests\SunamoRegex.Tests.csproj" />
+  </ItemGroup>
+
 </Project>

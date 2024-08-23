@@ -1,12 +1,12 @@
-namespace sunamo.Tests.Helpers.FileSystem;
 
+namespace sunamo.Tests.Helpers.FileSystem;
 public partial class FSTests
 {
     [Fact]
     public void GetAbsolutePathTest()
     {
         var line = @"..\_ut2\sunamo.Tests2\TestValues\TestValues.csproj";
-        var p = FS.GetAbsolutePath(BasePathsHelper.vs, line);
+        var p = FS.GetAbsolutePath(DefaultPaths.eVs, line);
         //E:\vs\Projects\..\_ut2\sunamo.Tests2\TestValues\TestValues.csproj
     }
 
@@ -14,7 +14,7 @@ public partial class FSTests
     public void GetAbsolutePath2Test()
     {
         var line = @"..\_ut2\sunamo.Tests2\TestValues\TestValues.csproj";
-        var p = FS.GetAbsolutePath2(BasePathsHelper.vs, line);
+        var p = FS.GetAbsolutePath2(DefaultPaths.eVs, line);
         //E:\vs\Projects
     }
 
