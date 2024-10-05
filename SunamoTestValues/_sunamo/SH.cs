@@ -1,4 +1,5 @@
-namespace TestValues._sunamo;
+
+namespace SunamoTestValues._sunamo;
 internal class SH
 {
     internal static string Replace(object c, string original, string empty)

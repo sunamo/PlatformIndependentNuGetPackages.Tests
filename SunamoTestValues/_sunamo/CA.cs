@@ -1,4 +1,5 @@
-namespace TestValues._sunamo;
+
+namespace SunamoTestValues._sunamo;
 internal class CA
 {
     internal static List<int> ToInt(List<int> list)

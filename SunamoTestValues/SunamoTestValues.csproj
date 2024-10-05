@@ -1,14 +1,17 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <TargetFramework>net8.0</TargetFramework>
-    <Version>24.3.29.2</Version>
+    <Version>24.10.5.1</Version>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <Description>Test values for many my projects</Description>
+    <PackageReleaseNotes>First version</PackageReleaseNotes>
+    <Authors>www.sunamo.cz</Authors>
+    <Copyright>www.sunamo.cz</Copyright>
+    <PackageProjectUrl>https://sunamo.cz/</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/sunamo/SunamoTestValues.git</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
   </PropertyGroup>
-  <ItemGroup>
-    <Compile Include="..\..\..\PlatformIndependentNuGetPackages\SunamoEnums\Enums\FileMoveCollisionOption.cs" Link="_linked\Enums\FileMoveCollisionOption.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="_linked\Enums\" />
-  </ItemGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
     <DefineConstants>$(DefineConstants);ASYNC;SunamoTestValues;SunamoTestValues.csproj</DefineConstants>
   </PropertyGroup>

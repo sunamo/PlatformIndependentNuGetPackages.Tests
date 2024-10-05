@@ -3,6 +3,7 @@
     <TargetFramework>net8.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
     <DefineConstants>$(DefineConstants);SunamoCl.Tests;SunamoCl.Tests.csproj</DefineConstants>
@@ -11,6 +12,7 @@
     <DefineConstants>$(DefineConstants);SunamoCl.Tests;SunamoCl.Tests.csproj</DefineConstants>
   </PropertyGroup>
   <ItemGroup>
+    <PackageReference Include="SunamoWinStd" Version="24.8.8.1" />
     <PackageReference Include="xunit.extensibility.core" Version="2.9.0" />
   </ItemGroup>
   <ItemGroup>

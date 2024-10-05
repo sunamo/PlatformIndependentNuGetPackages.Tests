@@ -1,4 +1,7 @@
 
+namespace SunamoTestValues;
+using SunamoFileSystem.Enums;
+using System.IO;
 
 /// <summary>
 /// Right format of paths are:
@@ -76,7 +79,7 @@ public class TestHelper
             folder += modeOfFeature;
         }
 
-        FSGetFiles.GetFiles(folder, copyFilesRecursively).ToList().ForEach(d => FS.TryDeleteFile(d));
+        Directory.GetFiles(folder, "*", copyFilesRecursively ? SearchOption.AllDirectories : SearchOption.TopDirectoryOnly).ToList().ForEach(d => FS.TryDeleteFile(d));
         if (copyFilesRecursively)
         {
             FS.CopyAllFilesRecursively(folderFrom, folder, FileMoveCollisionOption.Overwrite);
@@ -86,7 +89,7 @@ public class TestHelper
             FS.CopyAllFiles(folderFrom, folder, FileMoveCollisionOption.Overwrite);
         }
 
-        var files = FSGetFiles.GetFiles(folder);
+        var files = Directory.GetFiles(folder).ToList();
 
         if (replace_Original)
         {
@@ -172,6 +175,6 @@ public class TestHelper
     /// </summary>
     public static string GetFileInProjectsFolder(string fileRelativeToProjectPath)
     {
-        return FS.Combine(DefaultPaths.eVsProjects, ThisApp.Name, ThisApp.Project, fileRelativeToProjectPath);
+        return FS.Combine(@"E:\vs\Projects\", ThisApp.Name, ThisApp.Project, fileRelativeToProjectPath);
     }
 }

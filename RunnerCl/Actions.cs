@@ -33,6 +33,7 @@ partial class Program
         actions.Add("None", delegate { });
         actions.Add("Executables of all browsers", WriteTest);
         actions.Add("Test Test1 Test2 (search list)", WriteTest);
+        actions.Add("TestTest2Host", WriteTest);
 
         // Už nebude potřeba. v AskUser mi to získá znovu actions a actionsAsync dle typů ve value
         //AddToAllActions("Dating", actions, actionsAsync);

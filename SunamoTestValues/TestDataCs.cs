@@ -1,5 +1,5 @@
-namespace sunamo.Values;
 
+namespace SunamoTestValues;
 public class TestDataCs
 {
     public const string a = "a.cs";

@@ -2,6 +2,7 @@
   <PropertyGroup>
     <TargetFramework>net8.0</TargetFramework>
     <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="SunamoShared" Version="24.1.12.1" />

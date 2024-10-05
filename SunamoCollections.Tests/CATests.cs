@@ -8,7 +8,11 @@ public class CATests
         var arr = CA.ToArrayT<object>("|");
         var d = CA.OneElementCollectionToMulti(arr);
         int i = 0;
+
+
     }
+
+
 
     [Fact]
     public void WrapWithAndJoinTest()

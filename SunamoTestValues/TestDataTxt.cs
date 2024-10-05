@@ -1,5 +1,5 @@
-namespace sunamo.Values;
 
+namespace SunamoTestValues;
 public class TestDataTxt
 {
     public const string a = "a.txt";

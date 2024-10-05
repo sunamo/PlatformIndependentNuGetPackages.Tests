@@ -8,8 +8,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SunamoArgs.Tests", "SunamoA
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RunnerArgs", "RunnerArgs\RunnerArgs.csproj", "{A34EFB41-89E1-495C-8328-C7670445FA8D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SunamoRegex.Tests2", "SunamoRegex.Tests2\SunamoRegex.Tests2.csproj", "{C22423AB-4C95-43DD-B041-FFCFCF11E5BC}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -28,10 +26,6 @@ Global
 		{A34EFB41-89E1-495C-8328-C7670445FA8D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A34EFB41-89E1-495C-8328-C7670445FA8D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A34EFB41-89E1-495C-8328-C7670445FA8D}.Release|Any CPU.Build.0 = Release|Any CPU
-		{C22423AB-4C95-43DD-B041-FFCFCF11E5BC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C22423AB-4C95-43DD-B041-FFCFCF11E5BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C22423AB-4C95-43DD-B041-FFCFCF11E5BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C22423AB-4C95-43DD-B041-FFCFCF11E5BC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

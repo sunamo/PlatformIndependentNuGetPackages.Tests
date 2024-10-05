@@ -1,4 +1,7 @@
-namespace TestValues._sunamo;
+
+namespace SunamoTestValues._sunamo;
+using SunamoFileSystem.Enums;
+
 internal class FS
 {
     internal static string Combine(params object[] vsProjects)

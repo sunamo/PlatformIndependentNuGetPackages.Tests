@@ -1,4 +1,6 @@
-﻿namespace SunamoString.Tests2;
+﻿using SunamoString._public;
+
+namespace SunamoString.Tests2;
 
 public class SHTests
 {
@@ -12,7 +14,8 @@ public class SHTests
     [Fact]
     public void ContainsClTest()
     {
-        var d = SH.ContainsCl("Search all on Google (append text)", "google append", Enums.SearchStrategy.AnySpaces, false);
-        var d2 = SH.ContainsCl("Search all on Google (sites, append text) - jde použít i pro hledání např. rezervace na různých url", "google append", Enums.SearchStrategy.AnySpaces, false);
+        var d = SH.ContainsCl("Search all on Google (append text)", new StringOrStringList("google append"), Enums.SearchStrategy.AnySpaces, false);
+        var d2 = SH.ContainsCl("Search all on Google (sites, append text) - jde použít i pro hledání např. rezervace na různých url", new StringOrStringList("google append"), Enums.SearchStrategy.AnySpaces, false);
+        var d3 = SH.ContainsCl("TestHost2Sth3", new StringOrStringList("Test Host"), Enums.SearchStrategy.AnySpaces);
     }
 }

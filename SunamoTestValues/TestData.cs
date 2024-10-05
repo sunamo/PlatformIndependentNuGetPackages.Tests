@@ -1,3 +1,5 @@
+
+namespace SunamoTestValues;
 public class TestData
 {
     public static readonly List<int> _123 = new List<int>(new int[] { 1, 2, 3 });

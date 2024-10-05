@@ -1,10 +1,10 @@
-﻿using SunamoDevCode;
+
+namespace RunnerDevCode;
+using SunamoDevCode;
 using SunamoDevCode.Args;
 using SunamoDevCode.SunamoCSharp;
 using SunamoDevCode.Tests;
 using SunamoDevCode.Tests.Helpers;
-
-namespace RunnerDevCode;
 
 internal class Program
 {
@@ -20,11 +20,11 @@ internal class Program
         //GlobalUsingsInstanceTests t = new GlobalUsingsInstanceTests();
         //await t.GlobalUsingsInstance_Test();
 
-        //TFCsFormatTests tFCsFormatTests = new TFCsFormatTests();
-        //await tFCsFormatTests.WriteAllLinesTest();
+        TFCsFormatTests tFCsFormatTests = new TFCsFormatTests();
+        await tFCsFormatTests.WriteAllLinesTest();
 
-        FoldersWithSolutionsInstanceTests t = new FoldersWithSolutionsInstanceTests();
-        t.ReloadTest();
+        //FoldersWithSolutionsInstanceTests t = new FoldersWithSolutionsInstanceTests();
+        //t.ReloadTest();
 
         //var t = new CSharpHelperTests();
         //await t.IsEmptyCommentedOrOnlyWithNamespaceTest();

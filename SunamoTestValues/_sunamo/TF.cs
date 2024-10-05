@@ -1,4 +1,5 @@
-namespace TestValues._sunamo;
+
+namespace SunamoTestValues._sunamo;
 internal class TF
 {
     internal static async Task<string> ReadAllText(string item)

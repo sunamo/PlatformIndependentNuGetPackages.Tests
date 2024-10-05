@@ -5,6 +5,7 @@
     <RootNamespace>SunamoGoPay.Tests</RootNamespace>
     <AssemblyName>SunamoGoPay.Tests</AssemblyName>
     <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
   </PropertyGroup>
   <ItemGroup>
   </ItemGroup>

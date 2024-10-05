@@ -2,6 +2,7 @@
   <PropertyGroup>
     <TargetFramework>net8.0</TargetFramework>
     <IsPackable>false</IsPackable>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="FluentAssertions" Version="7.0.0-alpha.3" />

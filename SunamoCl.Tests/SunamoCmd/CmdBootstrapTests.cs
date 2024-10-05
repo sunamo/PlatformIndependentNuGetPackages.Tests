@@ -46,6 +46,7 @@ zkusil jsem nainstlaovat všechny po jednom ale bez výsledku
 
 
     }
+
     public static Dictionary<string, Action> allActions = new Dictionary<string, Action>();
 
     static void CustomInit()
@@ -58,8 +59,5 @@ zkusil jsem nainstlaovat všechny po jednom ale bez výsledku
 
     }
 
-    private static Dictionary<string, Func<Task>> AddGroupOfActions()
-    {
-        return new Dictionary<string, Func<Task>>();
-    }
+
 }

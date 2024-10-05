@@ -1,4 +1,5 @@
-namespace TestValues._sunamo;
+
+namespace SunamoTestValues._sunamo;
 internal class AppData
 {
     internal static AppData ci = new AppData();

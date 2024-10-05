@@ -2,6 +2,7 @@
   <PropertyGroup>
     <TargetFramework>net8.0-windows</TargetFramework>
     <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
   </PropertyGroup>
   <ItemGroup>
     <Content Include="neat.ico">

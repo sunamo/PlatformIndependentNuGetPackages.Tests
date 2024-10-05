@@ -1,11 +1,16 @@
 
 namespace RunnerCl;
+
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Logging;
 using SunamoCl;
 using SunamoCl.SunamoCmd;
 using SunamoCl.SunamoCmd.Helpers;
 using SunamoCl.SunamoCmdArgs_Cmd;
 using SunamoCl.Tests._sunamo;
+using SunamoCl.Tests.SunamoCmd.Essential;
 using SunamoCl.Tests.SunamoCmdArgs_Cmd;
+using SunamoLogging.FileLogger;
 
 internal partial class Program
 {
@@ -17,6 +22,11 @@ internal partial class Program
     public static Task ProgramSharedCreatePathToFiles(Func<string, string, string> getFile)
     {
         return Task.CompletedTask;
+    }
+
+    static string GetFileString(string a, string b)
+    {
+        return "";
     }
 
     private static Dictionary<string, Func<Task<Dictionary<string, object>>>> AddGroupOfActions()
@@ -31,6 +41,11 @@ internal partial class Program
 
     static ProgramCommon p;
 
+    //static void ConfigureServices(ServiceCollection services)
+    //{
+
+    //}
+
     static async Task MainAsync(string[] args)
     {
         //ProgramCommonTests t = new ProgramCommonTests();
@@ -39,19 +54,40 @@ internal partial class Program
         p = new ProgramCommon();
         // můžu přidat přímo do dict ve ProgramCommon protože ProgramCommon.AddToAllActions přidává právě do těchto 2 dict
 
+        var appName = "RunnerCl";
+
+        var sp = new ServiceCollection();
+        sp.AddScoped<TestContainer>();
+
         await CmdBootStrap.RunWithRunArgs(new SunamoCl.SunamoCmd.Args.RunArgs()
         {
-            IsDebug = true,
+            IsDebug = false,
             askUserIfRelease = true,
             ProgramSharedCreatePathToFiles = ProgramSharedCreatePathToFiles,
-            AddGroupOfActions = AddGroupOfActions,
-            args = args,
-            CatchUnhandledException = false,
-            runInDebug = RunInDebugAsync
+            AppDataCiGetFileString = GetFileString,
+            //AddGroupOfActions = AddGroupOfActions,
+            //args = args,
+            //CatchUnhandledException = false,
+            //runInDebug = RunInDebugAsync,
+            ServiceCollection = sp,
+            // V normální aplikaci bych importoval SunamoLogging
+            //FileLoggerProvider = FileLoggerProvider.DefaultDirectory(appName),
+            //IsLoggingToConsole = true,
+            //ConfigureServices =
+
             //pAllActions = p.allActions,
             //groupsOfActionsFromProgramCommon = p.groupsOfActions,
             //pAllActionsAsync = p.allActionsAsync
         });
+
+        //var s = sp.BuildServiceProvider();
+        //var logger = s.GetRequiredService<ILogger>();
+        //logger.LogWarning("From main");
+        //var tc = s.GetRequiredService<TestContainer>();
+        //tc.A();
+
+        //var tc = new TestContainer(s.GetRequiredService<ILogger>());
+        //tc.A();
 
         Console.WriteLine("Finished");
         Console.ReadLine();
@@ -59,20 +95,29 @@ internal partial class Program
 
     static async Task RunInDebugAsync()
     {
-        await Task.Delay(1000);
+        CmdAppTests t = new CmdAppTests();
+        await t.WaitForSaving();
 
-        var cl = new CLProgressBar();
 
-        Console.WriteLine("Before progress bar");
-        cl.LyricsHelper_OverallSongs(10);
 
-        for (int i = 0; i < 10; i++)
-        {
-            cl.LyricsHelper_AnotherSong();
-            await Task.Delay(1000);
-        }
+        //await Task.Delay(1000);
 
-        cl.LyricsHelper_WriteProgressBarEnd();
+
+
+        #region ProgressBar testing
+        //var cl = new CLProgressBar();
+
+        //Console.WriteLine("Before progress bar");
+        //cl.LyricsHelper_OverallSongs(10);
+
+        //for (int i = 0; i < 10; i++)
+        //{
+        //    cl.LyricsHelper_AnotherSong();
+        //    await Task.Delay(1000);
+        //}
+
+        //cl.LyricsHelper_WriteProgressBarEnd(); 
+        #endregion
 
 
     }

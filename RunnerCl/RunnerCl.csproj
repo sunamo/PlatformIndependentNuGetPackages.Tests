@@ -6,6 +6,7 @@
     <Nullable>enable</Nullable>
     <Description>Fixed selecting from actions</Description>
     <Version>24.7.19.1</Version>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
     <DefineConstants>$(DefineConstants);ASYNC</DefineConstants>
@@ -13,6 +14,9 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
     <DefineConstants>$(DefineConstants);ASYNC</DefineConstants>
   </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="SunamoLogging" Version="24.8.27.2" />
+  </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\..\PlatformIndependentNuGetPackages\SunamoCl\SunamoCl.csproj" />
     <ProjectReference Include="..\SunamoCl.Tests\SunamoCl.Tests.csproj" />

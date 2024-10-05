@@ -1,3 +1,5 @@
+
+namespace SunamoTestValues;
 public class XmlTestsBase
 {
     protected string pathXlf = @"D:\_Test\sunamo\sunamo\XH\xlf.xml";

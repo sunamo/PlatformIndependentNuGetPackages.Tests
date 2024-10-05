@@ -1,4 +1,5 @@
-namespace TestValues._sunamo;
+
+namespace SunamoTestValues._sunamo;
 internal class XlfResourcesHSunamo
 {
     internal static void SaveResouresToRLSunamo(LocalizationLanguages localizationLanguages)
