@@ -1,6 +1,8 @@
 //using SunamoInit;
 
 
+using SunamoChar._sunamo.SunamoStringGetLines;
+
 namespace SunamoCollections.Tests;
 
 public class CATests

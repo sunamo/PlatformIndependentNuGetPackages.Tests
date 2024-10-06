@@ -33,6 +33,11 @@ public class TestData
     public static readonly string flatJson = "{\"IdUser\":1,\"Sc\":\"au1skm2qhjbwhmu4z0qwcpiv\"}";
     public static readonly string flatJsonSc = "au1skm2qhjbwhmu4z0qwcpiv";
 
+    public static void Init()
+    {
+
+    }
+
     static TestData()
     {
         listAB1 = new List<string>(CA.ToListString2(a, b));

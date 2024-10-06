@@ -1,9 +1,12 @@
+using SunamoCollections.Tests;
+
 namespace RunnerCollections;
 
 internal class Program
 {
     static void Main(string[] args)
     {
-        Console.WriteLine("Hello, World!");
+        CATests2 ca = new CATests2();
+        ca.DivideByTest();
     }
 }

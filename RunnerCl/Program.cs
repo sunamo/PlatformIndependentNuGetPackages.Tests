@@ -70,6 +70,9 @@ internal partial class Program
             //CatchUnhandledException = false,
             //runInDebug = RunInDebugAsync,
             ServiceCollection = sp,
+            LoadFromAppsettingsJson = true,
+            categoryNameLogger = "Any",
+            IsLoggingToConsole = true
             // V normální aplikaci bych importoval SunamoLogging
             //FileLoggerProvider = FileLoggerProvider.DefaultDirectory(appName),
             //IsLoggingToConsole = true,
@@ -80,14 +83,19 @@ internal partial class Program
             //pAllActionsAsync = p.allActionsAsync
         });
 
-        //var s = sp.BuildServiceProvider();
-        //var logger = s.GetRequiredService<ILogger>();
-        //logger.LogWarning("From main");
-        //var tc = s.GetRequiredService<TestContainer>();
-        //tc.A();
+        var s = sp.BuildServiceProvider();
 
-        //var tc = new TestContainer(s.GetRequiredService<ILogger>());
-        //tc.A();
+        var logger = s.GetRequiredService<ILogger>();
+        logger.LogTrace("From main trace");
+        logger.LogDebug("From main debug");
+        logger.LogError("From main error");
+
+
+
+        var tc = s.GetRequiredService<TestContainer>();
+        tc.A();
+
+
 
         Console.WriteLine("Finished");
         Console.ReadLine();

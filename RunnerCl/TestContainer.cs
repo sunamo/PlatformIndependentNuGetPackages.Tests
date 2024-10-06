@@ -1,4 +1,5 @@
-﻿using Microsoft.Extensions.Logging;
+﻿using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
 using System.Dynamic;
@@ -8,10 +9,12 @@ using System.Text.Json;
 using System.Threading.Tasks;
 
 namespace RunnerCl;
-internal class TestContainer(ILogger logger)
+internal class TestContainer(ILogger logger, IConfiguration config)
 {
     internal void A()
     {
+        var c = config;
+
         logger.LogCritical("Critical!");
         logger.LogError("Error!");
 

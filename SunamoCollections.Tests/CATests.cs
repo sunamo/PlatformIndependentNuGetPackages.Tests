@@ -197,12 +197,5 @@ a b c";
 
     }
 
-    [Fact]
-    public void DivideByPercentTest()
-    {
-        List<int> a = TestData._0To95;
-        var actual = CA.DivideByPercent<int>(a, 10);
 
-        Assert.Equal(TestData._0To95By10, actual);
-    }
 }

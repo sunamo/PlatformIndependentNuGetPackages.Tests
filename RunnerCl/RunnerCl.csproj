@@ -21,4 +21,12 @@
     <ProjectReference Include="..\..\..\PlatformIndependentNuGetPackages\SunamoCl\SunamoCl.csproj" />
     <ProjectReference Include="..\SunamoCl.Tests\SunamoCl.Tests.csproj" />
   </ItemGroup>
+  <ItemGroup>
+    <None Update="appsettings.Development.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="appsettings.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
 </Project>

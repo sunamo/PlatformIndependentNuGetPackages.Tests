@@ -1,4 +1,4 @@
-global using Xunit;global using SunamoCollections.Tests._sunamo;
+global using Xunit;
 global using SunamoPercentCalculator;
 global using SunamoTextOutputGenerator;
 global using SunamoValues;

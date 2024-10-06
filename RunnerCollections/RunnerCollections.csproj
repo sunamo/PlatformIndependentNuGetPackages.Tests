@@ -6,4 +6,8 @@
     <Nullable>enable</Nullable>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
   </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\PlatformIndependentNuGetPackages\SunamoCollections\SunamoCollections.csproj" />
+    <ProjectReference Include="..\SunamoCollections.Tests\SunamoCollections.Tests.csproj" />
+  </ItemGroup>
 </Project>
