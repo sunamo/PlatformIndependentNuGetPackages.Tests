@@ -1,4 +1,4 @@
-﻿global using HtmlAgilityPack;
+global using HtmlAgilityPack;
 global using sunamo.Tests.Html;
 global using System.Collections.Generic;
 global using System.Diagnostics;
@@ -17,7 +17,7 @@ global using SunamoCollectionsGeneric;
 global using SunamoData.Data;
 global using SunamoEnums.Enums;
 global using SunamoEnums;
-global using SunamoExceptions.OnlyInSE;
+global using SunamoExceptions;
 global using SunamoShared.Entity;
 global using SunamoShared.Http;
 global using SunamoShared.Storage;

@@ -11,8 +11,9 @@ public class TFCsFormatTests
     [Fact]
     public async Task WriteAllLinesTest()
     {
-        const string path = @"E:\vs\Projects\LearnOcelot\Ocelot\samples\Administration\Program.cs";
+        const string path = @"E:\vs\Projects\PlatformIndependentNuGetPackages\SunamoGetFiles\_sunamo\XlfKeys.cs";
         var l = await File.ReadAllLinesAsync(path);
+        l[0] = "namespace SunamoGetFiles._sunamo;";
         await TFCsFormat.WriteAllLines(path, l);
 
 

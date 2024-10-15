@@ -1,3 +1,4 @@
+;
 public class ExcTests
 {
     [Fact]
@@ -6,7 +7,7 @@ public class ExcTests
         var input = @"   at EveryLine.SearchCodeElementsUC.SearchCodeElementsUC_Loaded(Object sender, RoutedEventArgs e) in E:\vs\Projects\_Selling\EveryLine\EveryLine\UC\EveryLineUC.xaml.cs:line 362";
 
         string type, methodName;
-        Exc.TypeAndMethodName(input, out type, out methodName);
+        Exceptions.TypeAndMethodName(input, out type, out methodName);
 
         Assert.Equal("EveryLine.SearchCodeElementsUC", type);
         Assert.Equal("SearchCodeElementsUC_Loaded", methodName);
@@ -20,15 +21,15 @@ public class ExcTests
 1 - CallingMethodTest
 0 - CallingMethod
          */
-        var cm0 = Exc.CallingMethod(0);
+        var cm0 = Exceptions.CallingMethod(0);
 
         Init1();
 
         Exc._trimTestOnEnd = false;
-        var cm = Exc.CallingMethod();
+        var cm = Exceptions.CallingMethod();
         Exc._trimTestOnEnd = true;
 
-        var cm2 = Exc.CallingMethod(2);
+        var cm2 = Exceptions.CallingMethod(2);
 
         Assert.Equal("CallingMethodTest", cm);
     }
@@ -48,12 +49,12 @@ public class ExcTests
         Exc._trimTestOnEnd = false;
 
         //Init1();
-        var cm0 = Exc.CallingMethod(0);
+        var cm0 = Exceptions.CallingMethod(0);
         Exc._trimTestOnEnd = false;
-        var cm = Exc.CallingMethod();
+        var cm = Exceptions.CallingMethod();
         Exc._trimTestOnEnd = true;
 
-        var cm2 = Exc.CallingMethod(2);
+        var cm2 = Exceptions.CallingMethod(2);
 
         Exc._trimTestOnEnd = true;
     }

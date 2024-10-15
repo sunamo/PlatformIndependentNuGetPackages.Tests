@@ -1,4 +1,8 @@
-﻿namespace SunamoHtml.Tests;
+﻿using SunamoHtml.Html;
+using System.Text;
+using TextCopy;
+
+namespace SunamoHtml.Tests;
 
 public class HtmlAgilityHelperTests
 {
@@ -119,5 +123,53 @@ public class HtmlAgilityHelperTests
         dict.Add("<span class=\"icon icon--check\">", "✓");
 
         var pairs = HtmlAgilityHelper.PairsDdDt(hd.DocumentNode, true, dict);
+    }
+
+    [Fact]
+    public void Test1()
+    {
+        var hd = HtmlAgilityHelper.CreateHtmlDocument();
+        //hd.Load(@"D:\_Test\PlatformIndependentNuGetPackages\SunamoHtml\a.html");
+        hd.Load(@"E:\vs\Projects\_tests\CompareTwoFiles\CompareTwoFiles\html\2.html");
+
+        var adsParent = hd.DocumentNode.FirstChild; //HtmlAgilityHelper.NodeWithAttr(hd.DocumentNode, true, "div", "class", "row inzlist");
+
+
+
+        var ads = HtmlAgilityHelper.NodesWithAttr(adsParent, false, "div", "class", "col-xs-12", false);
+
+        List<string> s = new();
+        StringBuilder sb = new();
+
+        var i = 0;
+        foreach (var item in ads)
+        {
+            var wrapperInz = HtmlAgilityHelper.NodeWithAttr(item, false, "div", "class", "poh0", true);
+
+            if (wrapperInz == null)
+            {
+                Console.WriteLine("wrapperInz == null");
+                continue;
+            }
+
+            var button = HtmlAgilityHelper.NodeWithAttr(wrapperInz, true, "div", "class", "inz-but clearfix", false);
+            var anchor = HtmlAgilityHelper.Node(button, true, "a");
+
+            if (anchor == null)
+            {
+                Console.WriteLine("Ad was skipped");
+                // zatím nevím proč se tak děje
+                continue;
+            }
+
+            var hrefUserDetail = "https://www.seznamka.cz" + HtmlAssistant.GetValueOfAttribute("href", anchor).TrimStart('.');
+
+
+            s.Add(hrefUserDetail);
+            sb.AppendLine(hrefUserDetail);
+            i++;
+        }
+
+        ClipboardService.SetText(sb.ToString());
     }
 }

@@ -17,7 +17,7 @@ global using SunamoData.Data;
 global using SunamoDelegates;
 global using SunamoEnums.Enums;
 global using SunamoExceptions.InSunamoIsDerivedFrom;
-global using SunamoExceptions.OnlyInSE;
+global using SunamoExceptions;
 global using SunamoExtensions;
 global using SunamoFileExtensions;
 global using SunamoFileIO;

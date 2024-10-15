@@ -1,9 +1,20 @@
+using Microsoft.Extensions.Logging.Abstractions;
 using System.Text;
 
 namespace SunamoGetFiles.Tests;
 
 public class SHGetFilesTests
 {
+    public void GetFoldersEveryFolderTest()
+    {
+
+        //var d = FSGetFiles.GetFilesEveryFolder(@"E:\vs\Projects\_WhenNeedToEditAllCorruptedSlns\CommandsToAllCsFiles.Cmd\", "*.cs", true);
+
+        var f = FSGetFiles.GetFilesEveryFolder(@"E:\vs\Projects\PlatformIndependentNuGetPackages\SunamoExceptions\", "*.cs", true, new SunamoGetFiles._public.SunamoArgs.GetFilesEveryFolderArgs { ExcludeCodeFolders = true, Logger = NullLogger.Instance });
+
+        //var f = FSGetFiles.GetFilesEveryFolder(@"E:\vs\Projects\", "*.cs", true, new SunamoGetFiles._public.SunamoArgs.GetFilesEveryFolderArgs { IgnoreFoldersWithName = ["obj", "node_modules", ".git", ".vs"], Logger = LoggerDummy.Instance });
+    }
+
     [Fact]
     public void GetFilesTest()
     {

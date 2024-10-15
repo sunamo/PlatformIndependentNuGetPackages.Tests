@@ -5,6 +5,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using SunamoCl;
 using SunamoCl.SunamoCmd;
+using SunamoCl.SunamoCmd.Args;
 using SunamoCl.SunamoCmd.Helpers;
 using SunamoCl.SunamoCmdArgs_Cmd;
 using SunamoCl.Tests._sunamo;
@@ -46,6 +47,8 @@ internal partial class Program
 
     //}
 
+    static ServiceCollection serviceCollection { get; set; } = new ServiceCollection();
+
     static async Task MainAsync(string[] args)
     {
         //ProgramCommonTests t = new ProgramCommonTests();
@@ -56,23 +59,28 @@ internal partial class Program
 
         var appName = "RunnerCl";
 
-        var sp = new ServiceCollection();
-        sp.AddScoped<TestContainer>();
 
-        await CmdBootStrap.RunWithRunArgs(new SunamoCl.SunamoCmd.Args.RunArgs()
+        serviceCollection.AddScoped<TestContainer>();
+
+        await CmdBootStrap.RunWithRunArgs(new RunArgs()
         {
-            IsDebug = false,
-            askUserIfRelease = true,
-            ProgramSharedCreatePathToFiles = ProgramSharedCreatePathToFiles,
-            AppDataCiGetFileString = GetFileString,
-            //AddGroupOfActions = AddGroupOfActions,
-            //args = args,
-            //CatchUnhandledException = false,
-            //runInDebug = RunInDebugAsync,
-            ServiceCollection = sp,
-            LoadFromAppsettingsJson = true,
-            categoryNameLogger = "Any",
-            IsLoggingToConsole = true
+            IsDebug = true,
+            IsLoggingToConsole = true,
+            //askUserIfRelease = true,
+            //ProgramSharedCreatePathToFiles = ProgramSharedCreatePathToFiles,
+            //AppDataCiGetFileString = GetFileString,
+            ////AddGroupOfActions = AddGroupOfActions,
+            ////args = args,
+            ////CatchUnhandledException = false,
+            ////runInDebug = RunInDebugAsync,
+            //ServiceCollection = serviceCollection,
+            //LoadFromAppsettingsJson = true,
+            //categoryNameLogger = "Any",
+            //IsLoggingToConsole = true,
+            //FileLoggerProvider = FileLoggerProvider.DefaultDirectory(appName),
+            runInDebug = RunInDebugAsync
+
+
             // V normální aplikaci bych importoval SunamoLogging
             //FileLoggerProvider = FileLoggerProvider.DefaultDirectory(appName),
             //IsLoggingToConsole = true,
@@ -83,7 +91,16 @@ internal partial class Program
             //pAllActionsAsync = p.allActionsAsync
         });
 
-        var s = sp.BuildServiceProvider();
+        Console.WriteLine("Finished");
+        Console.ReadLine();
+    }
+
+    static async Task RunInDebugAsync()
+    {
+        //CmdAppTests t = new CmdAppTests();
+        //await t.WaitForSaving();
+
+        var s = serviceCollection.BuildServiceProvider();
 
         var logger = s.GetRequiredService<ILogger>();
         logger.LogTrace("From main trace");
@@ -94,19 +111,6 @@ internal partial class Program
 
         var tc = s.GetRequiredService<TestContainer>();
         tc.A();
-
-
-
-        Console.WriteLine("Finished");
-        Console.ReadLine();
-    }
-
-    static async Task RunInDebugAsync()
-    {
-        CmdAppTests t = new CmdAppTests();
-        await t.WaitForSaving();
-
-
 
         //await Task.Delay(1000);
 

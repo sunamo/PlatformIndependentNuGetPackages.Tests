@@ -7,6 +7,9 @@
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
   </PropertyGroup>
   <ItemGroup>
+    <PackageReference Include="TextCopy" Version="6.2.1" />
+  </ItemGroup>
+  <ItemGroup>
     <ProjectReference Include="..\..\..\PlatformIndependentNuGetPackages\SunamoHtml\SunamoHtml.csproj" />
     <ProjectReference Include="..\SunamoHtml.Tests\SunamoHtml.Tests.csproj" />
   </ItemGroup>
