@@ -6,4 +6,8 @@
     <Nullable>enable</Nullable>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
   </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\PlatformIndependentNuGetPackages\SunamoToUnixLineEnding\SunamoToUnixLineEnding.csproj" />
+    <ProjectReference Include="..\SunamoToUnixLineEnding.Tests\SunamoToUnixLineEnding.Tests.csproj" />
+  </ItemGroup>
 </Project>

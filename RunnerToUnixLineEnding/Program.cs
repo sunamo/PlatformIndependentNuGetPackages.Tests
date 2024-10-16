@@ -1,9 +1,12 @@
+using SunamoToUnixLineEnding.Tests;
+
 namespace RunnerToUnixLineEnding;
 
 internal class Program
 {
     static void Main(string[] args)
     {
-        Console.WriteLine("Hello, World!");
+        LoadingFromFileTests t = new();
+        t.DoTest();
     }
 }
