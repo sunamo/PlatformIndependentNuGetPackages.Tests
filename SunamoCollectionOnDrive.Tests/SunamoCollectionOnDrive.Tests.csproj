@@ -19,4 +19,8 @@
       <PrivateAssets>all</PrivateAssets>
     </PackageReference>
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\PlatformIndependentNuGetPackages\SunamoCollectionOnDrive\SunamoCollectionOnDrive.csproj" />
+    <ProjectReference Include="..\RunnerCollectionOnDrive\RunnerCollectionOnDrive.csproj" />
+  </ItemGroup>
 </Project>

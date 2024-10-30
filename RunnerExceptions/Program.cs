@@ -1,5 +1,6 @@
 ﻿
 using SunamoExceptions;
+using SunamoExceptions.Tests;
 
 namespace RunnerExceptions;
 
@@ -7,12 +8,10 @@ internal class Program
 {
     static void Main(string[] args)
     {
-        AAA();
+        ThrowExTests t = new();
+        t.IsNullOrWhitespaceTest();
 
-    }
-
-    private static void AAA()
-    {
-        ThrowEx.Custom("Něco se posralo");
+        Console.WriteLine("Finished");
+        Console.ReadLine();
     }
 }
