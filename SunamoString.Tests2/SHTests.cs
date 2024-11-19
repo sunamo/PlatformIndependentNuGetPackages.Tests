@@ -1,5 +1,4 @@
-
-
+namespace SunamoString.Tests2;
 //public partial class SHTests
 //{
 //    const string splitAndKeepInput = "Shared settings <%--RL:SharedSettings--%> <span> aplikace</span>";

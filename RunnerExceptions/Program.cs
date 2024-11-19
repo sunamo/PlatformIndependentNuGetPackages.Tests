@@ -9,7 +9,8 @@ internal class Program
     static void Main(string[] args)
     {
         ThrowExTests t = new();
-        t.IsNullOrWhitespaceTest();
+        //t.IsNullOrWhitespaceTest();
+        t.HasNotIndexTest();
 
         Console.WriteLine("Finished");
         Console.ReadLine();

@@ -8,6 +8,6 @@
   </PropertyGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\..\PlatformIndependentNuGetPackages\SunamoString\SunamoString.csproj" />
-    <ProjectReference Include="..\SunamoString.Tests2\SunamoString.Tests2.csproj" />
+    <ProjectReference Include="..\SunamoString.Tests2\SunamoString.Tests.csproj" />
   </ItemGroup>
 </Project>

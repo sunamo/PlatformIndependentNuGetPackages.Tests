@@ -19,4 +19,7 @@
       <PrivateAssets>all</PrivateAssets>
     </PackageReference>
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\PlatformIndependentNuGetPackages\SunamoNumbers\SunamoNumbers.csproj" />
+  </ItemGroup>
 </Project>

@@ -5,9 +5,9 @@ VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SunamoString", "..\..\PlatformIndependentNuGetPackages\SunamoString\SunamoString.csproj", "{11BDC706-7226-4940-A2FE-999E2D756D7F}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SunamoString.Tests2", "SunamoString.Tests2\SunamoString.Tests2.csproj", "{B822B1EA-5563-4DB8-85D7-5B7D8F92A9F2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SunamoString.Tests", "SunamoString.Tests2\SunamoString.Tests.csproj", "{B822B1EA-5563-4DB8-85D7-5B7D8F92A9F2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RunnerString", "RunnerString\RunnerString.csproj", "{DB60222F-EC28-4D1F-8477-D61AA08BFCB8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RunnerString", "RunnerString\RunnerString.csproj", "{DB60222F-EC28-4D1F-8477-D61AA08BFCB8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

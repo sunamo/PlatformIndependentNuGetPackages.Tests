@@ -13,7 +13,9 @@ internal class Program
     {
         SHTests t = new();
         //t.FirstWordWhichIsNumberTest();
-        t.ContainsClTest();
+        //t.ContainsClTest();
+        //t.GetTextBetweenSimpleTest();
+        t.FirstWordWhichIsNumberTest();
     }
 
 }

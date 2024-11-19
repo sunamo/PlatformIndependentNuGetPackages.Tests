@@ -1,9 +1,12 @@
+using SunamoNumbers.Tests;
+
 namespace RunnerNumbers;
 
 internal class Program
 {
     static void Main(string[] args)
     {
-        Console.WriteLine("Hello, World!");
+        NumberServiceTests t = new();
+        t.ParseInterval();
     }
 }

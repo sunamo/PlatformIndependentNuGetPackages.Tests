@@ -7,10 +7,9 @@ public class SHGetFilesTests
 {
     public void GetFoldersEveryFolderTest()
     {
-
         //var d = FSGetFiles.GetFilesEveryFolder(@"E:\vs\Projects\_WhenNeedToEditAllCorruptedSlns\CommandsToAllCsFiles.Cmd\", "*.cs", true);
 
-        var f = FSGetFiles.GetFilesEveryFolder(@"E:\vs\Projects\PlatformIndependentNuGetPackages\SunamoExceptions\", "*.cs", true, new SunamoGetFiles._public.SunamoArgs.GetFilesEveryFolderArgs { ExcludeCodeFolders = true, Logger = NullLogger.Instance });
+        var f = FSGetFiles.GetFilesEveryFolder(LoggerDummy.Instance, @"E:\vs\Projects\PlatformIndependentNuGetPackages\SunamoExceptions\", "*.cs", true, new SunamoGetFiles._public.SunamoArgs.GetFilesEveryFolderArgs { ExcludeCodeFolders = true });
 
         //var f = FSGetFiles.GetFilesEveryFolder(@"E:\vs\Projects\", "*.cs", true, new SunamoGetFiles._public.SunamoArgs.GetFilesEveryFolderArgs { IgnoreFoldersWithName = ["obj", "node_modules", ".git", ".vs"], Logger = LoggerDummy.Instance });
     }
@@ -23,7 +22,7 @@ public class SHGetFilesTests
         var d = DriveInfo.GetDrives();
         foreach (var item in d)
         {
-            r.Add(FSGetFiles.GetFilesEveryFolder(item.RootDirectory.FullName, "*", SearchOption.AllDirectories));
+            r.Add(FSGetFiles.GetFilesEveryFolder(LoggerDummy.Instance, item.RootDirectory.FullName, "*", SearchOption.AllDirectories));
         }
 
         StringBuilder sb = new StringBuilder();

@@ -20,8 +20,11 @@ internal class Program
         //GlobalUsingsInstanceTests t = new GlobalUsingsInstanceTests();
         //await t.GlobalUsingsInstance_Test();
 
-        TFCsFormatTests tFCsFormatTests = new TFCsFormatTests();
-        await tFCsFormatTests.WriteAllLinesTest();
+        //TFCsFormatTests tFCsFormatTests = new TFCsFormatTests();
+        //await tFCsFormatTests.WriteAllLinesTest();
+
+        FoldersWithSolutionsInstanceTests foldersWithSolutionsInstanceTests = new();
+        foldersWithSolutionsInstanceTests.ReloadTest();
 
         //FoldersWithSolutionsInstanceTests t = new FoldersWithSolutionsInstanceTests();
         //t.ReloadTest();

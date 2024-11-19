@@ -6,4 +6,7 @@
     <Nullable>enable</Nullable>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
   </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SunamoRoslyn.Tests\SunamoRoslyn.Tests.csproj" />
+  </ItemGroup>
 </Project>

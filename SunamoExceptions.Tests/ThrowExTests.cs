@@ -16,4 +16,11 @@ public class ThrowExTests
         a = null;
         var b2 = ThrowEx.IsNullOrWhitespace("a", a);
     }
+
+    [Fact]
+    public void HasNotIndexTest()
+    {
+        var l = Exceptions.HasNotIndex("", [1, 2, 3], "", 2);
+        var l2 = Exceptions.HasNotIndex("", [1, 2, 3], "", 3);
+    }
 }

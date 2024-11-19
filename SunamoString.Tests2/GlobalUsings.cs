@@ -1,1 +1,2 @@
-global using Xunit;global using SunamoStringGetLines;
+global using XunitSunamoStringGetLines;
+global using SunamoString.Tests2;

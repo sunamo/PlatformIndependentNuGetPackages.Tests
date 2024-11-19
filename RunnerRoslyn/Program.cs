@@ -1,9 +1,11 @@
 namespace RunnerRoslyn;
+using SunamoRoslyn.Tests;
 
 internal class Program
 {
     static void Main(string[] args)
     {
-        Console.WriteLine("Hello, World!");
+        RoslynCommentServiceTests t = new();
+        t.RemoveCommentsTest();
     }
 }

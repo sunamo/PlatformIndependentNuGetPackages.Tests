@@ -15,7 +15,7 @@
     <DefineConstants>$(DefineConstants);ASYNC</DefineConstants>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="SunamoLogging" Version="24.8.27.2" />
+    <PackageReference Include="SunamoLogging" Version="24.11.11.1" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\..\PlatformIndependentNuGetPackages\SunamoCl\SunamoCl.csproj" />

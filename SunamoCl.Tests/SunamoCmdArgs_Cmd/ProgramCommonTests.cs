@@ -12,7 +12,8 @@ using Xunit;
 
 enum Mode
 {
-    None
+    None,
+    Test
 }
 
 class CommonArgsTest : CommonArgs
@@ -26,6 +27,6 @@ public class ProgramCommonTests
     public void ProcessArgsTest()
     {
         ProgramCommon p = new ProgramCommon();
-        var a = p.ProcessArgs<CommonArgsTest, Mode>(new string[] { }, Mode.None);
+        var a = p.ProcessArgs<CommonArgsTest, Mode>(["--Mode", "Test"], Mode.None);
     }
 }

@@ -42,11 +42,6 @@ internal partial class Program
 
     static ProgramCommon p;
 
-    //static void ConfigureServices(ServiceCollection services)
-    //{
-
-    //}
-
     static ServiceCollection serviceCollection { get; set; } = new ServiceCollection();
 
     static async Task MainAsync(string[] args)
@@ -64,22 +59,37 @@ internal partial class Program
 
         await CmdBootStrap.RunWithRunArgs(new RunArgs()
         {
-            IsDebug = true,
-            IsLoggingToConsole = true,
+            ServiceCollection = serviceCollection,
+            categoryNameLogger = appName,
+            //IsLoggingToConsole = true,
             //askUserIfRelease = true,
-            //ProgramSharedCreatePathToFiles = ProgramSharedCreatePathToFiles,
+
+            ProgramSharedCreatePathToFiles = ProgramSharedCreatePathToFiles,
             //AppDataCiGetFileString = GetFileString,
-            ////AddGroupOfActions = AddGroupOfActions,
+            AddGroupOfActions = AddGroupOfActions,
             ////args = args,
             ////CatchUnhandledException = false,
             ////runInDebug = RunInDebugAsync,
             //ServiceCollection = serviceCollection,
             //LoadFromAppsettingsJson = true,
             //categoryNameLogger = "Any",
-            //IsLoggingToConsole = true,
-            //FileLoggerProvider = FileLoggerProvider.DefaultDirectory(appName),
-            runInDebug = RunInDebugAsync
+            IsLoggingToConsole = true,
+            FileLoggerProvider = FileLoggerProvider.DefaultDirectory(appName),
+            runInDebug = RunInDebugAsync,
+            args =
+#if DEBUG
+            ["TestTest2Host"],
+#else
+args,
+#endif
 
+
+            IsDebug =
+#if DEBUG
+            true
+#else
+false
+#endif
 
             // V normální aplikaci bych importoval SunamoLogging
             //FileLoggerProvider = FileLoggerProvider.DefaultDirectory(appName),
@@ -90,27 +100,54 @@ internal partial class Program
             //groupsOfActionsFromProgramCommon = p.groupsOfActions,
             //pAllActionsAsync = p.allActionsAsync
         });
-
-        Console.WriteLine("Finished");
-        Console.ReadLine();
     }
 
     static async Task RunInDebugAsync()
     {
+        await Task.Delay(1);
+        Console.WriteLine("RunInDebugAsync");
+
         //CmdAppTests t = new CmdAppTests();
         //await t.WaitForSaving();
 
         var s = serviceCollection.BuildServiceProvider();
 
-        var logger = s.GetRequiredService<ILogger>();
-        logger.LogTrace("From main trace");
-        logger.LogDebug("From main debug");
-        logger.LogError("From main error");
+        #region Tohle mi nefunguje. Nejsem schopen aby se mi vždy vypsali všechny 3 a teprve pak "Finished"
+        /*
+Nepomohlo ani aby RunInDebug vracelo string který potom dále použiji
+        Občas se zbylé 2 vypíšou až po Finished
+        ale to bude kódem samotného loggeru
+        V mém kódu to fakt není, všude kde má být await tak tam je
+        nefungovalo to ani bez Task.Run
+        */
+        await Task.Run(() =>
+        {
+            var logger = s.GetRequiredService<ILogger>();
+
+
+            logger.LogTrace("From main trace");
+            logger.LogDebug("From main debug");
+            logger.LogInformation("Info");
+
+            logger.LogWarning("Warning");
+            logger.LogError("From main error");
+            logger.LogCritical("Critical");
+        });
+
+        //Toto naopak funguje bezchybně:
+        Console.WriteLine("a");
+        Console.WriteLine("b");
+        Console.WriteLine("c");
+        Console.WriteLine("d");
+        #endregion
 
 
 
-        var tc = s.GetRequiredService<TestContainer>();
-        tc.A();
+        //var tc = s.GetRequiredService<TestContainer>();
+        //tc.A();
+
+        //ProgramCommonTests t = new();
+        //t.ProcessArgsTest();
 
         //await Task.Delay(1000);
 
@@ -130,7 +167,5 @@ internal partial class Program
 
         //cl.LyricsHelper_WriteProgressBarEnd(); 
         #endregion
-
-
     }
 }

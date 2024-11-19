@@ -32,6 +32,7 @@ partial class Program
         Dictionary<string, Func<Task>> actionsAsync = new Dictionary<string, Func<Task>>();
         actions.Add("None", delegate { });
         actions.Add("Executables of all browsers", WriteTest);
+        //actions.Add("Executables of all browsers", WriteTest);
         actions.Add("Test Test1 Test2 (search list)", WriteTest);
         actions.Add("TestTest2Host", WriteTest);
 
