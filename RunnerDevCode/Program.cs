@@ -17,6 +17,8 @@ internal class Program
 
     static async Task MainAsync(string[] args)
     {
+        await Task.Delay(1);
+
         //GlobalUsingsInstanceTests t = new GlobalUsingsInstanceTests();
         //await t.GlobalUsingsInstance_Test();
 

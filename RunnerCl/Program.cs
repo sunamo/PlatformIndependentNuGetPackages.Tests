@@ -46,6 +46,8 @@ internal partial class Program
 
     static async Task MainAsync(string[] args)
     {
+
+
         //ProgramCommonTests t = new ProgramCommonTests();
         //t.ProcessArgsTest();
 
@@ -78,7 +80,7 @@ internal partial class Program
             runInDebug = RunInDebugAsync,
             args =
 #if DEBUG
-            ["TestTest2Host"],
+            ["TestTest"],
 #else
 args,
 #endif
@@ -86,7 +88,7 @@ args,
 
             IsDebug =
 #if DEBUG
-            true
+            false
 #else
 false
 #endif
@@ -100,6 +102,9 @@ false
             //groupsOfActionsFromProgramCommon = p.groupsOfActions,
             //pAllActionsAsync = p.allActionsAsync
         });
+
+        Console.WriteLine("Finished");
+        Console.ReadLine();
     }
 
     static async Task RunInDebugAsync()
