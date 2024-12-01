@@ -24,7 +24,7 @@ partial class Program
 #if ASYNC
             await
 #endif
-            CL.PerformActionAsync(actions);
+            CLActions.PerformActionAsync(actions);
         }
 
         return actions;

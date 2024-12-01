@@ -1,4 +1,5 @@
-﻿using Microsoft.Extensions.Configuration;
+namespace RunnerCl;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
@@ -8,19 +9,15 @@ using System.Text;
 using System.Text.Json;
 using System.Threading.Tasks;
 
-namespace RunnerCl;
 internal class TestContainer(ILogger logger, IConfiguration config)
 {
-    internal void A()
-    {
-        var c = config;
-
-        logger.LogCritical("Critical!");
-        logger.LogError("Error!");
-
-        dynamic d = new ExpandoObject();
-        d.To = "to";
-
-        logger.LogInformation(JsonSerializer.Serialize(d as ExpandoObject));
-    }
+internal void A()
+{
+var c = config;
+logger.LogCritical("Critical!");
+logger.LogError("Error!");
+dynamic d = new ExpandoObject();
+d.To = "to";
+logger.LogInformation(JsonSerializer.Serialize(d as ExpandoObject));
+}
 }

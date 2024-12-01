@@ -8,24 +8,6 @@ using System.Threading.Tasks;
 
 partial class Program
 {
-    private static void AddToAllActions(string v, Dictionary<string, Action> actions, Dictionary<string, Func<Task>> actionsAsync)
-    {
-        Dictionary<string, Action> actions2 = new Dictionary<string, Action>();
-        Dictionary<string, Func<Task>> actionsAsync2 = new Dictionary<string, Func<Task>>();
-
-        foreach (var item in actions)
-        {
-            actions2.Add(item.Key, (Action)(dynamic)item.Value);
-        }
-
-        foreach (var item in actionsAsync)
-        {
-            actionsAsync2.Add(item.Key, (Func<Task>)(dynamic)item.Value);
-        }
-
-        p.AddToAllActions(v, actions2, actionsAsync2);
-    }
-
     static Dictionary<string, object> DatingActions()
     {
         Dictionary<string, Action> actions = new Dictionary<string, Action>();
