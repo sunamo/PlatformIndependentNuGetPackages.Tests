@@ -126,6 +126,21 @@ public class HtmlAgilityHelperTests
     }
 
     [Fact]
+    public async Task NodesWithAttrTest()
+    {
+        var d = await File.ReadAllTextAsync(@"D:\_Test\PlatformIndependentNuGetPackages\SunamoHtml\NodesWithAttrTest.html");
+
+        var hd = HtmlAgilityHelper.CreateHtmlDocument();
+        hd.LoadHtml(d);
+
+        var c_products__list = HtmlAgilityHelper.NodeWithAttr(hd.DocumentNode, true, "div", "class", "c-products__list grid");
+
+        var grid__cells = HtmlAgilityHelper.NodesWithAttr(c_products__list, false, "div", "class", "grid__cell", true);
+
+        Assert.Equal(23, grid__cells.Count);
+    }
+
+    [Fact]
     public void Test1()
     {
         var hd = HtmlAgilityHelper.CreateHtmlDocument();

@@ -1,14 +1,18 @@
 namespace SunamoString.Tests2;
 using SunamoString._public;
+using Xunit;
 
 public class SHTests
 {
     [Fact]
     public void FirstWordWhichIsNumberTest()
     {
+        var d4 = SH.FirstWordWhichIsNumber(" 85 m², pozemek 260 m²", 0);
         var d = SH.FirstWordWhichIsNumber(" 44 m² ", 1);
         var d2 = SH.FirstWordWhichIsNumber(" 44 m² ", 0);
         var d3 = SH.FirstWordWhichIsNumber("a 44 m² ", 1);
+
+
     }
 
     [Fact]

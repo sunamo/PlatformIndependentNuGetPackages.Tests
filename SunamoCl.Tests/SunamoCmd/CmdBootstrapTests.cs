@@ -4,6 +4,7 @@ namespace SunamoCl.Tests.SunamoCmd;
 internal class CmdBootstrapTests
 {
     static ProgramCommon p = null;
+    static readonly string appName = "ConsoleApp1";
 
     /*
 Při instalaci jakéhokoliv balíčku mám vždy tyto chyby:
@@ -34,7 +35,7 @@ zkusil jsem nainstlaovat všechny po jednom ale bez výsledku
     //[Fact]
     public async Task Run2Test()
     {
-        string appName = "ConsoleApp1";
+
 
         p = new ProgramCommon();
 
@@ -48,16 +49,4 @@ zkusil jsem nainstlaovat všechny po jednom ale bez výsledku
     }
 
     public static Dictionary<string, Action> allActions = new Dictionary<string, Action>();
-
-    static void CustomInit()
-    {
-
-    }
-
-    async Task RunInDebug()
-    {
-
-    }
-
-
 }

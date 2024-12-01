@@ -6,6 +6,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SunamoWinStd", "..\..\Platf
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RunnerWinStd", "RunnerWinStd\RunnerWinStd.csproj", "{6AEADF6C-D909-4606-9EF4-EA7599404A5C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SunamoWinStd.Tests", "SunamoWinStd.Tests\SunamoWinStd.Tests.csproj", "{B9130367-2940-419C-8CA0-F7D1736711E6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -20,6 +22,10 @@ Global
 		{6AEADF6C-D909-4606-9EF4-EA7599404A5C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6AEADF6C-D909-4606-9EF4-EA7599404A5C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6AEADF6C-D909-4606-9EF4-EA7599404A5C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B9130367-2940-419C-8CA0-F7D1736711E6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B9130367-2940-419C-8CA0-F7D1736711E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B9130367-2940-419C-8CA0-F7D1736711E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B9130367-2940-419C-8CA0-F7D1736711E6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

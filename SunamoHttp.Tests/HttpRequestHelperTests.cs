@@ -1,3 +1,4 @@
+using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Logging.Abstractions;
 using SunamoHttp.Args;
 using SunamoPlatformUwpInterop._public.SunamoEnums.Enums;
@@ -15,6 +16,16 @@ public class HttpRequestHelperTests
 
         var html = await HttpRequestHelper.DownloadOrRead(NullLogger.Instance, @"https://reality.idnes.cz/s/prodej/domy/okres-kutna-hora/?s-qc%5BusableAreaMin%5D=60&s-qc%5BusableAreaMax%5D=70", AppData.ci.GetFolder(AppFolders.Cache), new DownloadOrReadArgs { forceDownload = false });
     }
+
+    ILogger logger = NullLogger.Instance;
+
+    //[Fact]
+    //public async Task DownloadOrReadTest()
+    //{
+    //    AppData.ci.CreateAppFoldersIfDontExists(new SunamoPlatformUwpInterop.Args.CreateAppFoldersIfDontExistsArgs { AppName = "SunamoHttp.Tests" });
+
+    //    HttpRequestHelper.DownloadOrRead(logger, AppData.ci.GetFolder(AppFolders.Cache), uriListing, new DownloadOrReadArgs { forceDownload = true });
+    //}
 
     [Fact]
     public async Task DownloadTest()
