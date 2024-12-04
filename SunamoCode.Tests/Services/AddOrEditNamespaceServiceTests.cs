@@ -12,7 +12,7 @@ public class AddOrEditNamespaceServiceTests
     public async Task AddOrEditNamespaceForSingleFileAndSaveTest()
     {
         var addOrEditNamespaceService = new AddOrEditNamespaceService();
-        var ns = await addOrEditNamespaceService.AddOrEditNamespaceForSingleFileAndSave(@"E:\vs\Projects\PlatformIndependentNuGetPackages\SunamoDotNetZip\", "SunamoDotNetZip", @"E:\vs\Projects\PlatformIndependentNuGetPackages\SunamoDotNetZip\Zip\ZipDirEntry.cs");
+        var ns = await addOrEditNamespaceService.AddOrEditNamespaceForSingleFileAndSave(@"E:\vs\Projects\PlatformIndependentNuGetPackages\SunamoDotNetZip\", "SunamoDotNetZip", @"E:\vs\Projects\PlatformIndependentNuGetPackages\SunamoDotNetZip\Zlib\ZlibConstants.cs");
 
     }
 }
