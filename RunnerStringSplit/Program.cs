@@ -4,9 +4,10 @@ namespace RunnerStringSplit;
 
 internal class Program
 {
-    static void Main(string[] args)
+    private static void Main(string[] args)
     {
         SHSplitTests t = new SHSplitTests();
-        t.SplitMoreTest();
+        //t.SplitMoreTest();
+        t.SplitByWhiteSpacesTest();
     }
 }

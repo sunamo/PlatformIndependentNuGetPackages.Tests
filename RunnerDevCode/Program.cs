@@ -5,6 +5,7 @@ using SunamoDevCode.Args;
 using SunamoDevCode.SunamoCSharp;
 using SunamoDevCode.Tests;
 using SunamoDevCode.Tests.Helpers;
+using SunamoDevCode.Tests.Services;
 
 internal class Program
 {
@@ -25,8 +26,11 @@ internal class Program
         //TFCsFormatTests tFCsFormatTests = new TFCsFormatTests();
         //await tFCsFormatTests.WriteAllLinesTest();
 
-        FoldersWithSolutionsInstanceTests foldersWithSolutionsInstanceTests = new();
-        foldersWithSolutionsInstanceTests.ReloadTest();
+        //FoldersWithSolutionsInstanceTests foldersWithSolutionsInstanceTests = new();
+        //foldersWithSolutionsInstanceTests.ReloadTest();
+
+        AddOrEditNamespaceServiceTests t = new AddOrEditNamespaceServiceTests();
+        await t.AddOrEditNamespaceForSingleFileAndSaveTest();
 
         //FoldersWithSolutionsInstanceTests t = new FoldersWithSolutionsInstanceTests();
         //t.ReloadTest();
