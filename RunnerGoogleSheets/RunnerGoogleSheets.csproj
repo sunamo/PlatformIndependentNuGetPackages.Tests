@@ -13,4 +13,10 @@
     <ProjectReference Include="..\..\..\PlatformIndependentNuGetPackages\SunamoGoogleSheets\SunamoGoogleSheets.csproj" />
     <ProjectReference Include="..\SunamoGoogleSheets.Tests\SunamoGoogleSheets.Tests.csproj" />
   </ItemGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DefineConstants>$(DefineConstants)</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DefineConstants>$(DefineConstants)</DefineConstants>
+  </PropertyGroup>
 </Project>

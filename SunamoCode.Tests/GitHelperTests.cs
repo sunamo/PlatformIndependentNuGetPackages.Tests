@@ -1,6 +1,4 @@
-namespace win.std.Tests;
-
-
+namespace SunamoCode.Tests;
 public class GitHelperTests
 {
     [Fact]

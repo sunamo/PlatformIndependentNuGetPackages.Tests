@@ -23,9 +23,9 @@
     <ProjectReference Include="..\..\..\PlatformIndependentNuGetPackages\SunamoTextBuilder\SunamoTextBuilder.csproj" />
   </ItemGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
-    <DefineConstants>$(DefineConstants);ASYNC;SunamoTextBuilder.Tests;SunamoTextBuilder.Tests.csproj</DefineConstants>
+    <DefineConstants>$(DefineConstants);ASYNC</DefineConstants>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
-    <DefineConstants>$(DefineConstants);ASYNC;SunamoTextBuilder.Tests;SunamoTextBuilder.Tests.csproj</DefineConstants>
+    <DefineConstants>$(DefineConstants);ASYNC</DefineConstants>
   </PropertyGroup>
 </Project>

@@ -23,9 +23,9 @@
     <ProjectReference Include="..\..\..\PlatformIndependentNuGetPackages\SunamoPlatformUwpInterop\SunamoPlatformUwpInterop.csproj" />
   </ItemGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
-    <DefineConstants>$(DefineConstants);ASYNC;SunamoPlatformUwpInterop.Tests;SunamoPlatformUwpInterop.Tests.csproj</DefineConstants>
+    <DefineConstants>$(DefineConstants);ASYNC</DefineConstants>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
-    <DefineConstants>$(DefineConstants);ASYNC;SunamoPlatformUwpInterop.Tests;SunamoPlatformUwpInterop.Tests.csproj</DefineConstants>
+    <DefineConstants>$(DefineConstants);ASYNC</DefineConstants>
   </PropertyGroup>
 </Project>

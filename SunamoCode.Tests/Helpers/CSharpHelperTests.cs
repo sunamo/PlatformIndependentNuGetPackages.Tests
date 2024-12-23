@@ -1,7 +1,6 @@
+namespace SunamoCode.Tests.Helpers;
 using SunamoDevCode.SunamoCSharp;
 using System.IO;
-
-namespace SunamoDevCode.Tests.Helpers;
 
 public class CSharpHelperTests
 {

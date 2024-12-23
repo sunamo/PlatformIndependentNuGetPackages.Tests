@@ -10,4 +10,10 @@
     <ProjectReference Include="..\..\..\PlatformIndependentNuGetPackages\SunamoRegex\SunamoRegex.csproj" />
     <ProjectReference Include="..\SunamoRegex.Tests\SunamoRegex.Tests.csproj" />
   </ItemGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DefineConstants>$(DefineConstants)</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DefineConstants>$(DefineConstants)</DefineConstants>
+  </PropertyGroup>
 </Project>

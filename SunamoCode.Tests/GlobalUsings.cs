@@ -1,4 +1,4 @@
-﻿global using SunamoDevCode;
+global using SunamoDevCode;
 global using System.Collections.Generic;
 global using System.Linq;
 global using System.Reflection;
@@ -7,5 +7,9 @@ global using System.Threading.Tasks;
 global using System;
 global using Xunit;
 global using FluentAssertions;
-//global using Microsoft.VisualStudio.TestTools.UnitTesting;
 global using SunamoStringGetLines;
+global using SunamoCode.Tests;
+global using SunamoCode.Tests.FileFormats;
+global using SunamoCode.Tests.Helpers;
+global using SunamoCode.Tests.Services;
+global using SunamoCode.Tests.SunamoSolutionsIndexer;

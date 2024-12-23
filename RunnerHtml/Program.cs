@@ -13,9 +13,10 @@ internal class Program
     static async Task MainAsync(string[] args)
     {
         HtmlAgilityHelperTests t = new HtmlAgilityHelperTests();
-        ////t.PairsDdDtTest();
+        //t.PairsDdDtTest2();
+        await t.CreateHtmlDocumentTest();
         //t.Test1();
-        await t.NodesWithAttrTest();
+        //await t.NodesWithAttrTest();
 
         //HtmlAssistantTests t = new HtmlAssistantTests();
         //t.InnerTextDecodeTrimTest();

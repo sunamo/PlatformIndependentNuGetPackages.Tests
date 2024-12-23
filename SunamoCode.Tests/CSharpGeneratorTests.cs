@@ -1,5 +1,4 @@
-namespace SunamoDevCode.Tests;
-
+namespace SunamoCode.Tests;
 public class CSharpGeneratorTests
 {
     [Fact]

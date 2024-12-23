@@ -1,3 +1,4 @@
+namespace SunamoCode.Tests;
 public class GlobalUsingsInstanceTests
 {
     [Fact]

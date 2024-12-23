@@ -6,6 +6,12 @@ namespace SunamoGetFolders.Tests;
 public class SHGetFoldersTests
 {
     [Fact]
+    public void GetFoldersEveryFolderTest()
+    {
+        var gitPaths = FSGetFolders.GetFoldersEveryFolder(@"E:\vs", ".git", new SunamoGetFolders.Args.GetFoldersEveryFolderArgs { excludeFromLocationsCOntains = ["de_mo", @"\obj\", ".vs"], SecondsToWriteActualFolder = 5 });
+    }
+
+    [Fact]
     public void GetFoldersTest2()
     {
         var f = FSGetFolders.GetFoldersEveryFolder(@"D:\_Test\", $"*{"PlatformIndependentNuGetPackages"}*");

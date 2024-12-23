@@ -1,5 +1,5 @@
-
-namespace SunamoDevCode.Tests;
+namespace SunamoCode.Tests;
+using Microsoft.Extensions.Logging.Abstractions;
 using SunamoDevCode.SunamoSolutionsIndexer;
 using System;
 using System.Collections.Generic;
@@ -15,9 +15,9 @@ public class FoldersWithSolutionsInstanceTests
         var p = @"E:\vs\";
 
         //DefaultPaths.eVs = p;
-        FoldersWithSolutions.PairProjectFolderWithEnum(p);
-        FoldersWithSolutionsInstance d = new FoldersWithSolutionsInstance(p, null, false);
-        d.Reload(p, null, false);
+        FoldersWithSolutions.PairProjectFolderWithEnum(NullLogger.Instance, p);
+        FoldersWithSolutionsInstance d = new FoldersWithSolutionsInstance(NullLogger.Instance, p, null, false);
+        d.Reload(NullLogger.Instance, p, null, false);
         var slns = d.Solutions(Enums.RepositoryLocal.Vs17);
         //d.Reload()
     }

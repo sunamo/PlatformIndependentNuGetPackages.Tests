@@ -11,14 +11,14 @@ internal partial class Program
     static ProgramCommon p;
     const string appName = "RunnerCl";
 
-    static ServiceCollection services { get; set; }
+    static IServiceCollection services { get; set; }
     static ServiceProvider provider { get; set; }
 
     static Program()
     {
         p = new ProgramCommon();
 
-        services = new();
+        services = new ServiceCollection();
 
         services.AddScoped<TestContainer>();
 

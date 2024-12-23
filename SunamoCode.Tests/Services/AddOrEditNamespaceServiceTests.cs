@@ -1,11 +1,11 @@
-﻿using SunamoDevCode.Services;
+namespace SunamoCode.Tests.Services;
+using SunamoDevCode.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SunamoDevCode.Tests.Services;
 public class AddOrEditNamespaceServiceTests
 {
     [Fact]

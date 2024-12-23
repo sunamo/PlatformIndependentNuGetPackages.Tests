@@ -10,6 +10,13 @@ public class FSTests
         //var d = FSGetFiles.GetFiles(@"E:\vs\Projects\PlatformIndependentNuGetPackages2\_\", "*.cs", SearchOption.AllDirectories, new GetFilesArgs { excludeFromLocationsCOntains = new List<string>([@"\obj\", "de_mo"]) });
     }
 
+    [Fact]
+    public void InsertBetweenFileNameAndPathTest()
+    {
+        var r = FS.InsertBetweenFileNameAndPath();
+
+    }
+
     [Theory]
     [InlineData(true)]
     [InlineData(false)]

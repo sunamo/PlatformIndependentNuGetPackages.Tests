@@ -6,9 +6,9 @@ internal class Program
 {
     static void Main(string[] args)
     {
-        //SHGetFoldersTests t = new SHGetFoldersTests();
+        SHGetFoldersTests t = new SHGetFoldersTests();
         //t.GetFoldersTest2();
-
+        t.GetFoldersEveryFolderTest();
 
     }
 }
