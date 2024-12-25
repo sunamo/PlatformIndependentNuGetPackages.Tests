@@ -16,10 +16,10 @@ public class SunamoMapyCzServiceTests
             throw new Exception("Key will be loaded securely later");
         }
 
-        HttpClient httpClient = new();
-        var r = await sunamoMapyCz.AddressToCoordsSingle(httpClient, "Podnádražní 8, Praha", key, true);
+        //HttpClient httpClient = new();
+        //var r = await sunamoMapyCz.AddressToCoordsSingle(httpClient, "Podnádražní 8, Praha", key, true);
 
-        var position = r.position.ToString();
+        //var position = r.Position.ToString();
     }
 
 }

@@ -1,3 +1,5 @@
+using System.IO.Compression;
+
 namespace SunamoCsproj.Tests;
 public class CsprojInstanceTests : SwdRepoNames
 {
@@ -7,6 +9,66 @@ public class CsprojInstanceTests : SwdRepoNames
         CsprojInstance csp = new CsprojInstance(await File.ReadAllTextAsync(@"E:\vs\Projects\PlatformIndependentNuGetPackages\SunamoAsync\SunamoAsync.csproj"));
 
         csp.RemoveSingleItemGroup("SunamoArgs", Items.ItemGroupTagName.PackageReference);
+    }
+
+    //
+
+    [Fact]
+    public void AddRemoveNoWarnTest()
+    {
+        var pathFile = @"D:\_Test\sunamo\SunamoCsproj\CsProjInstance\Original.zip";
+        ZipFile.ExtractToDirectory(pathFile, Path.GetDirectoryName(pathFile)!, true);
+
+        var csprojPath = @"D:\_Test\sunamo\SunamoCsproj\CsProjInstance\Original\Example.csproj";
+        AddRemoveNoWarnTestWorker(csprojPath);
+    }
+
+    [Fact]
+    public void AddRemoveNoWarnTest2()
+    {
+        var zipFile = @"E:\vs\Projects\sunamo.notmine\UAParser\UAParser.zip";
+        ZipFile.ExtractToDirectory(zipFile, Path.GetDirectoryName(zipFile), true);
+
+        AddRemoveNoWarnTestWorker(@"E:\vs\Projects\sunamo.notmine\UAParser\UAParser.csproj");
+    }
+
+    public void AddRemoveNoWarnTestWorker(string csprojPath)
+    {
+        CsprojInstance csi = new(csprojPath);
+        csi.AddRemoveNoWarn(true, "CA1822");
+
+        csi.Save();
+    }
+
+    //
+
+    [Fact]
+    public void ItemsInItemGroupTest()
+    {
+        CsprojInstance csi = new(@"E:\vs\Projects\_WhenNeedToEditAllCorruptedSlns\CommandsToAllCsprojs.Cmd\CommandsToAllCsprojs.Cmd\CommandsToAllCsprojs.Cmd.csproj");
+
+        var d = csi.ItemsInItemGroup(ItemGroupTagName.PackageReference);
+        var d2 = csi.ItemsInItemGroup(ItemGroupTagName.ProjectReference);
+
+    }
+
+    [Fact]
+    public async Task RemoveDuplicatesInItemGroupTest()
+    {
+        CsprojInstance csi = new(@"D:\_Test\PlatformIndependentNuGetPackages\SunamoCsproj\DetectDuplicatedNugetPackages.csproj");
+
+        var newCsprojContent = await csi.RemoveDuplicatedProjectAndPackageReferences(null);
+        await File.WriteAllTextAsync(@"E:\vs\Projects\_tests\CompareTwoFiles\CompareTwoFiles\xml\1.xml", newCsprojContent);
+    }
+
+
+    [Fact]
+    public void PropertyGroupItemContentTest()
+    {
+        CsprojInstance csi = new(@"E:\vs\Projects\PlatformIndependentNuGetPackages\SunamoCsproj\SunamoCsproj.csproj");
+
+        //var d = await CsprojHelper.PropertyGroupItemContent(@"E:\vs\Projects\_ut2\PlatformIndependentNuGetPackages.Tests\SunamoCsproj.Tests\SunamoCsproj.Tests.csproj", "Description");
+        var d2 = csi.PropertyGroupItemContent("Description");
     }
 
     [Fact]
@@ -24,6 +86,7 @@ public class CsprojInstanceTests : SwdRepoNames
         csi.CreateNewPackageReference(SunamoInterfaces, "*");
 
         var xml = xd.OuterXml;
+        Console.WriteLine(xml);
         Debugger.Break();
 
         foreach (var item in new string[] { SunamoArgs, SunamoInterfaces })
@@ -32,6 +95,7 @@ public class CsprojInstanceTests : SwdRepoNames
         }
 
         var xml2 = xd.OuterXml;
+        Console.WriteLine(xml2);
         Debugger.Break();
         // Act
 
@@ -41,6 +105,6 @@ public class CsprojInstanceTests : SwdRepoNames
     [Fact]
     public void AddTagsForNugetReadmeFile()
     {
-        var csi = new CsprojInstance();
+        //var csi = new CsprojInstance();
     }
 }

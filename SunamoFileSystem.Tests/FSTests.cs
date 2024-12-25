@@ -1,4 +1,6 @@
-﻿using Ionic.Zip;
+﻿
+using SunamoFileSystem.Enums;
+using System.IO.Compression;
 
 namespace SunamoFileSystem.Tests;
 
@@ -13,8 +15,27 @@ public class FSTests
     [Fact]
     public void InsertBetweenFileNameAndPathTest()
     {
-        var r = FS.InsertBetweenFileNameAndPath();
+        var r = FS.InsertBetweenFileNameAndPath("a", null, "_");
 
+    }
+
+    [Fact]
+    public void MoveDirectoryNoRecursiveTest()
+    {
+        var bp = @"D:\_Test\PlatformIndependentNuGetPackages\SunamoFileSystem\MoveDirectoryNoRecursiveTest\";
+
+        var sourceZip = bp + "MoveDirectoryNoRecursiveTest.zip";
+        if (!File.Exists(sourceZip))
+        {
+            throw new Exception($"{sourceZip} not exists!");
+        }
+
+        Directory.Delete(bp + "From", true);
+        Directory.Delete(bp + "To", true);
+
+        ZipFile.ExtractToDirectory(sourceZip, Path.GetDirectoryName(sourceZip));
+
+        FS.MoveDirectoryNoRecursive(bp + @"From\", bp + @"To\", DirectoryMoveCollisionOption.Overwrite, FileMoveCollisionOption.ThrowEx);
     }
 
     [Theory]
@@ -24,15 +45,10 @@ public class FSTests
     {
         // Jen takhle to funguje. Extrahovat tím že se složka sama vytvoří nejde.
         var path = @"D:\_Test\PlatformIndependentNuGetPackages\SunamoFileSystem\DeleteAllEmptyDirectoriesTest.zip";
-        var p2 = Path.Combine(Path.GetDirectoryName(path), "DeleteAllEmptyDirectoriesTest");
-        Directory.Delete(p2, true);
+        var p2 = Path.Combine(Path.GetDirectoryName(path), Path.GetFileNameWithoutExtension(path));
 
-        using (var zip = Ionic.Zip.ZipFile.Read(path))
-        {
-            Directory.CreateDirectory(p2);
-
-            zip.ExtractAll(p2, ExtractExistingFileAction.OverwriteSilently);
-        }
+        // extract pomocí System.IO.Compression
+        ZipFile.ExtractToDirectory(path, p2);
 
         FS.DeleteAllEmptyDirectories(p2, b, ".stfolder");
     }

@@ -12,11 +12,10 @@ public class SunamoGpxServiceTests
     {
         List<Item> list = new();
         //N, E
-        list.Add(new Item() { name = "Byt", position = new Position { lat = double.Parse("50.1115364"), lon = double.Parse("14.4965639") } });
-        list.Add(new Item() { name = "Leica", position = new Position { lat = double.Parse("50.0793428"), lon = double.Parse("14.4242769") } });
+        list.Add(new Item("Byt", new Position { lat = double.Parse("50.1115364"), lon = double.Parse("14.4965639") }));
+        list.Add(new Item("Leica", new Position { lat = double.Parse("50.0793428"), lon = double.Parse("14.4242769") }));
 
-        SunamoGpxService sunamoGpxService = new SunamoGpxService();
-        var c = sunamoGpxService.GenerateGpxFile("Create with love", list);
+        var c = SunamoGpxService.GenerateGpxFile("Create with love", list);
 
         await File.WriteAllTextAsync(@"D:\t.gpx", c);
     }

@@ -1,15 +1,16 @@
-using TextCopy;
-
 namespace SunamoGoogleMyMaps.Tests;
+using TextCopy;
 
 public class GoogleMyMapsHelperTests
 {
     [Fact]
     public void CreateExportForGoogleMyMapsTest()
     {
-        Dictionary<string, string> d = new Dictionary<string, string>();
-        d.Add("A", "B");
-        d.Add("C", "D");
+        Dictionary<string, string> d = new()
+        {
+            { "A", "B" },
+            { "C", "D" }
+        };
 
         var o = GoogleMyMapsHelper.CreateExportForGoogleMyMaps(d);
         ClipboardService.SetText(o);

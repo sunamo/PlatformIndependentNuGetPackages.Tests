@@ -6,9 +6,6 @@
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <Nullable>enable</Nullable>
   </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <Optimize>false</Optimize>
-  </PropertyGroup>
   <PropertyGroup>
     <StartupObject>
     </StartupObject>
@@ -33,8 +30,12 @@
   </ItemGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
     <DefineConstants>$(DefineConstants);ASYNC</DefineConstants>
+    <NoWarn>CA1822;CS1573;CS1572;CS1570;CA1866;CA2249</NoWarn>
+    <Optimize>false</Optimize>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
     <DefineConstants>$(DefineConstants);ASYNC</DefineConstants>
+    <NoWarn>CA1822;CS1573;CS1572;CS1570;CA1866;CA2249</NoWarn>
+    <Optimize>false</Optimize>
   </PropertyGroup>
 </Project>

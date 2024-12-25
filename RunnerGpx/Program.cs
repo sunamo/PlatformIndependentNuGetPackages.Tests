@@ -3,6 +3,6 @@
 //SunamoMapyCzServiceTests sunamoMapyCzServiceTests = new();
 //await sunamoMapyCzServiceTests.AddressToCoordsSingleTest();
 
-SunamoGpxServiceTests t = new SunamoGpxServiceTests();
+SunamoGpxServiceTests t = new();
 await t.GenerateGpxFileTest();
 
