@@ -1,4 +1,4 @@
-﻿namespace Ionic.Tests;
+﻿namespace SunamoDotNetZip.Tests;
 
 public class UnitTest1
 {

@@ -46,8 +46,8 @@ false
         SHGetFilesTests t = new SHGetFilesTests();
         //t.GetFilesTest();
 
-        t.GetFoldersEveryFolderTest();
-
+        //t.GetFoldersEveryFolderTest();
+        t.GetFilesEveryFolderTest();
 
     }
 }

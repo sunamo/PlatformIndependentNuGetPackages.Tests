@@ -1,4 +1,4 @@
-namespace SunamoCode.Tests.SunamoSolutionsIndexer;
+namespace SunamoDevCode.Tests.SunamoSolutionsIndexer;
 using Microsoft.Extensions.Logging.Abstractions;
 using SunamoDevCode.SunamoSolutionsIndexer;
 using System;

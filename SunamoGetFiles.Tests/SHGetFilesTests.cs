@@ -1,4 +1,5 @@
 using Microsoft.Extensions.Logging.Abstractions;
+using SunamoGetFiles._public.SunamoArgs;
 using System.Text;
 
 namespace SunamoGetFiles.Tests;
@@ -9,7 +10,7 @@ public class SHGetFilesTests
     {
         //var d = FSGetFiles.GetFilesEveryFolder(@"E:\vs\Projects\_WhenNeedToEditAllCorruptedSlns\CommandsToAllCsFiles.Cmd\", "*.cs", true);
 
-        var f = FSGetFiles.GetFilesEveryFolder(LoggerDummy.Instance, @"E:\vs\Projects\PlatformIndependentNuGetPackages\SunamoExceptions\", "*.cs", true, new SunamoGetFiles._public.SunamoArgs.GetFilesEveryFolderArgs { ExcludeCodeFolders = true });
+        var f = FSGetFiles.GetFilesEveryFolder(LoggerDummy.Instance, @"E:\vs\Projects\PlatformIndependentNuGetPackages\SunamoExceptions\", "*.cs", true, new SunamoGetFiles._public.SunamoArgs.GetFilesEveryFolderArgs { ExcludeGeneratedCodeFolders = true });
 
         //var f = FSGetFiles.GetFilesEveryFolder(@"E:\vs\Projects\", "*.cs", true, new SunamoGetFiles._public.SunamoArgs.GetFilesEveryFolderArgs { IgnoreFoldersWithName = ["obj", "node_modules", ".git", ".vs"], Logger = LoggerDummy.Instance });
     }
@@ -39,5 +40,11 @@ public class SHGetFilesTests
         }
 
         File.WriteAllText(@"D:\a.txt", sb.ToString());
+    }
+
+    [Fact]
+    public void GetFilesEveryFolderTest()
+    {
+        var d = FSGetFiles.GetFilesEveryFolder(NullLogger.Instance, @"E:\vs\Projects\PlatformIndependentNuGetPackages\SunamoThreading\", "Sess.cs", true, new GetFilesEveryFolderArgs { ExcludeGeneratedCodeFolders = true });
     }
 }

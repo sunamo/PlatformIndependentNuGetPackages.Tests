@@ -1,4 +1,4 @@
-namespace SunamoCode.Tests.Services;
+namespace SunamoDevCode.Tests.Services;
 using SunamoDevCode.Services;
 using System;
 using System.Collections.Generic;

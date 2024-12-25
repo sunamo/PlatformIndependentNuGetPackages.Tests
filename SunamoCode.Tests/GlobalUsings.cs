@@ -8,8 +8,3 @@ global using System;
 global using Xunit;
 global using FluentAssertions;
 global using SunamoStringGetLines;
-global using SunamoCode.Tests;
-global using SunamoCode.Tests.FileFormats;
-global using SunamoCode.Tests.Helpers;
-global using SunamoCode.Tests.Services;
-global using SunamoCode.Tests.SunamoSolutionsIndexer;
