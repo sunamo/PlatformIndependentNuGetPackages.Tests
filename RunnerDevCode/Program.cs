@@ -23,11 +23,11 @@ internal class Program
         //GlobalUsingsInstanceTests t = new GlobalUsingsInstanceTests();
         //await t.GlobalUsingsInstance_Test();
 
-        //TFCsFormatTests tFCsFormatTests = new TFCsFormatTests();
-        //await tFCsFormatTests.WriteAllLinesTest();
+        TFCsFormatTests tFCsFormatTests = new TFCsFormatTests();
+        await tFCsFormatTests.WriteAllLinesTest2();
 
-        FoldersWithSolutionsInstanceTests foldersWithSolutionsInstanceTests = new();
-        foldersWithSolutionsInstanceTests.ReloadTest();
+        //FoldersWithSolutionsInstanceTests foldersWithSolutionsInstanceTests = new();
+        //foldersWithSolutionsInstanceTests.ReloadTest();
 
         //AddOrEditNamespaceServiceTests t = new AddOrEditNamespaceServiceTests();
         //await t.AddOrEditNamespaceForSingleFileAndSaveTest();

@@ -18,4 +18,15 @@ public class TFCsFormatTests
 
 
     }
+
+    [Fact]
+    public async Task WriteAllLinesTest2()
+    {
+        const string path = @"E:\vs\Projects\sunamo.net\Lyrics\ProgramControllers.cs";
+        var l = (await File.ReadAllLinesAsync(path)).ToList();
+        l.Insert(3, "");
+        await TFCsFormat.WriteAllLines(path, l);
+
+
+    }
 }
