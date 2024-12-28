@@ -14,4 +14,11 @@
     <DefineConstants>$(DefineConstants);ASYNC</DefineConstants>
     <NoWarn>CA1822;CS1573;CS1572;CS1570;CA1866;CA1865;CA1867;CS1998;CA1847;IDE0066</NoWarn>
   </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="SunamoExceptions" Version="24.12.14.1" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\PlatformIndependentNuGetPackages\SunamoJson\SunamoJson.csproj" />
+    <ProjectReference Include="..\SunamoJson.Tests\SunamoJson.Tests.csproj" />
+  </ItemGroup>
 </Project>
