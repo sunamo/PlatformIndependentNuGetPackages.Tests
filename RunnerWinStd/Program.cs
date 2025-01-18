@@ -1,6 +1,5 @@
 
 namespace RunnerWinStd;
-using SunamoWinStd;
 using SunamoWinStd.Tests;
 
 internal class Program
@@ -10,8 +9,10 @@ internal class Program
         //PHWin.ExecutableOfAllBrowsers();
         PHWinTests t = new PHWinTests();
         //t.OpenFolderInTotalcmdTest();
-        //t.CodeInsiderTest();
-        t.CodeTest();
+
+        //t.CodeTest();
+        t.CodiumTest();
+        t.CodeInsiderTest();
 
         Console.WriteLine("Finished");
         Console.ReadLine();

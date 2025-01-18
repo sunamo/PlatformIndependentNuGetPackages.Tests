@@ -11,21 +11,34 @@ public class PHWinTests
 {
     ILogger logger = NullLogger.Instance;
 
-    [Fact]
-    public void OpenFolderInTotalcmdTest()
-    {
-        PHWin.OpenFolderInTotalcmd(logger, @"D:\_Test\ConsoleApp1\ConsoleApp1\RenameBankTransactionListing\");
-    }
-
-    [Fact]
-    public void CodeInsiderTest()
-    {
-        PHWin.CodeInsider(logger, @"C:\Users\r\AppData\Roaming\Code - Insiders\User\settings.json");
-    }
-
-    [Fact]
     public void CodeTest()
     {
-        PHWin.Code(logger, @"C:\Users\r\AppData\Roaming\Code - Insiders\User\settings.json");
+        var path = CreateTestFile();
+        PHWin.Code(logger, path, true);
     }
+
+    private string CreateTestFile()
+    {
+        var path = @"C:\Users\radek.jancik\a.txt";
+        if (!File.Exists(path))
+        {
+            File.WriteAllText(path, "Hello world");
+        }
+
+        return path;
+    }
+
+    public void CodeInsiderTest()
+    {
+        var path = CreateTestFile();
+        PHWin.CodeInsider(logger, path, true);
+    }
+
+    public void CodiumTest()
+    {
+        var path = CreateTestFile();
+        PHWin.Codium(logger, path, true);
+    }
+
+
 }
