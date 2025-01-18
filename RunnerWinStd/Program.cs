@@ -9,7 +9,9 @@ internal class Program
     {
         //PHWin.ExecutableOfAllBrowsers();
         PHWinTests t = new PHWinTests();
-        t.OpenFolderInTotalcmdTest();
+        //t.OpenFolderInTotalcmdTest();
+        //t.CodeInsiderTest();
+        t.CodeTest();
 
         Console.WriteLine("Finished");
         Console.ReadLine();

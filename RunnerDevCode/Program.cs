@@ -6,6 +6,8 @@ using SunamoDevCode.SunamoCSharp;
 using SunamoDevCode.Tests;
 using SunamoDevCode.Tests.Helpers;
 using SunamoDevCode.Tests.Services;
+using SunamoDevCode.Tests.SunamoSolutionsIndexer;
+using SunamoDevCode.Tests.SunamoSolutionsIndexer.Data.SolutionFolderNs;
 
 internal class Program
 {
@@ -23,17 +25,21 @@ internal class Program
         //GlobalUsingsInstanceTests t = new GlobalUsingsInstanceTests();
         //await t.GlobalUsingsInstance_Test();
 
-        TFCsFormatTests tFCsFormatTests = new TFCsFormatTests();
-        await tFCsFormatTests.WriteAllLinesTest2();
+        //TFCsFormatTests tFCsFormatTests = new TFCsFormatTests();
+        //await tFCsFormatTests.WriteAllLinesTest2();
 
-        //FoldersWithSolutionsInstanceTests foldersWithSolutionsInstanceTests = new();
+        //FoldersWithSolutionsTests foldersWithSolutionsInstanceTests = new();
         //foldersWithSolutionsInstanceTests.ReloadTest();
 
         //AddOrEditNamespaceServiceTests t = new AddOrEditNamespaceServiceTests();
         //await t.AddOrEditNamespaceForSingleFileAndSaveTest();
 
-        //FoldersWithSolutionsInstanceTests t = new FoldersWithSolutionsInstanceTests();
+        //FoldersWithSolutionsTests t = new FoldersWithSolutionsTests();
         //t.ReloadTest();
+        //t.InsertIntoFwssTest();
+
+        SolutionFolderTests t = new();
+        t.ExeToReleaseTest();
 
         //var t = new CSharpHelperTests();
         //await t.IsEmptyCommentedOrOnlyWithNamespaceTest();

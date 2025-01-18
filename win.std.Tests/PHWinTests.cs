@@ -15,6 +15,6 @@ public class PHWinTests
     {
         var path = @"C:\a.txt";
         await File.WriteAllTextAsync(path, "abc");
-        await PHWin.Codium(path);
+        PHWin.Codium(path);
     }
 }

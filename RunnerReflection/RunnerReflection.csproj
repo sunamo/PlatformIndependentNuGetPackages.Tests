@@ -14,4 +14,8 @@
     <DefineConstants>$(DefineConstants);ASYNC</DefineConstants>
     <NoWarn>CA1822;CS1573;CS1572;CS1570;CA1866;CA1865;CA1867;CS1998;CA1847;IDE0066</NoWarn>
   </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\PlatformIndependentNuGetPackages\SunamoReflection\SunamoReflection.csproj" />
+    <ProjectReference Include="..\SunamoReflection.Tests\SunamoReflection.Tests.csproj" />
+  </ItemGroup>
 </Project>
