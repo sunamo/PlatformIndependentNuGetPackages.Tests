@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace SunamoDevCode.Tests;
+
 public class TestsBase
 {
     public ILogger logger = NullLogger.Instance;

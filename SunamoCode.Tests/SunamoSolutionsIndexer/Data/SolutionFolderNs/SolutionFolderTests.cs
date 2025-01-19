@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace SunamoDevCode.Tests.SunamoSolutionsIndexer.Data.SolutionFolderNs;
+
 public class SolutionFolderTests : TestsBase
 {
 
