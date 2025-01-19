@@ -10,8 +10,10 @@ internal class Program
         PHWinTests t = new PHWinTests();
         //t.OpenFolderInTotalcmdTest();
         //t.CodeTest();
+        //t.CodiumTest();
+        //t.CodeInsiderTest();
+
         t.CodiumTest();
-        t.CodeInsiderTest();
 
         Console.WriteLine("Finished");
         Console.ReadLine();

@@ -1,7 +1,13 @@
+using SunamoDebugIO;
+using SunamoPlatformUwpInterop.AppData;
+using SunamoPS;
+
 namespace RunnerPS;
 
-internal class Program
+internal class Program : ProgramShared
 {
+    const string appName = "RunnerPS";
+
     static void Main(string[] args)
     {
         MainAsync(args).GetAwaiter().GetResult();
@@ -9,7 +15,15 @@ internal class Program
 
     static async Task MainAsync(string[] args)
     {
-        PowershellRunnerTests t = new PowershellRunnerTests();
-        await t.InvokeInFolderTest();
+        AppData.ci.CreateAppFoldersIfDontExists(new SunamoPlatformUwpInterop.Args.CreateAppFoldersIfDontExistsArgs { AppName = appName });
+        await ProgramShared.CreatePathToFiles(AppData.ci.GetFileString);
+
+        //PowershellRunnerTests t = new PowershellRunnerTests();
+        //await t.InvokeInFolderTest();
+
+        var methods = PowershellHelper.ParseMethods(await File.ReadAllTextAsync(@"e:\vs\Scripts_Projects\PowershellScripts\_PowerShell\Microsoft.PowerShell_profile.ps1"));
+
+        Output = PowershellHelper.FindDuplicatedMethodsInPs1File(methods);
+        OutputOpen();
     }
 }
