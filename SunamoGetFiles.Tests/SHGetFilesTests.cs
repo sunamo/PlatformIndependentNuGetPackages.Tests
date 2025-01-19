@@ -1,3 +1,4 @@
+using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Logging.Abstractions;
 using SunamoGetFiles._public.SunamoArgs;
 using System.Text;
@@ -42,9 +43,13 @@ public class SHGetFilesTests
         File.WriteAllText(@"D:\a.txt", sb.ToString());
     }
 
+    ILogger logger = NullLogger.Instance;
+
     [Fact]
     public void GetFilesEveryFolderTest()
     {
-        var d = FSGetFiles.GetFilesEveryFolder(NullLogger.Instance, @"E:\vs\Projects\PlatformIndependentNuGetPackages\SunamoThreading\", "Sess.cs", true, new GetFilesEveryFolderArgs { ExcludeGeneratedCodeFolders = true });
+        //var d = FSGetFiles.GetFilesEveryFolder(NullLogger.Instance, @"E:\vs\Projects\PlatformIndependentNuGetPackages\SunamoThreading\", "Sess.cs", true, new GetFilesEveryFolderArgs { ExcludeGeneratedCodeFolders = true });
+
+        var d = FSGetFiles.GetFilesEveryFolder(logger, @"E:\vs\Projects\sunamo.net\Clients\src", "*.js;*.cjs", true ? SearchOption.AllDirectories : SearchOption.TopDirectoryOnly, new GetFilesEveryFolderArgs { ExcludeGeneratedCodeFolders = true });
     }
 }

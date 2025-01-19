@@ -1,4 +1,5 @@
 namespace SunamoDevCode.Tests.Helpers;
+
 using SunamoDevCode.SunamoCSharp;
 using System.IO;
 

@@ -7,7 +7,7 @@ public class SheetsHelperTests
     [Fact]
     public void SwitchForGoogleSheetsTest()
     {
-        var a = SheetsHelper.SwitchForGoogleSheets(CollectionsHelperTo.To("a", "b"), CollectionsHelperTo.To<List<string>>(CollectionsHelperTo.To("c", "d"), CollectionsHelperTo.To("e", "f")));
+        var a = SheetsHelper.SwitchForGoogleSheets(["a", "b"], new List<List<string>>([["c", "d"], ["e", "f"]]));
         ClipboardService.SetText(a);
 
     }
@@ -24,6 +24,7 @@ Code lines	1942	82	1146	288	534	44	220	1024	458	667	1325	337	348	112	351	313	318
 Documentation lines	235	0	152	27	53	5	10	140	70	105	217	27	48	0	39	95	135	45	32	7	14	45	272	0	13	7	62	5	8	59	4	22	19	29	36	65	4	74	2	71	92	4	0	46	8	40	5	15	0	0	2	4	2	0	0	18	5	7	56	16	8	0	3	47	4	0	7	0	11	39	24	13	0	12	0	0	7	4	4	0	0	6	0	7	0	0	50	4	49	0	0	26	0	12	64	47	20	9	0	0	7	3	0	8	0	0	0	0	0	0	0	0	0	0
 Test code lines	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
 ";
+
         ClipboardService.SetText(SheetsHelper.SwitchRowsAndColumn(a));
     }
 

@@ -2,6 +2,8 @@
 namespace RunnerCl;
 
 using Microsoft.Extensions.DependencyInjection;
+using ShellProgressBar;
+using SunamoCl;
 using SunamoCl.SunamoCmd;
 using SunamoCl.SunamoCmd.Args;
 using SunamoCl.SunamoCmdArgs_Cmd;
@@ -11,21 +13,21 @@ internal partial class Program
     static ProgramCommon p;
     const string appName = "RunnerCl";
 
-    static IServiceCollection services { get; set; }
-    static ServiceProvider provider { get; set; }
+    static IServiceCollection Services { get; set; }
+    static ServiceProvider Provider { get; set; }
 
     static Program()
     {
         p = new ProgramCommon();
 
-        services = new ServiceCollection();
+        Services = new ServiceCollection();
 
-        services.AddScoped<TestContainer>();
+        Services.AddScoped<TestContainer>();
 
-        CmdBootStrap.AddILogger(services, true, null, appName);
-        CmdBootStrap.AddIConfiguration(services);
+        CmdBootStrap.AddILogger(Services, true, null, appName);
+        CmdBootStrap.AddIConfiguration(Services);
 
-        provider = services.BuildServiceProvider();
+        Provider = Services.BuildServiceProvider();
     }
 
     static void Main(string[] args)
@@ -33,48 +35,23 @@ internal partial class Program
         MainAsync(args).GetAwaiter().GetResult();
     }
 
-    public static Task ProgramSharedCreatePathToFiles(Func<string, string, string> getFile)
-    {
-        return Task.CompletedTask;
-    }
-
-    static string GetFileString(string a, string b)
-    {
-        return "";
-    }
-
-    private static Dictionary<string, Func<Task<Dictionary<string, object>>>> AddGroupOfActions()
-    {
-        Dictionary<string, Func<Task<Dictionary<string, object>>>> groupsOfActions = new()
-        {
-            { "Dating", Dating }
-        };
-
-        return groupsOfActions;
-    }
-
-
-
     static async Task MainAsync(string[] args)
     {
-
-
         //ProgramCommonTests t = new ProgramCommonTests();
         //t.ProcessArgsTest();
 
-
         // můžu přidat přímo do dict ve ProgramCommon protože ProgramCommon.AddToAllActions přidává právě do těchto 2 dict
-
-
 
         await CmdBootStrap.RunWithRunArgs(new RunArgs()
         {
-            ServiceCollection = services,
+            ServiceCollection = Services,
             AddGroupOfActions = AddGroupOfActions,
+            //AddGroupOfActions = CommandsToAllCsFiles.Cmd.Program.AddGroupOfActions,
             RunInDebugAsync = RunInDebugAsync,
             Args =
 #if DEBUG
-            ["TestTest"],
+            //["TestTest"],
+            [],
 #else
 args,
 #endif
@@ -88,28 +65,49 @@ false
 #endif
         });
 
-        Console.WriteLine("Finished");
+        //CL.WriteLine("Finished");
         Console.ReadLine();
     }
 
     static async Task RunInDebugAsync()
     {
         await Task.Delay(1);
-        Console.WriteLine("RunInDebugAsync");
-
-
+        //CL.WriteLine("RunInDebugAsync");
 
         //CmdAppTests t = new CmdAppTests();
         //await t.WaitForSaving();
 
         //LoggingInSerie();
 
-        var tc = provider.GetRequiredService<TestContainer>();
+        var tc = Provider.GetRequiredService<TestContainer>();
         tc.A();
 
+        var options = new ProgressBarOptions
+        {
+            ProgressCharacter = '─',
+            ProgressBarOnBottom = true,
+            CollapseWhenFinished = false,
+            DisplayTimeInRealTime = false
+        };
+
+        CLProgressBarWithChilds pb = new CLProgressBarWithChilds();
 
 
+        RunFor10("First", options, pb);
+        RunFor10("Second", options, pb);
+    }
 
+    private static void RunFor10(string message, ProgressBarOptions options, CLProgressBarWithChilds pb)
+    {
+        pb.LyricsHelper_OverallSongs(10, message, options);
+
+        for (int i = 0; i < 10; i++)
+        {
+            pb.LyricsHelper_AnotherSong(message);
+            Thread.Sleep(100);
+        }
+
+        pb.LyricsHelper_WriteProgressBarEnd();
     }
 
     private static void ProgressBarTesting()
@@ -133,7 +131,7 @@ false
     private static void LoggingInSerie()
     {
         #region Logging test
-        var s = services.BuildServiceProvider();
+        var s = Services.BuildServiceProvider();
 
         #region Tohle mi nefunguje. Nejsem schopen aby se mi vždy vypsali všechny 3 a teprve pak "Finished"
         /*

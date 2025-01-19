@@ -10,6 +10,7 @@ internal class Program
         FSTests t = new FSTests();
         //t.RenameDirectoryTest();
         //t.DeleteAllEmptyDirectoriesTest(false);
-        t.MoveDirectoryNoRecursiveTest();
+        //t.MoveDirectoryNoRecursiveTest();
+        t.CombineTest();
     }
 }

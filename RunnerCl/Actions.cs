@@ -1,5 +1,7 @@
 ﻿
 namespace RunnerCl;
+
+using SunamoCl;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -21,7 +23,7 @@ partial class Program
 
         // Už nebude potřeba. v AskUser mi to získá znovu actions a actionsAsync dle typů ve value
         //AddToAllActions("Dating", actions, actionsAsync);
-        return m(actions, actionsAsync);
+        return CLActions.MergeActions(actions, actionsAsync);
     }
 
     static void TestTest()

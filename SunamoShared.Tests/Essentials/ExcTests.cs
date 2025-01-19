@@ -1,5 +1,6 @@
+;
 
-using SunamoExceptions.OnlyInSE;
+using SunamoExceptions;
 
 public class ExcTests
 {

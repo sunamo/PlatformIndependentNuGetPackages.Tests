@@ -7,6 +7,15 @@ namespace SunamoFileSystem.Tests;
 public class FSTests
 {
     [Fact]
+    public void CombineTest()
+    {
+        const string bp = @"D:\_Test\ConsoleApp_MergeAfterNugets\PeopleForEveryDay\";
+        var actual = FS.Combine(bp, "12");
+
+        Assert.Equal(bp + "12\\", actual);
+    }
+
+    [Fact]
     public void GetFilesTest()
     {
         //var d = FSGetFiles.GetFiles(@"E:\vs\Projects\PlatformIndependentNuGetPackages2\_\", "*.cs", SearchOption.AllDirectories, new GetFilesArgs { excludeFromLocationsCOntains = new List<string>([@"\obj\", "de_mo"]) });

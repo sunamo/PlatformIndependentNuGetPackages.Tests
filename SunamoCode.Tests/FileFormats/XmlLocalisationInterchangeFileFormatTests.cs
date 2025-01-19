@@ -1,4 +1,5 @@
 namespace SunamoDevCode.Tests.FileFormats;
+
 using SunamoDevCode.FileFormats;
 
 public class XmlLocalisationInterchangeFileFormatTests
