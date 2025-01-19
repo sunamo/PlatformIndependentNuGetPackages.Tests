@@ -1,14 +1,6 @@
 
 namespace RunnerDevCode;
-
-using SunamoDevCode;
-using SunamoDevCode.Args;
-using SunamoDevCode.SunamoCSharp;
-using SunamoDevCode.Tests;
-using SunamoDevCode.Tests.Helpers;
-using SunamoDevCode.Tests.Services;
 using SunamoDevCode.Tests.SunamoSolutionsIndexer;
-using SunamoDevCode.Tests.SunamoSolutionsIndexer.Data.SolutionFolderNs;
 
 internal class Program
 {
@@ -35,12 +27,13 @@ internal class Program
         //AddOrEditNamespaceServiceTests t = new AddOrEditNamespaceServiceTests();
         //await t.AddOrEditNamespaceForSingleFileAndSaveTest();
 
-        //FoldersWithSolutionsTests t = new FoldersWithSolutionsTests();
+        FoldersWithSolutionsTests t = new FoldersWithSolutionsTests();
+        t.ReloadTest2();
         //t.ReloadTest();
         //t.InsertIntoFwssTest();
 
-        SolutionFolderTests t = new();
-        t.ExeToReleaseTest();
+        //SolutionFolderTests t = new();
+        //t.ExeToReleaseTest();
 
         //var t = new CSharpHelperTests();
         //await t.IsEmptyCommentedOrOnlyWithNamespaceTest();
