@@ -39,10 +39,11 @@ internal class Program
         //t.ReloadTest();
         //t.InsertIntoFwssTest();
 
-        SolutionFolderTests t = new();
-        t.ExeToReleaseTest();
+        //SolutionFolderTests t = new();
+        //t.ExeToReleaseTest();
 
-        //var t = new CSharpHelperTests();
+        var t = new CSharpHelperTests();
+        t.RemoveCommentsKeepLinesTest();
         //await t.IsEmptyCommentedOrOnlyWithNamespaceTest();
 
         //var d = FSGetFilesDC.GetFilesDC(pinp, "XlfKeys.cs", SearchOption.AllDirectories, new GetFilesDCArgs { OnlyIn_Sunamo = true });

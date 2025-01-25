@@ -17,12 +17,24 @@ public class PHWinTests
         PHWin.Code(logger, path, true);
     }
 
+    public void CodeWithLineTest()
+    {
+        var path = CreateTestFile();
+        PHWin.Code(logger, path, true, 150);
+    }
+
     private string CreateTestFile()
     {
-        var path = @"C:\Users\radek.jancik\a.txt";
+        var path = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile), @"a.txt");
         if (!File.Exists(path))
         {
-            File.WriteAllText(path, "Hello world");
+            StringBuilder sb = new StringBuilder();
+            for (int i = 0; i < 200; i++)
+            {
+                sb.AppendLine(i.ToString());
+            }
+
+            File.WriteAllText(path, sb.ToString());
         }
 
         return path;

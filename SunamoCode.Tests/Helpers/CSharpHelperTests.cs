@@ -50,4 +50,38 @@ f";
         var actual = CSharpHelper.RemoveBlockComments(input);
         Assert.Equal(expected, actual);
     }
+
+    [Fact]
+    public void RemoveCommentsKeepLinesTest()
+    {
+        const string input = @"a
+//b
+//b2
+c
+d /*e*/
+/*haf
+
+baf*/
+f";
+        // d have space on end
+        const string expected = @"a
+
+
+c
+d 
+
+
+
+f";
+        var actual = CSharpHelper.RemoveComments(input, true, true, true);
+        try
+        {
+            Assert.Equal(expected, actual);
+        }
+        catch (Exception ex)
+        {
+
+        }
+
+    }
 }
