@@ -58,7 +58,7 @@ false
     {
         await Task.Delay(1);
 
-        var driver = SeleniumHelper.InitDriver(@"D:\pa\_dev\edgedriver_win64\");
+        var driver = SeleniumHelper.InitDriver();
 
         SeleniumService seleniumService = new SeleniumService(driver, logger);
 

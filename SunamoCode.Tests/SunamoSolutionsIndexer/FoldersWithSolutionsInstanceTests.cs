@@ -4,11 +4,6 @@ using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Logging.Abstractions;
 using SunamoDevCode.SunamoSolutionsIndexer;
 using SunamoPaths;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 public class FoldersWithSolutionsTests
 {
@@ -26,6 +21,12 @@ public class FoldersWithSolutionsTests
         FoldersWithSolutions foldersWithSolutionsInstance = new(NullLogger.Instance, @"E:\vs\", null);
 
 
+    }
+
+    [Fact]
+    public void ReloadTest2()
+    {
+        var fws = new FoldersWithSolutions(logger, DefaultPaths.eVs, null, true);
     }
 
     [Fact]
