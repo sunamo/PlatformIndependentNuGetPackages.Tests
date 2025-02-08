@@ -1,8 +1,7 @@
-﻿
+namespace SunamoFileSystem.Tests;
+
 using SunamoFileSystem.Enums;
 using System.IO.Compression;
-
-namespace SunamoFileSystem.Tests;
 
 public class FSTests
 {
@@ -18,7 +17,7 @@ public class FSTests
     [Fact]
     public void GetFilesTest()
     {
-        //var d = FSGetFiles.GetFiles(@"E:\vs\Projects\PlatformIndependentNuGetPackages2\_\", "*.cs", SearchOption.AllDirectories, new GetFilesArgs { excludeFromLocationsCOntains = new List<string>([@"\obj\", "de_mo"]) });
+        //var d = FSGetFiles.GetFilesEveryFolder(logger, @"E:\vs\Projects\PlatformIndependentNuGetPackages2\_\", "*.cs", SearchOption.AllDirectories, new GetFilesEveryFolderArgs { excludeFromLocationsCOntains = new List<string>([@"\obj\", "de_mo"]) });
     }
 
     [Fact]

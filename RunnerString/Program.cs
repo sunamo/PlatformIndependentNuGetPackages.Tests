@@ -15,7 +15,9 @@ internal class Program
         //t.FirstWordWhichIsNumberTest();
         //t.ContainsClTest();
         //t.GetTextBetweenSimpleTest();
-        t.FirstWordWhichIsNumberTest();
+        //t.FirstWordWhichIsNumberTest();
+
+        await t.GetTextBetweenSimpleTest2();
     }
 
 }

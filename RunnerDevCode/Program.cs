@@ -2,6 +2,7 @@
 namespace RunnerDevCode;
 
 using SunamoDevCode.Tests.Helpers;
+using SunamoDevCode.Tests.Services;
 using SunamoDevCode.Tests.SunamoSolutionsIndexer;
 
 internal class Program
@@ -16,6 +17,9 @@ internal class Program
     static async Task MainAsync(string[] args)
     {
         await Task.Delay(1);
+
+        DotnetOutputServiceTests t = new();
+        t.GetPartsFromDotnetBuildLineTest();
 
         //GlobalUsingsInstanceTests t = new GlobalUsingsInstanceTests();
         //await t.GlobalUsingsInstance_Test();
@@ -37,8 +41,8 @@ internal class Program
         //SolutionFolderTests t = new();
         //t.ExeToReleaseTest();
 
-        var t = new CSharpHelperTests();
-        t.RemoveCommentsKeepLinesTest();
+        //var t = new CSharpHelperTests();
+        //t.RemoveCommentsKeepLinesTest();
         //await t.IsEmptyCommentedOrOnlyWithNamespaceTest();
 
         //var d = FSGetFilesDC.GetFilesDC(pinp, "XlfKeys.cs", SearchOption.AllDirectories, new GetFilesDCArgs { OnlyIn_Sunamo = true });

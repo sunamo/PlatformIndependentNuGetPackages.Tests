@@ -27,5 +27,15 @@ public class SHTests
     public void GetTextBetweenSimpleTest()
     {
         var d = SH.GetTextBetweenSimple("\" \"", "\"", "\"");
+
+
+    }
+
+    [Fact]
+    public async Task GetTextBetweenSimpleTest2()
+    {
+        var f = await File.ReadAllTextAsync(@"E:\vs\Projects\_ut2\PlatformIndependentNuGetPackages.Tests\SunamoString.Tests2\AutoFixByDotnetBuildCommandWorker.txt");
+
+        var firstPart = SH.GetTextBetweenSimple(f, "Build succeeded.", "    ", true).Trim();
     }
 }

@@ -1,4 +1,4 @@
-namespace SunamoSqlite.Tests
+namespace SunamoSqlite.Tests;
 
     public class UnitTest1WithoutMocking
     {
@@ -47,7 +47,7 @@ namespace SunamoSqlite.Tests
         public void GetFilesWhichAreSqliteTest()
         {
             string folder = @"D:\ed\instagram\";
-            var files = FSGetFiles.GetFiles(folder, true);
+            var files = FSGetFiles.GetFilesEveryFolder(logger, folder, true);
             var dbPath = @"D:\_Test\sunamo\SunamoSqlite\test.db";
             var txtFile = @"D:\_Test\sunamo\SunamoSqlite\IsSqlite\a.txt";
             files.Insert(0, dbPath);

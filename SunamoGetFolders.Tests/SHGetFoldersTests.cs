@@ -1,20 +1,32 @@
-using System.Diagnostics;
-using System.Text;
-
 namespace SunamoGetFolders.Tests;
+
+using Microsoft.Extensions.Logging;
+using Microsoft.Extensions.Logging.Abstractions;
+using SunamoGetFolders.Args;
+using System.Text;
 
 public class SHGetFoldersTests
 {
+    ILogger logger = NullLogger.Instance;
+
     [Fact]
     public void GetFoldersEveryFolderTest()
     {
-        var gitPaths = FSGetFolders.GetFoldersEveryFolder(@"E:\vs", ".git", new SunamoGetFolders.Args.GetFoldersEveryFolderArgs { excludeFromLocationsCOntains = ["de_mo", @"\obj\", ".vs"], SecondsToWriteActualFolder = 5 });
+        var gitPaths = FSGetFolders.GetFoldersEveryFolder(logger, @"E:\vs", ".git", SearchOption.TopDirectoryOnly, new SunamoGetFolders.Args.GetFoldersEveryFolderArgs { excludeFromLocationsCOntains = ["de_mo", @"\obj\", ".vs"], SecondsToWriteActualFolder = 5 });
+
+
+    }
+
+    [Fact]
+    public void GetFoldersEveryFolder_ExcludeJunction_Test()
+    {
+        var d = FSGetFolders.GetFoldersEveryFolder(logger, @"D:\", "*", SearchOption.TopDirectoryOnly, new GetFoldersEveryFolderArgs { followJunctions = false });
     }
 
     [Fact]
     public void GetFoldersTest2()
     {
-        var f = FSGetFolders.GetFoldersEveryFolder(@"D:\_Test\", $"*{"PlatformIndependentNuGetPackages"}*");
+        var f = FSGetFolders.GetFoldersEveryFolder(logger, @"D:\_Test\", $"*{"PlatformIndependentNuGetPackages"}*");
     }
 
     [Fact]
@@ -25,7 +37,7 @@ public class SHGetFoldersTests
         var d = DriveInfo.GetDrives();
         foreach (var item in d)
         {
-            r.Add(FSGetFolders.GetFoldersEveryFolder(item.RootDirectory.FullName, "*", new Args.GetFoldersEveryFolderArgs { followJunctions = false }));
+            r.Add(FSGetFolders.GetFoldersEveryFolder(logger, item.RootDirectory.FullName, "*", SearchOption.TopDirectoryOnly, new Args.GetFoldersEveryFolderArgs { followJunctions = false }));
         }
 
         StringBuilder sb = new StringBuilder();

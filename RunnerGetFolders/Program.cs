@@ -8,7 +8,7 @@ internal class Program
     {
         SHGetFoldersTests t = new SHGetFoldersTests();
         //t.GetFoldersTest2();
-        t.GetFoldersEveryFolderTest();
+        t.GetFoldersEveryFolder_ExcludeJunction_Test();
 
     }
 }

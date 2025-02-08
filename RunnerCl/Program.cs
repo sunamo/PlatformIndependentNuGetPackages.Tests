@@ -65,7 +65,7 @@ false
 #endif
         });
 
-        //CL.WriteLine("Finished");
+        CL.WriteLine("Finished");
         Console.ReadLine();
     }
 
@@ -79,22 +79,24 @@ false
 
         //LoggingInSerie();
 
-        var tc = Provider.GetRequiredService<TestContainer>();
-        tc.A();
+        Console.WriteLine("Test");
 
-        var options = new ProgressBarOptions
-        {
-            ProgressCharacter = '─',
-            ProgressBarOnBottom = true,
-            CollapseWhenFinished = false,
-            DisplayTimeInRealTime = false
-        };
+        //var tc = Provider.GetRequiredService<TestContainer>();
+        //tc.A();
 
-        CLProgressBarWithChilds pb = new CLProgressBarWithChilds();
+        //var options = new ProgressBarOptions
+        //{
+        //    ProgressCharacter = '─',
+        //    ProgressBarOnBottom = true,
+        //    CollapseWhenFinished = false,
+        //    DisplayTimeInRealTime = false
+        //};
+
+        //CLProgressBarWithChilds pb = new CLProgressBarWithChilds();
 
 
-        RunFor10("First", options, pb);
-        RunFor10("Second", options, pb);
+        //RunFor10("First", options, pb);
+        //RunFor10("Second", options, pb);
     }
 
     private static void RunFor10(string message, ProgressBarOptions options, CLProgressBarWithChilds pb)
