@@ -4,11 +4,7 @@ using OpenQA.Selenium;
 using SunamoCl.SunamoCmd;
 using SunamoSelenium;
 using SunamoSelenium.Services;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using SunamoSelenium.Tests;
 
 namespace RunnerSelenium;
 partial class Program
@@ -58,7 +54,15 @@ false
     {
         await Task.Delay(1);
 
-        var driver = SeleniumHelper.InitDriver();
+        SeleniumHelperTests t = new SeleniumHelperTests();
+        await t.InitDriverTest();
+
+        //await a();
+    }
+
+    private static async Task a()
+    {
+        var driver = await SeleniumHelper.InitDriver(logger, @"D:\pa\_dev\edgedriver_win64\msedgedriver.exe");
 
         SeleniumService seleniumService = new SeleniumService(driver, logger);
 
@@ -69,5 +73,4 @@ false
         var acceptCookies = driver.FindElement(By.CssSelector(".fc-button.fc-cta-consent.fc-primary-button"));
         acceptCookies?.Click();
     }
-
 }

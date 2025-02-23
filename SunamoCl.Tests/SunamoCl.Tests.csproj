@@ -6,8 +6,8 @@
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="SunamoWinStd" Version="24.8.8.1" />
-    <PackageReference Include="xunit.extensibility.core" Version="2.9.0" />
+    <PackageReference Include="SunamoWinStd" Version="25.2.2.2" />
+    <PackageReference Include="xunit.extensibility.core" Version="2.9.3" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\..\PlatformIndependentNuGetPackages\SunamoCl\SunamoCl.csproj" />

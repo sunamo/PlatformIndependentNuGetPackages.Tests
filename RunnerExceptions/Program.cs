@@ -1,6 +1,4 @@
-﻿
-using SunamoExceptions;
-using SunamoExceptions.Tests;
+﻿using SunamoExceptions.Tests;
 
 namespace RunnerExceptions;
 
@@ -8,9 +6,12 @@ internal class Program
 {
     static void Main(string[] args)
     {
-        ThrowExTests t = new();
-        //t.IsNullOrWhitespaceTest();
-        t.HasNotIndexTest();
+        //ThrowExTests t = new();
+        ////t.IsNullOrWhitespaceTest();
+        //t.HasNotIndexTest();
+
+        ExceptionsExtensionsTests s = new ExceptionsExtensionsTests();
+        s.GetAllMessagesTest();
 
         Console.WriteLine("Finished");
         Console.ReadLine();

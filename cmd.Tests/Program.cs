@@ -49,6 +49,7 @@ namespace cmd.Tests
             allSongs = ProgressBar.GetAllSongFromInternet();
         }
 
+
         private static void ProgressBar_AnotherSong()
         {
             bool writeProgressItem = true;
