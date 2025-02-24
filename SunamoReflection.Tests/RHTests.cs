@@ -1,4 +1,5 @@
 using SunamoReflection;
+using System.Text;
 
 public class RHTests
 {
@@ -11,6 +12,34 @@ public class RHTests
     public class ClassWithDerived : BaseClass
     {
         internal int Age { get; set; }
+    }
+
+    class SubSubClass
+    {
+        public string E { get; set; }
+    }
+
+    class SubClass
+    {
+        public string D { get; set; }
+        public SubSubClass F { get; set; }
+    }
+
+    class ClassWithSubclasses
+    {
+        public int A { get; set; }
+        public SubClass C { get; set; }
+    }
+
+    [Fact]
+    public void PrintPublicPropertiesRecursivelyTest()
+    {
+        ClassWithSubclasses c = new();
+        StringBuilder sb = new();
+
+        RH.PrintPublicPropertiesRecursively(sb, c.GetType(), "  ");
+
+        var s = sb.ToString();
     }
 
     [Fact]
