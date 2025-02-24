@@ -1,6 +1,5 @@
 using SunamoDebugIO;
 using SunamoPlatformUwpInterop.AppData;
-using SunamoPlatformUwpInterop.Args;
 
 namespace RunnerDebugIO;
 
@@ -19,6 +18,11 @@ internal class Program
         await ProgramShared.CreatePathToFiles(AppData.ci.GetFileString);
 
         ProgramShared.Output = "Ahoj";
+        ProgramShared.Output2 = "R";
+        ProgramShared.OutputL = ["L"];
+        ProgramShared.OutputJson = "J";
         ProgramShared.OutputOpen();
+        ProgramShared.Output2Open();
+        ProgramShared.OutputJsonOpen();
     }
 }
