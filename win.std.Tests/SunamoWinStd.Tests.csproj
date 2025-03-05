@@ -14,6 +14,7 @@
     <PackageReference Include="MSTest.TestFramework">
       <Version>3.2.0</Version>
     </PackageReference>
+    <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="*" Pack="True" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\..\PlatformIndependentNuGetPackages\SunamoWinStd\SunamoWinStd.csproj" />

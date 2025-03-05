@@ -9,6 +9,7 @@
   <ItemGroup>
     <ProjectReference Include="..\..\..\PlatformIndependentNuGetPackages\SunamoToUnixLineEnding\SunamoToUnixLineEnding.csproj" />
     <ProjectReference Include="..\SunamoToUnixLineEnding.Tests\SunamoToUnixLineEnding.Tests.csproj" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="*" Pack="True" />
   </ItemGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
     <DefineConstants>$(DefineConstants);ASYNC</DefineConstants>

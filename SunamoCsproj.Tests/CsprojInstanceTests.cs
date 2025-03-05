@@ -14,6 +14,17 @@ public class CsprojInstanceTests : SwdRepoNames
     //
 
     [Fact]
+    public void CreateOrReplaceMicrosoft_Extensions_Logging_AbstractionsTest()
+    {
+        CsprojInstance csi = new CsprojInstance(@"E:\vs\Projects\_ut2\PlatformIndependentNuGetPackages.Tests\SunamoCsproj.Tests\SunamoCsproj.Tests.csproj");
+        csi.CreateOrReplaceMicrosoft_Extensions_Logging_Abstractions();
+
+
+
+        csi.Save();
+    }
+
+    [Fact]
     public void AddRemoveNoWarnTest()
     {
         var pathFile = @"D:\_Test\sunamo\SunamoCsproj\CsProjInstance\Original.zip";

@@ -9,6 +9,7 @@
   <ItemGroup>
     <ProjectReference Include="..\..\..\PlatformIndependentNuGetPackages\SunamoGetFolders\SunamoGetFolders.csproj" />
     <ProjectReference Include="..\SunamoGetFolders.Tests\SunamoGetFolders.Tests.csproj" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="*" Pack="True" />
   </ItemGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
     <DefineConstants>$(DefineConstants);ASYNC</DefineConstants>

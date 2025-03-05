@@ -11,6 +11,7 @@
     <ProjectReference Include="..\SunamoCollectionsGeneric.Tests\SunamoCollectionsGeneric.Tests.csproj" />
     <ProjectReference Include="..\SunamoCsproj.Tests\SunamoCsproj.Tests.csproj" />
     <ProjectReference Include="..\SunamoFileSystem.Tests\SunamoFileSystem.Tests.csproj" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="*" Pack="True" />
   </ItemGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
     <DefineConstants>$(DefineConstants);ASYNC</DefineConstants>
