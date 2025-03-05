@@ -2,6 +2,7 @@ namespace SunamoGetFiles.Tests;
 
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Logging.Abstractions;
+using SunamoGetFiles._public.SunamoArgs;
 using System.Text;
 
 public class SHGetFilesTests
@@ -53,7 +54,11 @@ public class SHGetFilesTests
 
         //var d = FSGetFiles.GetFilesEveryFolder(logger, @"E:\vs\Projects\sunamo.net\Clients\src", "*.js;*.cjs", true ? SearchOption.AllDirectories : SearchOption.TopDirectoryOnly, new GetFilesEveryFolderArgs { ExcludeGeneratedCodeFolders = true });
 
-        const string pnusSrc = @"C:\Proj_Net\usys-siesta\src\";
-        var f = FSGetFiles.GetFilesEveryFolder(logger, pnusSrc, "*.ts;*.tsx", true, new() { ExcludeGeneratedCodeFolders = true });
+        //const string pnusSrc = @"C:\Proj_Net\usys-siesta\src\";
+        //var f = FSGetFiles.GetFilesEveryFolder(logger, pnusSrc, "*.ts;*.tsx", true, new() { ExcludeGeneratedCodeFolders = true });
+
+        //
+        var tsx = FSGetFiles.GetFilesEveryFolder(logger, @"C:\Proj_Net\Dealers.BezDodavatele\", "*.ts;*.tsx", SearchOption.AllDirectories,
+            new GetFilesEveryFolderArgs() { ExcludeGeneratedCodeFolders = true });
     }
 }
