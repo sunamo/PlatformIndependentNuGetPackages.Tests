@@ -12,6 +12,7 @@
     </PackageReference>
     <PackageReference Include="xunit.extensibility.core" Version="2.6.6">
     </PackageReference>
+    <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="*" Pack="True" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\..\PlatformIndependentNuGetPackages\SunamoSqlServer\SunamoSqlServer.csproj" />

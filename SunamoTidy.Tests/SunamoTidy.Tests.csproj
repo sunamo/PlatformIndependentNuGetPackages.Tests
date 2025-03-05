@@ -8,6 +8,7 @@
   <ItemGroup>
     <Content Include="neat.ico">
     </Content>
+    <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="*" Pack="True" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.8.0">

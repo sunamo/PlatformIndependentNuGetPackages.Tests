@@ -8,6 +8,7 @@
   <ItemGroup>
     <ProjectReference Include="..\TestValues.Sql\TestValues.Sql.csproj" />
     <ProjectReference Include="..\TestValues\TestValues.csproj" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="*" Pack="True" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.8.0">

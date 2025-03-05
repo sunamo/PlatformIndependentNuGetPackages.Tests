@@ -13,6 +13,7 @@
   <ItemGroup>
     <Content Include="ReplaceManyFromString\In_ReplaceManyFromString.cs">
     </Content>
+    <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="*" Pack="True" />
   </ItemGroup>
   <ItemGroup>
     <Compile Remove="ReplaceManyFromString\In_ReplaceManyFromString.cs">
