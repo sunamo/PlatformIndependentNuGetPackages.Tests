@@ -1,5 +1,4 @@
-﻿using SunamoFileSystem;
-using SunamoFileSystem.Tests;
+﻿using SunamoFileSystem.Tests;
 
 namespace RunnerFileSystem;
 
@@ -11,6 +10,7 @@ internal class Program
         //t.RenameDirectoryTest();
         //t.DeleteAllEmptyDirectoriesTest(false);
         //t.MoveDirectoryNoRecursiveTest();
-        t.CombineTest();
+        //t.CombineTest();
+        t.MoveFileTest();
     }
 }

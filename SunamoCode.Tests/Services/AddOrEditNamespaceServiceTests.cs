@@ -1,10 +1,6 @@
 namespace SunamoDevCode.Tests.Services;
 
 using SunamoDevCode.Services;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 
 public class AddOrEditNamespaceServiceTests
@@ -13,7 +9,7 @@ public class AddOrEditNamespaceServiceTests
     public async Task AddOrEditNamespaceForSingleFileAndSaveTest()
     {
         var addOrEditNamespaceService = new AddOrEditNamespaceService();
-        var ns = await addOrEditNamespaceService.AddOrEditNamespaceForSingleFileAndSave(@"E:\vs\Projects\PlatformIndependentNuGetPackages\SunamoDotNetZip\", "SunamoDotNetZip", @"E:\vs\Projects\PlatformIndependentNuGetPackages\SunamoDotNetZip\Zlib\ZlibConstants.cs");
+        var ns = await addOrEditNamespaceService.AddOrEditNamespaceForSingleFileAndSave(@"E:\vs\Projects\PlatformIndependentNuGetPackages\SunamoDevCode\", "SunamoDevCode", "E:\\vs\\Projects\\PlatformIndependentNuGetPackages\\SunamoDevCode\\Enums\\WhatIsExcepted.cs");
 
     }
 }
