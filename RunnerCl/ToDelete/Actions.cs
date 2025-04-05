@@ -1,5 +1,6 @@
-﻿using Microsoft.Extensions.DependencyInjection;
+namespace RunnerCl.ToDelete;
 
+using Microsoft.Extensions.DependencyInjection;
 using SunamoCl;
 using System;
 using System.Collections.Generic;
@@ -7,7 +8,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CommandsToAllCsFiles.Cmd;
 partial class Program
 {
     static Dictionary<string, object> OtherActions()
