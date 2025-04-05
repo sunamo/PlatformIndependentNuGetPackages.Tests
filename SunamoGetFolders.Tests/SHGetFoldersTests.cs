@@ -7,7 +7,7 @@ using System.Text;
 
 public class SHGetFoldersTests
 {
-    ILogger logger = NullLogger.Instance;
+    ILogger logger = TestLogger.Instance;
 
     [Fact]
     public void GetFoldersEveryFolderTest()

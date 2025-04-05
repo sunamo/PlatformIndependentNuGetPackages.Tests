@@ -7,7 +7,7 @@ using System.IO.Compression;
 
 public class FSTests
 {
-    ILogger logger = NullLogger.Instance;
+    ILogger logger = TestLogger.Instance;
 
     [Fact]
     public void MoveFileTest()

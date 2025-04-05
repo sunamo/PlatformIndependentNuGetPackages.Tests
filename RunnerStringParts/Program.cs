@@ -1,11 +1,21 @@
 using SunamoStringGetLines;
 using SunamoStringParts;
+using SunamoStringParts.Tests;
 
 namespace RunnerStringParts;
 
 internal class Program
 {
     static void Main(string[] args)
+    {
+        //o();
+
+        SHPartsTests t = new();
+        t.KeepAfterFirstTest();
+        t.RemoveAfterFirstTest();
+    }
+
+    private static void o()
     {
         var input = @"50. ""Programming today is a race between software engineers striving to build bigger and better idiot-proof programs, and the universe trying to build bigger and better idiots. So far, the universe is winning."" - Rick Cook
 

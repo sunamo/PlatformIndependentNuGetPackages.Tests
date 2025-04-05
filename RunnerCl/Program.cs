@@ -111,7 +111,7 @@ false
         CLProgressBar s = new();
         s.Start(10, "Message PB", new());
 
-        for (int i = 0; i < 10; i++)
+        for (int i = 0; i < 5; i++)
         {
             s.DoneOne();
             Thread.Sleep(500);
@@ -121,6 +121,20 @@ false
 
         Console.WriteLine("C");
         Console.WriteLine("D");
+
+        s = new();
+        s.Start(10, "Message PB", new());
+
+        for (int i = 0; i < 5; i++)
+        {
+            s.DoneOne();
+            Thread.Sleep(500);
+        }
+
+        s.Done();
+
+        Console.WriteLine("E");
+        Console.WriteLine("F");
     }
 
     private static void RunFor10(string message, ProgressBarOptions options, CLProgressBarWithChilds pb)

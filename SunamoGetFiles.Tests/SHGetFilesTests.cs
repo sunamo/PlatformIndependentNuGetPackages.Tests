@@ -45,12 +45,12 @@ public class SHGetFilesTests
         File.WriteAllText(@"D:\a.txt", sb.ToString());
     }
 
-    ILogger logger = NullLogger.Instance;
+    ILogger logger = TestLogger.Instance;
 
     [Fact]
     public void GetFilesEveryFolderTest()
     {
-        //var d = FSGetFiles.GetFilesEveryFolder(logger, NullLogger.Instance, @"E:\vs\Projects\PlatformIndependentNuGetPackages\SunamoThreading\", "Sess.cs", true, new GetFilesEveryFolderArgs { ExcludeGeneratedCodeFolders = true });
+        //var d = FSGetFiles.GetFilesEveryFolder(logger, TestLogger.Instance, @"E:\vs\Projects\PlatformIndependentNuGetPackages\SunamoThreading\", "Sess.cs", true, new GetFilesEveryFolderArgs { ExcludeGeneratedCodeFolders = true });
 
         //var d = FSGetFiles.GetFilesEveryFolder(logger, @"E:\vs\Projects\sunamo.net\Clients\src", "*.js;*.cjs", true ? SearchOption.AllDirectories : SearchOption.TopDirectoryOnly, new GetFilesEveryFolderArgs { ExcludeGeneratedCodeFolders = true });
 

@@ -11,7 +11,7 @@
     <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="*" Pack="True" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\PlatformIndependentNuGetPackages\SunamoStringParts\SunamoStringParts.csproj" />
+    <ProjectReference Include="..\SunamoStringParts.Tests\SunamoStringParts.Tests.csproj" />
   </ItemGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
     <DefineConstants>$(DefineConstants);ASYNC</DefineConstants>

@@ -7,7 +7,7 @@ using SunamoPaths;
 
 public class FoldersWithSolutionsTests
 {
-    ILogger logger = NullLogger.Instance;
+    ILogger logger = TestLogger.Instance;
 
     [Fact]
     public void InsertIntoFwssTest()
@@ -18,7 +18,7 @@ public class FoldersWithSolutionsTests
     [Fact]
     public void Reload_AllProjectFoldersIsLoaded()
     {
-        FoldersWithSolutions foldersWithSolutionsInstance = new(NullLogger.Instance, @"E:\vs\", null);
+        FoldersWithSolutions foldersWithSolutionsInstance = new(TestLogger.Instance, @"E:\vs\", null);
 
 
     }
@@ -35,9 +35,9 @@ public class FoldersWithSolutionsTests
         var p = @"E:\vs\";
 
         //DefaultPaths.eVs = p;
-        FoldersWithSolutions.PairProjectFolderWithEnum(NullLogger.Instance, p);
-        FoldersWithSolutions d = new FoldersWithSolutions(NullLogger.Instance, p, null, false);
-        d.Reload(NullLogger.Instance, p, null, false);
+        FoldersWithSolutions.PairProjectFolderWithEnum(TestLogger.Instance, p);
+        FoldersWithSolutions d = new FoldersWithSolutions(TestLogger.Instance, p, null, false);
+        d.Reload(TestLogger.Instance, p, null, false);
         var slns = d.Solutions(Enums.RepositoryLocal.Vs17);
         //d.Reload()
     }
