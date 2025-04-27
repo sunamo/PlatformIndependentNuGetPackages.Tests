@@ -1,6 +1,7 @@
-using Microsoft.Extensions.Logging;
-
 namespace SunamoSelenium.Tests;
+
+using Microsoft.Extensions.Logging;
+using SunamoTest;
 
 public class SeleniumHelperTests
 {

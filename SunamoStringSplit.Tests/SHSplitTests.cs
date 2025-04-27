@@ -14,6 +14,6 @@ public class SHSplitTests
     public void SplitMoreTest()
     {
         var ch = " "[0];
-        var actual = SHSplit.SplitMore(" 63 m² ", " ");
+        var actual = SHSplit.Split(" 63ï¿½mï¿½ ", "ï¿½");
     }
 }
