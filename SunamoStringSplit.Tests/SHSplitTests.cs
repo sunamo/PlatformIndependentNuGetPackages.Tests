@@ -11,7 +11,7 @@ public class SHSplitTests
     }
 
     [Fact]
-    public void SplitMoreTest()
+    public void SplitTest()
     {
         var ch = " "[0];
         var actual = SHSplit.Split(" 63�m� ", "�");
