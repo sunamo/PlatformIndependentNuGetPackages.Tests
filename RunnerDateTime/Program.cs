@@ -1,4 +1,4 @@
-using SunamoDateTime.Tests;
+using SunamoDateTime.Tests.DT;
 
 namespace RunnerDateTime;
 
@@ -6,7 +6,14 @@ internal class Program
 {
     static void Main(string[] args)
     {
-        DTHelperGeneralTests t = new DTHelperGeneralTests();
-        t.WeekOfYearFromDateTest();
+        //DTHelperGeneralTests t = new DTHelperGeneralTests();
+        //t.WeekOfYearFromDateTest();
+
+        DTHelperCsTests t = new();
+        t.CalculateAgeAndAddRightStringTest();
+        t.ToTimeAgoTest();
+
+        Console.WriteLine("Finished");
+        Console.ReadLine();
     }
 }
