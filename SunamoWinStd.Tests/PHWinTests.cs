@@ -1,15 +1,11 @@
-﻿using Microsoft.Extensions.Logging;
-using Microsoft.Extensions.Logging.Abstractions;
-using System;
-using System.Collections.Generic;
-using System.Linq;
+using Microsoft.Extensions.Logging;
+using SunamoTest;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace SunamoWinStd.Tests;
 public class PHWinTests
 {
-    ILogger logger = NullLogger.Instance;
+    ILogger logger = TestLogger.Instance;
 
     public void CodeTest()
     {
@@ -52,5 +48,9 @@ public class PHWinTests
         PHWin.Codium(logger, path, true);
     }
 
-
+    public void OpenInBrowserTest()
+    {
+        PHWin.AddBrowser();
+        PHWin.OpenInBrowser(logger, @"D:\OneDrive\sunamo\SeznamkaCz\Output\EveryProcessedAd.html");
+    }
 }

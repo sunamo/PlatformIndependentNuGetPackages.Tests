@@ -1,9 +1,12 @@
+using SunamoStringReplace.Tests;
+
 namespace RunnerStringReplace;
 
 internal class Program
 {
-    static void Main(string[] args)
+    static async Task Main(string[] args)
     {
-        Console.WriteLine("Hello, World!");
+        SHReplaceTests t = new();
+        await t.ReplaceAll();
     }
 }

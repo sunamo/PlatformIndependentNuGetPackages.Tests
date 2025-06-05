@@ -1,11 +1,11 @@
-using Microsoft.Extensions.Logging;
-using Microsoft.Extensions.Logging.Abstractions;
-
 namespace SunamoSelenium.Tests;
+
+using Microsoft.Extensions.Logging;
+using SunamoTest;
 
 public class SeleniumHelperTests
 {
-    ILogger logger = NullLogger.Instance;
+    ILogger logger = TestLogger.Instance;
 
     [Fact]
     public async Task InitDriverTest()

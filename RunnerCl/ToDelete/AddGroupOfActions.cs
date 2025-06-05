@@ -1,10 +1,11 @@
-﻿using System;
+namespace RunnerCl.ToDelete;
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CommandsToAllCsFiles.Cmd;
 partial class Program
 {
     public static Dictionary<string, Func<Task<Dictionary<string, object>>>> AddGroupOfActions()

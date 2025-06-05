@@ -1,6 +1,7 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿//// See https://aka.ms/new-console-template for more information
+//Console.WriteLine("Hello, World!");
 
-var a = AppDomain.CurrentDomain.GetAssemblies();
+using Microsoft.Extensions.Logging;
+using SunamoDependencyInjection.Exceptions;
 
-int i = 0;
+throw new ServiceNotFoundExceptionT<ILogger>();

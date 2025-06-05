@@ -1,11 +1,7 @@
-﻿using Microsoft.Extensions.Logging.Abstractions;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
 namespace SunamoCollectionOnDrive.Tests;
+
+using SunamoTest;
+
 public class Tests
 {
     [Fact]
@@ -13,7 +9,7 @@ public class Tests
     {
         var path = Path.Combine(Environment.CurrentDirectory, "LoadAddAndSave.txt");
 
-        CollectionOnDrive d = new CollectionOnDrive(NullLogger.Instance);
+        CollectionOnDrive d = new CollectionOnDrive(TestLogger.Instance);
         await d.Load(path, true);
         d.Add("a");
         d.Add("c");
@@ -28,7 +24,7 @@ public class Tests
     {
         var path = Path.Combine(Environment.CurrentDirectory, "LoadAddAndSave.txt");
 
-        CollectionOnDrive d = new CollectionOnDrive(NullLogger.Instance);
+        CollectionOnDrive d = new CollectionOnDrive(TestLogger.Instance);
         await d.Load(path, true);
         d.Add("d");
 

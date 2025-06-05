@@ -1,10 +1,11 @@
-﻿using System;
+namespace RunnerCl;
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace RunnerCl;
 partial class Program
 {
     public static Task ProgramSharedCreatePathToFiles(Func<string, string, string> getFile)

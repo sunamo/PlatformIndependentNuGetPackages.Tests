@@ -7,8 +7,9 @@ internal class Program
     static void Main(string[] args)
     {
         //PHWin.ExecutableOfAllBrowsers();
-        //PHWinTests t = new PHWinTests();
+        PHWinTests t = new PHWinTests();
         //t.OpenFolderInTotalcmdTest();
+        t.OpenInBrowserTest();
 
         //t.CodeTest();
         //t.CodiumTest();
@@ -18,8 +19,8 @@ internal class Program
 
         ////t.CodeWithLineTest();
         ///
-        JunctionPointTests t = new();
-        t.IsJunctionPoint_Junction_Test();
+        //JunctionPointTests t = new();
+        //t.IsJunctionPoint_Junction_Test();
         //t.CreateWithMklink();
 
         Console.WriteLine("Finished");

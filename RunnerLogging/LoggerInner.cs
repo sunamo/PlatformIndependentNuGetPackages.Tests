@@ -1,11 +1,12 @@
-﻿using Microsoft.Extensions.Logging;
+namespace RunnerLogging;
+
+using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace RunnerLogging;
 internal class LoggerInner(ILogger logger)
 {
     public void Log()

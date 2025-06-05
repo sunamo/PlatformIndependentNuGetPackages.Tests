@@ -1,4 +1,5 @@
 namespace SunamoString.Tests2;
+
 //public partial class SHTests
 //{
 //    const string splitAndKeepInput = "Shared settings <%--RL:SharedSettings--%> <span> aplikace</span>";
@@ -366,7 +367,7 @@ namespace SunamoString.Tests2;
 //    //[Fact]
 //    public void SplitAndKeepTest()
 //    {
-//        var actual = SHSplit.SplitAndKeepDelimiters(splitAndKeepInput, AspxConsts.all);
+//        var actual = SHSplit.SplitAndKeepDelimiters(splitAndKeepInput, ConstsAspx.all);
 //        Assert.Equal<string>(expected, actual);
 //    }
 

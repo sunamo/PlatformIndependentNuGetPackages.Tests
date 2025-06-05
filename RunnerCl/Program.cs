@@ -1,4 +1,3 @@
-
 namespace RunnerCl;
 
 using Microsoft.Extensions.DependencyInjection;
@@ -7,6 +6,7 @@ using SunamoCl;
 using SunamoCl.SunamoCmd;
 using SunamoCl.SunamoCmd.Args;
 using SunamoCl.SunamoCmdArgs_Cmd;
+using System;
 
 internal partial class Program
 {
@@ -72,12 +72,17 @@ false
     static async Task RunInDebugAsync()
     {
         await Task.Delay(1);
+
+        TestProgressBar();
+
         //CL.WriteLine("RunInDebugAsync");
 
         //CmdAppTests t = new CmdAppTests();
         //await t.WaitForSaving();
 
         //LoggingInSerie();
+
+
 
         Console.WriteLine("Test");
 
@@ -99,17 +104,50 @@ false
         //RunFor10("Second", options, pb);
     }
 
+    private static void TestProgressBar()
+    {
+        Console.WriteLine("A");
+        Console.WriteLine("B");
+        CLProgressBar s = new();
+        s.Start(10, "Message PB", new());
+
+        for (int i = 0; i < 5; i++)
+        {
+            s.DoneOne();
+            Thread.Sleep(500);
+        }
+
+        s.Done();
+
+        Console.WriteLine("C");
+        Console.WriteLine("D");
+
+        s = new();
+        s.Start(10, "Message PB", new());
+
+        for (int i = 0; i < 5; i++)
+        {
+            s.DoneOne();
+            Thread.Sleep(500);
+        }
+
+        s.Done();
+
+        Console.WriteLine("E");
+        Console.WriteLine("F");
+    }
+
     private static void RunFor10(string message, ProgressBarOptions options, CLProgressBarWithChilds pb)
     {
-        pb.LyricsHelper_OverallSongs(10, message, options);
+        pb.Start(10, message, options);
 
         for (int i = 0; i < 10; i++)
         {
-            pb.LyricsHelper_AnotherSong(message);
+            pb.DoneOne(message);
             Thread.Sleep(100);
         }
 
-        pb.LyricsHelper_WriteProgressBarEnd();
+        pb.Done();
     }
 
     private static void ProgressBarTesting()
@@ -118,15 +156,15 @@ false
         //var cl = new CLProgressBar();
 
         //Console.WriteLine("Before progress bar");
-        //cl.LyricsHelper_OverallSongs(10);
+        //cl.Start(10);
 
         //for (int i = 0; i < 10; i++)
         //{
-        //    cl.LyricsHelper_AnotherSong();
+        //    cl.DoneOne();
         //    await Task.Delay(1000);
         //}
 
-        //cl.LyricsHelper_WriteProgressBarEnd(); 
+        //cl.Done(); 
         #endregion
     }
 

@@ -1,6 +1,7 @@
 
 namespace RunnerDevCode;
-using SunamoDevCode.Tests.SunamoSolutionsIndexer;
+
+using SunamoDevCode.Tests.Services;
 
 internal class Program
 {
@@ -19,7 +20,6 @@ internal class Program
         //t.GetPartsFromDotnetBuildLineTest();
 
 
-
         //GlobalUsingsInstanceTests t = new GlobalUsingsInstanceTests();
         //await t.GlobalUsingsInstance_Test();
 
@@ -32,6 +32,11 @@ internal class Program
 
         //AddOrEditNamespaceServiceTests t = new AddOrEditNamespaceServiceTests();
         //await t.AddOrEditNamespaceForSingleFileAndSaveTest();
+        //FoldersWithSolutionsTests foldersWithSolutionsInstanceTests = new();
+        //foldersWithSolutionsInstanceTests.ReloadTest();
+
+        AddOrEditNamespaceServiceTests t = new AddOrEditNamespaceServiceTests();
+        await t.AddOrEditNamespaceForSingleFileAndSaveTest();
 
         //FoldersWithSolutionsTests t = new FoldersWithSolutionsTests();
         //t.ReloadTest2();

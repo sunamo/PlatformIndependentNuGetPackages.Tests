@@ -1,10 +1,20 @@
 namespace SunamoFileSystem.Tests;
 
+using Microsoft.Extensions.Logging;
+using Microsoft.Extensions.Logging.Abstractions;
 using SunamoFileSystem.Enums;
 using System.IO.Compression;
 
 public class FSTests
 {
+    ILogger logger = TestLogger.Instance;
+
+    [Fact]
+    public void MoveFileTest()
+    {
+        FS.MoveFile(logger, @"D:\_Test\ConsoleApp1\ConsoleApp1\RenameBankTransactionListing\24-11p.pdf", @"D:\Drive\Finance\Banks transactions listing\_2024\Uni\Uni_2024_11.pdf\", FileMoveCollisionOption.Overwrite);
+    }
+
     [Fact]
     public void CombineTest()
     {
@@ -43,7 +53,7 @@ public class FSTests
 
         ZipFile.ExtractToDirectory(sourceZip, Path.GetDirectoryName(sourceZip));
 
-        FS.MoveDirectoryNoRecursive(bp + @"From\", bp + @"To\", DirectoryMoveCollisionOption.Overwrite, FileMoveCollisionOption.ThrowEx);
+        FS.MoveDirectoryNoRecursive(logger, bp + @"From\", bp + @"To\", DirectoryMoveCollisionOption.Overwrite, FileMoveCollisionOption.ThrowEx);
     }
 
     [Theory]
@@ -64,6 +74,6 @@ public class FSTests
     [Fact]
     public void RenameDirectoryTest()
     {
-        FS.RenameDirectory(@"D:\Downloads\PlatformIndependentNuGetPackages-7154fb035791e4817f3849c0d68d403e3658e756\", "PlatformIndependentNuGetPackages-7154fb035791e4817f3849c0d68d403e3658e756", Enums.DirectoryMoveCollisionOption.Overwrite, Enums.FileMoveCollisionOption.Overwrite);
+        FS.RenameDirectory(logger, @"D:\Downloads\PlatformIndependentNuGetPackages-7154fb035791e4817f3849c0d68d403e3658e756\", "PlatformIndependentNuGetPackages-7154fb035791e4817f3849c0d68d403e3658e756", Enums.DirectoryMoveCollisionOption.Overwrite, Enums.FileMoveCollisionOption.Overwrite);
     }
 }

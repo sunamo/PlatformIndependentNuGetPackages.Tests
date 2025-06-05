@@ -11,7 +11,6 @@ internal class Program
         //t.DeleteAllEmptyDirectoriesTest(false);
         //t.MoveDirectoryNoRecursiveTest();
         //t.CombineTest();
-
-
+        t.MoveFileTest();
     }
 }

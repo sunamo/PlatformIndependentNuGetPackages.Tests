@@ -7,7 +7,7 @@ public class SunamoMapyCzServiceTests
     [Fact]
     public async Task AddressToCoordsSingleTest()
     {
-        SunamoMapyCzService sunamoMapyCz = new(NullLogger.Instance);
+        SunamoMapyCzService sunamoMapyCz = new(TestLogger.Instance);
 
         string key = string.Empty;
 
@@ -17,7 +17,7 @@ public class SunamoMapyCzServiceTests
         }
 
         //HttpClient httpClient = new();
-        //var r = await sunamoMapyCz.AddressToCoordsSingle(httpClient, "Podnádražní 8, Praha", key, true);
+        //var r = await sunamoMapyCz.AddressToCoordsSingle(httpClient, "Podnï¿½draï¿½nï¿½ 8, Praha", key, true);
 
         //var position = r.Position.ToString();
     }

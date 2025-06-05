@@ -1,8 +1,6 @@
 ﻿namespace SunamoRegex.Tests;
 public class QuestionMarkTests
 {
-
-
     [Fact]
     public void a()
     {

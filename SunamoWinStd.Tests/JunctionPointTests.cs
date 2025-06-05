@@ -1,5 +1,5 @@
-﻿using Microsoft.Extensions.Logging;
-using Microsoft.Extensions.Logging.Abstractions;
+using Microsoft.Extensions.Logging;
+using SunamoTest;
 using SunamoWinStd;
 using System.Text;
 using TextCopy;
@@ -12,7 +12,7 @@ enum LinkType
 
 public class JunctionPointTests
 {
-    ILogger logger = NullLogger.Instance;
+    ILogger logger = TestLogger.Instance;
     /// <summary>
     /// Nastavuje se v metodě SetFor
     /// </summary>
