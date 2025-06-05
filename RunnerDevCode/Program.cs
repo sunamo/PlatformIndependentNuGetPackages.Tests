@@ -1,8 +1,5 @@
 
 namespace RunnerDevCode;
-
-using SunamoDevCode.Tests.Helpers;
-using SunamoDevCode.Tests.Services;
 using SunamoDevCode.Tests.SunamoSolutionsIndexer;
 
 internal class Program
@@ -18,8 +15,10 @@ internal class Program
     {
         await Task.Delay(1);
 
-        DotnetOutputServiceTests t = new();
-        t.GetPartsFromDotnetBuildLineTest();
+        //DotnetOutputServiceTests t = new();
+        //t.GetPartsFromDotnetBuildLineTest();
+
+
 
         //GlobalUsingsInstanceTests t = new GlobalUsingsInstanceTests();
         //await t.GlobalUsingsInstance_Test();
@@ -27,8 +26,9 @@ internal class Program
         //TFCsFormatTests tFCsFormatTests = new TFCsFormatTests();
         //await tFCsFormatTests.WriteAllLinesTest2();
 
-        //FoldersWithSolutionsTests foldersWithSolutionsInstanceTests = new();
+        FoldersWithSolutionsTests foldersWithSolutionsInstanceTests = new();
         //foldersWithSolutionsInstanceTests.ReloadTest();
+        foldersWithSolutionsInstanceTests.ReloadTest_WithAddSlns();
 
         //AddOrEditNamespaceServiceTests t = new AddOrEditNamespaceServiceTests();
         //await t.AddOrEditNamespaceForSingleFileAndSaveTest();
