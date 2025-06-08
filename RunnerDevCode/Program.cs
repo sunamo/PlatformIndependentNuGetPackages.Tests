@@ -26,6 +26,12 @@ internal class Program
         //TFCsFormatTests tFCsFormatTests = new TFCsFormatTests();
         //await tFCsFormatTests.WriteAllLinesTest2();
 
+        FoldersWithSolutionsTests foldersWithSolutionsInstanceTests = new();
+        //foldersWithSolutionsInstanceTests.ReloadTest();
+        foldersWithSolutionsInstanceTests.ReloadTest_WithAddSlns();
+
+        //AddOrEditNamespaceServiceTests t = new AddOrEditNamespaceServiceTests();
+        //await t.AddOrEditNamespaceForSingleFileAndSaveTest();
         //FoldersWithSolutionsTests foldersWithSolutionsInstanceTests = new();
         //foldersWithSolutionsInstanceTests.ReloadTest();
 

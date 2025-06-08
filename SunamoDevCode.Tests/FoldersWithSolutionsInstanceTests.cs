@@ -24,7 +24,13 @@ public class FoldersWithSolutionsTests
     }
 
     [Fact]
-    public void ReloadTest2()
+    public void ReloadTest_WithNoAddingSlns()
+    {
+        var fws = new FoldersWithSolutions(logger, DefaultPaths.eVs, null, false);
+    }
+
+    [Fact]
+    public void ReloadTest_WithAddSlns()
     {
         var fws = new FoldersWithSolutions(logger, DefaultPaths.eVs, null, true);
     }
