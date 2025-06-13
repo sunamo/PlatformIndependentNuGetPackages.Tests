@@ -5,9 +5,9 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
     <Description>Fixed selecting from actions</Description>
-    <Version>25.6.13.1</Version>
+    <Version>25.6.13.2</Version>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
-    <PackageReleaseNotes>Added notify before require action</PackageReleaseNotes>
+    <PackageReleaseNotes>Added notify </PackageReleaseNotes>
     <Authors>www.sunamo.cz</Authors>
     <Copyright>www.sunamo.cz</Copyright>
     <PackageProjectUrl>https://sunamo.cz/</PackageProjectUrl>
