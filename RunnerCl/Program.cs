@@ -1,12 +1,14 @@
 namespace RunnerCl;
 
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Logging;
 using ShellProgressBar;
 using SunamoCl;
 using SunamoCl.SunamoCmd;
 using SunamoCl.SunamoCmd.Args;
 using SunamoCl.SunamoCmdArgs_Cmd;
 using System;
+using System.Threading.Tasks;
 
 internal partial class Program
 {
@@ -15,6 +17,7 @@ internal partial class Program
 
     static IServiceCollection Services { get; set; }
     static ServiceProvider Provider { get; set; }
+    static ILogger logger { get; set; }
 
     static Program()
     {
@@ -73,7 +76,13 @@ false
     {
         await Task.Delay(1);
 
-        TestProgressBar();
+
+        await ClNotify.FlashConsoleTitle(logger, "Akce vyžadována!"); // Blikání titulu 5x
+
+
+
+
+        //TestProgressBar();
 
         //CL.WriteLine("RunInDebugAsync");
 
@@ -103,6 +112,8 @@ false
         //RunFor10("First", options, pb);
         //RunFor10("Second", options, pb);
     }
+
+
 
     private static void TestProgressBar()
     {
