@@ -33,6 +33,8 @@ internal partial class Program
         Provider = Services.BuildServiceProvider();
     }
 
+
+
     static void Main(string[] args)
     {
         MainAsync(args).GetAwaiter().GetResult();
