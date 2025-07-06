@@ -10,7 +10,8 @@ public class SeleniumHelperTests
     [Fact]
     public async Task InitDriverTest()
     {
-        var d = await SeleniumHelper.InitDriver(logger, @"D:\pa\_dev\edgedriver_win64\msedgedriver.exe");
+        var d = await SeleniumHelper.InitEdgeDriver(logger, @"D:\pa\_dev\edgedriver_win64\msedgedriver.exe");
+
 
     }
 }
