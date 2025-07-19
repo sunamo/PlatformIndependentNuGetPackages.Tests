@@ -5,6 +5,26 @@ namespace SunamoRegex.Tests;
 public class RegexHelperTests
 {
     [Fact]
+    public void IsTelephoneTest()
+    {
+        RegexHelper.IsTelephone(@"
+												
+													
+														
+															
+			
+				
+					
+				
+			
+		
+														
+													
+												
+											");
+    }
+
+    [Fact]
     public void CzechAccountNumbersTest()
     {
         var input = @"341944165/0300 3265290/Rosalinda34

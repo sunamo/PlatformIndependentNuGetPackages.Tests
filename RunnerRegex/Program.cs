@@ -10,6 +10,7 @@ internal class Program
         //d.b();
 
         var t = new RegexHelperTests();
-        t.CzechAccountNumbersTest();
+        //t.CzechAccountNumbersTest();
+        t.IsTelephoneTest();
     }
 }
