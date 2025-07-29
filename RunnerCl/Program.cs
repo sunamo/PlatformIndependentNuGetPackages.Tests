@@ -1,4 +1,4 @@
-namespace RunnerCl;
+﻿namespace RunnerCl;
 
 using Microsoft.Extensions.DependencyInjection;
 using ShellProgressBar;
@@ -6,6 +6,7 @@ using SunamoCl;
 using SunamoCl.SunamoCmd;
 using SunamoCl.SunamoCmd.Args;
 using SunamoCl.SunamoCmdArgs_Cmd;
+using SunamoCl.Tests;
 using System;
 
 internal partial class Program
@@ -73,7 +74,7 @@ false
     {
         await Task.Delay(1);
 
-        TestProgressBar();
+        //TestProgressBar();
 
         //CL.WriteLine("RunInDebugAsync");
 
@@ -82,7 +83,8 @@ false
 
         //LoggingInSerie();
 
-
+        CLTests t = new CLTests();
+        t.LoadFromClipboardOrConsoleTest();
 
         Console.WriteLine("Test");
 
