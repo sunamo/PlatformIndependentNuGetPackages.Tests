@@ -55,14 +55,18 @@ false
         await Task.Delay(1);
 
         SeleniumHelperTests t = new SeleniumHelperTests();
-        await t.InitDriverTest();
+        //await t.InitDriverTest();
 
-        //await a();
+        //await LoginSeznamkaCz();
+
+        //await LoginSeznamCz();
     }
 
-    private static async Task a()
+
+
+    private static async Task LoginSeznamkaCz()
     {
-        var driver = await SeleniumHelper.InitDriver(logger, @"D:\pa\_dev\edgedriver_win64\msedgedriver.exe");
+        var driver = await SeleniumHelper.InitEdgeDriver(logger, @"D:\pa\_dev\edgedriver_win64\msedgedriver.exe");
 
         SeleniumService seleniumService = new SeleniumService(driver, logger);
 

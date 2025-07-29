@@ -9,18 +9,22 @@ public class SheetsHelperTests
     {
         DataTable dt = new();
         dt.Columns.Add("Column");
+        dt.Columns.Add("Column 2");
 
-        dt.Rows.Add("a");
-        dt.Rows.Add("b");
+        dt.Rows.Add(["conventional-changelog-cli", "@semantic-release/release-notes-generator"]);
+        dt.Rows.Add(["https://www.npmjs.com/package/conventional-changelog-cli", " https://www.npmjs.com/package/@semantic-release/release-notes-generator"]);
 
         var ts = SheetsHelper.DataTableToString(dt);
+
     }
 
     [Fact]
     public void SwitchForGoogleSheetsTest()
     {
+        var c = SheetsHelper.SwitchForGoogleSheets(["a", "b"], new List<List<string>>([["conventional-changelog-cli", "https://www.npmjs.com/package/conventional-changelog-cli"], ["@semantic-release/release-notes-generator", " https://www.npmjs.com/package/@semantic-release/release-notes-generator"]]));
+
         var a = SheetsHelper.SwitchForGoogleSheets(["a", "b"], new List<List<string>>([["c", "d"], ["e", "f"]]));
-        ClipboardService.SetText(a);
+        ClipboardService.SetText(c);
     }
 
     [Fact]

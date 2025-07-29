@@ -7,12 +7,12 @@ internal class Program
 {
     const string appName = "RunnerDebugIO";
 
-    static void Main(string[] args)
+    static void Main()
     {
-        MainAsync(args).GetAwaiter().GetResult();
+        MainAsync().GetAwaiter().GetResult();
     }
 
-    static async Task MainAsync(string[] args)
+    static async Task MainAsync()
     {
         AppData.ci.CreateAppFoldersIfDontExists(new SunamoPlatformUwpInterop.Args.CreateAppFoldersIfDontExistsArgs { AppName = appName });
         await ProgramShared.CreatePathToFiles(AppData.ci.GetFileString);

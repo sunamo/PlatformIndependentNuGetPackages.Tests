@@ -61,7 +61,8 @@ false
         SheetsHelperTests t = new SheetsHelperTests();
         //t.SwitchForGoogleSheetsTest();
         //t.SwitchRowsAndColumnTest();
-        t.DataTableToStringTest();
+        //t.DataTableToStringTest();
+        t.SwitchForGoogleSheetsTest();
 
         //SheetsTableTests t = new();
         //await t.ParseRowsTest();

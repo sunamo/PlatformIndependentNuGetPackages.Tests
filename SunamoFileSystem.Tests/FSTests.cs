@@ -1,13 +1,31 @@
 namespace SunamoFileSystem.Tests;
 
 using Microsoft.Extensions.Logging;
-using Microsoft.Extensions.Logging.Abstractions;
 using SunamoFileSystem.Enums;
+using SunamoTest;
 using System.IO.Compression;
 
 public class FSTests
 {
     ILogger logger = TestLogger.Instance;
+
+    [Fact]
+    public void GetFileSerieTest()
+    {
+        var actual = FS.GetFileSerie("Faktura_25004.pdf", SerieStyleFS.Brackets);
+    }
+
+    [Fact]
+    public void GetNameWithoutSeriesTest()
+    {
+        var r4 = FS.GetNameWithoutSeries("Faktura_25001(3)", false, out var hasSerie4, SerieStyleFS.Brackets);
+
+        var r = FS.GetNameWithoutSeries("Faktura_25004(2).pdf", false, out var hasSerie, SerieStyleFS.Brackets);
+        var r2 = FS.GetNameWithoutSeries("Faktura_25004.pdf", false, out var hasSerie2, SerieStyleFS.Brackets);
+        var r3 = FS.GetNameWithoutSeries(@"D:\Documents\_a\_c\Faktura_25004(2).pdf", false, out var hasSerie3, SerieStyleFS.Brackets);
+
+
+    }
 
     [Fact]
     public void MoveFileTest()

@@ -1,8 +1,8 @@
 namespace SunamoGetFiles.Tests;
 
 using Microsoft.Extensions.Logging;
-using Microsoft.Extensions.Logging.Abstractions;
 using SunamoGetFiles._public.SunamoArgs;
+using SunamoTest;
 using System.Text;
 
 public class SHGetFilesTests
