@@ -1,6 +1,6 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <TargetFramework>net9.0-windows</TargetFramework>
+    <TargetFramework>net10.0-windows</TargetFramework>
     <IsPackable>false</IsPackable>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <Nullable>enable</Nullable>
@@ -22,7 +22,8 @@
     <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="*" Pack="True" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\PlatformIndependentNuGetPackages\SunamoSqlite\SunamoSqlite.csproj" />
+    <ProjectReference
+      Include="..\..\..\PlatformIndependentNuGetPackages\SunamoSqlite\SunamoSqlite.csproj" />
   </ItemGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
     <DefineConstants>$(DefineConstants);ASYNC</DefineConstants>
