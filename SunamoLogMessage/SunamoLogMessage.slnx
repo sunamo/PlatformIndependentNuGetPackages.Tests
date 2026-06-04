@@ -1,0 +1,5 @@
+<Solution>
+  <Project Path="../../../PlatformIndependentNuGetPackages/SunamoLogMessage/SunamoLogMessage.csproj" />
+  <Project Path="RunnerLogMessage/RunnerLogMessage.csproj" />
+  <Project Path="SunamoLogMessage.Tests/SunamoLogMessage.Tests.csproj" />
+</Solution>
