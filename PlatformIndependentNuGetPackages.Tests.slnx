@@ -72,8 +72,8 @@
   <Project Path="../../PlatformIndependentNuGetPackages/SunamoDelegates/SunamoDelegates/SunamoDelegates.csproj" />
   <Project Path="../../PlatformIndependentNuGetPackages/SunamoDependencyInjection/SunamoDependencyInjection.Tests/SunamoDependencyInjection.Tests.csproj" />
   <Project Path="../../PlatformIndependentNuGetPackages/SunamoDependencyInjection/SunamoDependencyInjection/SunamoDependencyInjection.csproj" />
-  <Project Path="../../PlatformIndependentNuGetPackages/SunamoDevCode/SunamoDevCode.Tests/SunamoDevCode.Tests.csproj" />
-  <Project Path="../../PlatformIndependentNuGetPackages/SunamoDevCode/SunamoDevCode/SunamoDevCode.csproj">
+  <Project Path="../../SunamoDevCode/SunamoDevCode.Tests/SunamoDevCode.Tests.csproj" />
+  <Project Path="../../SunamoDevCode/SunamoDevCode/SunamoDevCode.csproj">
     <Platform Solution="*|x86" Project="x86" />
   </Project>
   <Project Path="../../PlatformIndependentNuGetPackages/SunamoDictionary/SunamoDictionary.Tests/SunamoDictionary.Tests.csproj" />
@@ -192,8 +192,6 @@
   <Project Path="../../PlatformIndependentNuGetPackages/SunamoSelenium/SunamoSelenium/SunamoSelenium.csproj" />
   <Project Path="../../PlatformIndependentNuGetPackages/SunamoSerializer/SunamoSerializer.Tests/SunamoSerializer.Tests.csproj" />
   <Project Path="../../PlatformIndependentNuGetPackages/SunamoSerializer/SunamoSerializer/SunamoSerializer.csproj" />
-  <Project Path="../../PlatformIndependentNuGetPackages/SunamoShared/SunamoShared.Tests/SunamoShared.Tests.csproj" />
-  <Project Path="../../PlatformIndependentNuGetPackages/SunamoShared/SunamoShared/SunamoShared.csproj" />
   <Project Path="../../PlatformIndependentNuGetPackages/SunamoStopwatch/SunamoStopwatch.Tests/SunamoStopwatch.Tests.csproj" />
   <Project Path="../../PlatformIndependentNuGetPackages/SunamoStopwatch/SunamoStopwatch/SunamoStopwatch.csproj" />
   <Project Path="../../PlatformIndependentNuGetPackages/SunamoString/SunamoString.Tests/SunamoString.Tests.csproj" />
