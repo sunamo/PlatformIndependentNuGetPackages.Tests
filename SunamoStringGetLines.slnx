@@ -1,9 +1,0 @@
-<Solution>
-  <Configurations>
-    <Platform Name="Any CPU" />
-    <Platform Name="x86" />
-  </Configurations>
-  <Project Path="../../PlatformIndependentNuGetPackages/SunamoStringGetLines/RunnerStringGetLines/RunnerStringGetLines.csproj" />
-  <Project Path="../../PlatformIndependentNuGetPackages/SunamoStringGetLines/SunamoStringGetLines/SunamoStringGetLines.csproj" />
-  <Project Path="SunamoStringGetLines.Tests/SunamoStringGetLines.Tests.csproj" />
-</Solution>
