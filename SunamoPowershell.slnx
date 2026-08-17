@@ -1,5 +1,0 @@
-<Solution>
-  <Project Path="../../PlatformIndependentNuGetPackages/SunamoPS/SunamoPS.csproj" />
-  <Project Path="RunnerPS/RunnerPS.csproj" />
-  <Project Path="SunamoPS.Tests/SunamoPS.Tests.csproj" />
-</Solution>
