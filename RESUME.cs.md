@@ -1,5 +1,5 @@
 ---
-schema_version: 4
+schema_version: 5
 type: tests
 file_count: 138
 delete_recommendation_percent: 45
@@ -7,6 +7,9 @@ generated_date: 2026-09-30
 generated_time: 16:47:07
 github_origin: no
 github_source_url: 
+first_commit_date: 2020-05-18
+last_commit_date: 2026-08-17
+commit_count: 128
 ---
 
 ## Description
@@ -27,3 +30,11 @@ Doporučení ke smazání: **45 %** — část je zastaralá, část jsou jen cv
 - Testy odkazují na názvy balíčků z doby před rozdělením monolitu (např. `SunamoDevCode.Tests`) a část projektů má jen minimální obsah (např. `UnitTest1.cs`).
 - `Roslyn.Tests` jsou procvičovací ukázky bez produkčního užití.
 - Poslední změna obsahu je z 2026-08-17 (úprava řešení), testy tedy nejsou zcela opuštěné, proto ne vyšší hodnota.
+
+## Historie commitů
+
+- První commit: 2020-05-18
+- Poslední commit: 2026-08-17
+- Celkem commitů: 128
+
+- Počítá se bez commitů, které jen generovaly RESUME.cs.md nebo README.md.
