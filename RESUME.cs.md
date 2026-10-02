@@ -36,4 +36,4 @@ Doporučení přesunu do sunamocz-legacy.visualstudio.com: **45 %** — část j
 ## Vazby na moje repa
 
 - Submoduly: žádné
-- ProjectReference / PackageReference: FluentAssertions
+- ProjectReference / PackageReference: `SunamoExceptions` (PackageReference), `SunamoPaths` (PackageReference), `SunamoShared` (PackageReference), `SunamoStringGetLines` (PackageReference), `SunamoTest` (PackageReference), `SunamoWinStd` (PackageReference), `SunamoCl` (ProjectReference, cíl chybí), `SunamoClipboard` (ProjectReference, cíl chybí), `SunamoDevCode` (ProjectReference, cíl chybí), `SunamoFileIO` (ProjectReference, cíl chybí), `SunamoRoslyn2_LaterMergeToSunamoRoslyn` (ProjectReference, cíl chybí), `SunamoShared` (ProjectReference, cíl chybí), `SunamoSqlite` (ProjectReference, cíl chybí), `SunamoSqlServer` (ProjectReference, cíl chybí), `SunamoString` (ProjectReference, cíl chybí), `SunamoTextBuilder` (ProjectReference, cíl chybí), `SunamoTextOutputGenerator` (ProjectReference, cíl chybí), `SunamoWinStd` (ProjectReference, cíl chybí)
