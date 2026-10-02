@@ -1,5 +1,9 @@
 # Reorganization Scripts for NuGet Packages
 
+## Short description
+
+Sbírka testovacích projektů k balíčkům `Sunamo*` z PlatformIndependentNuGetPackages (Cl, Clipboard, DevCode, FileIO, GoPay, Roslyn, Shared, Sqlite, SqlServer, String, TextBuilder, TextOutputGenerator, WinStd, LogMessage) a testovací data. Obsahuje také 47 ukázkových souborů `Roslyn.Tests` číslovaných po složkách (procvičování Roslynu) a skripty na reorganizaci balíčků do podsložek, které popisuje README.
+
 This directory contains scripts to reorganize NuGet packages into individual subdirectories.
 
 ## Files
