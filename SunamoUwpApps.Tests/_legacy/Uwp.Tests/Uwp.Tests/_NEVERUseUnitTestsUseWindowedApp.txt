@@ -1,0 +1,24 @@
+﻿Nikdy nepoužívat jednotkové testy pro UWP:
+
+11-4-20:
+ladil jsem Uap unit test, to bylo peklo
+napíšu, dám breakpoint, nezastaví se
+odstraním async z metody, nevyhodí se protože musím odškrtnout "require source files to exactly original version"...
+dal jsem to do Debug.WriteLine, nevypsalo nic tady ten kod vůbec nejde.
+instead of unit test use to it App1 sln !!!!
+
+13-5-20:
+chtěl jsem vytvořit jednotkové testy na uwp app
+vytvořil jsem xUnit apps.Tests ale ty nejosu Universal Windows, nýbrž .net 3.1
+zkusil jsem použít starší Uwp.Tests
+updatoval jsem v něm nuget balíčky
+unit test šel spustit ale neházel žádný výsledek
+zkusil jsem app1
+
+pokračování 13-5-20:
+Vytvořil jsem Nunit testy SunamoSecure.apps.Tests
+nepodařilo se je spustit: Payload contains two or more files with the same destination path 'SunamoSecure.apps.pdb', but they are different sizes. Source files: 
+D:\Documents\Visual Studio 2017\Projects\_Uap\apps.Tests\SunamoSecure.apps\bin\x86\Debug\SunamoSecure.apps.pdb
+D:\Documents\Visual Studio 2017\Projects\_Uap\apps\SunamoSecure.apps\bin\Debug\netstandard2.0\SunamoSecure.apps.pdb
+
+už na to seru, všechno to je tak kompikované, kurva nemůžu se zaobírat s takovými píčovinami a ktomu tak dlouho, jednotkové testy dělat jako spustitelné apps!! 
