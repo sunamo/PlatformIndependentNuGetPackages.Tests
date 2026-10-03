@@ -1,0 +1,29 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <!--
+    Puvodni projekt byl legacy UWP unit test host (TargetPlatformIdentifier=UAP,
+    AppContainerExe, MSTest.TestAdapter/TestFramework 2.1.1, TestPlatform.Universal SDK).
+    Prevedeno 2026-09-28 na moderni SDK-style testovaci projekt (net8.0-windows,
+    MSTest SDK-style balicky) kompatibilni s Windows App SDK / WinUI3.
+    Viz _NEVERUseUnitTestsUseWindowedApp.txt - puvodni UAP unit testy se nikdy
+    nepodarilo rozchodit (breakpointy, vystup), test SaveFileTest byl prazdny.
+  -->
+
+  <PropertyGroup>
+    <TargetFramework>net8.0-windows10.0.19041.0</TargetFramework>
+    <TargetPlatformMinVersion>10.0.17763.0</TargetPlatformMinVersion>
+    <RootNamespace>Uwp.Tests</RootNamespace>
+    <AssemblyName>Uwp.Tests</AssemblyName>
+    <IsPackable>false</IsPackable>
+    <IsTestProject>true</IsTestProject>
+    <Nullable>enable</Nullable>
+    <LangVersion>latest</LangVersion>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.11.1" />
+    <PackageReference Include="MSTest.TestAdapter" Version="3.6.3" />
+    <PackageReference Include="MSTest.TestFramework" Version="3.6.3" />
+  </ItemGroup>
+
+</Project>
