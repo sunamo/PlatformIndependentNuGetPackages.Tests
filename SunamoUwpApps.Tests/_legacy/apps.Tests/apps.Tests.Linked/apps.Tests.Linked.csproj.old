@@ -1,0 +1,19 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Remove="apps\ProtectedDataTestsShared.cs"></Compile>
+    <Compile Remove="SunamoSecure\StringSecurityHelperTests.cs"></Compile>
+    <Compile Remove="sunamo\Helpers\Resources\EmbeddedResourcesHTests.cs"></Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="apps\ProtectedDataTestsShared.cs"></None>
+    <None Include="SunamoSecure\StringSecurityHelperTests.cs"></None>
+    <None Include="sunamo\Helpers\Resources\EmbeddedResourcesHTests.cs"></None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\sunamo\standard\sunamo.csproj"></ProjectReference>
+    <ProjectReference Include="..\..\apps\SunamoSecure.apps\SunamoSecure.apps.csproj"></ProjectReference>
+  </ItemGroup>
+</Project>

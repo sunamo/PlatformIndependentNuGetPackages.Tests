@@ -1,5 +1,6 @@
 <Solution>
   <Project Path="Roslyn.Tests/SunamoRoslyn.Tests.csproj" />
+  <Project Path="RoslynAnalyzer.Tests/RoslynAnalyzer.Tests.csproj" />
   <Project Path="SunamoCl.Tests/SunamoCl.Tests.csproj" />
   <Project Path="SunamoClipboard.Tests/SunamoClipboard.Tests.csproj" />
   <Project Path="SunamoCode.Tests/SunamoDevCode.Tests.csproj" />
@@ -11,7 +12,9 @@
   <Project Path="SunamoShared2.Tests/SunamoShared2.Tests.csproj" />
   <Project Path="SunamoSqlServer.Tests/SunamoSqlServer.Tests.csproj" />
   <Project Path="SunamoSqlite.Tests/SunamoSqlite.Tests.csproj" />
+  <Project Path="SunamoUwpApps.Tests/SunamoUwpApps.Tests.csproj" />
   <Project Path="SunamoString.Tests2/SunamoString.Tests.csproj" />
+  <Project Path="Tesseract.Tests/Tesseract.Tests.csproj" />
   <Project Path="SunamoTextBuilder.Tests/SunamoTextBuilder.Tests.csproj" />
   <Project Path="SunamoTextOutputGenerator.Tests2/SunamoTextOutputGenerator.Tests.csproj" />
   <Project Path="TestValues.Sql/TestValues.Sql.csproj" />

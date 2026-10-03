@@ -1,0 +1,4 @@
+﻿jednotnové testy pro uwp byly úplně v píči
+snažil jsem se to spouštět v App1, ale nedeployovala se
+vytvořil jsem do stejného řešení App2 ale totéž
+proto jsem vytvořil nové řešení apps.windowed.Tests, zde už vše v pořádku
