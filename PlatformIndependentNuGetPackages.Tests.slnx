@@ -3,7 +3,6 @@
   <Project Path="RoslynAnalyzer.Tests/RoslynAnalyzer.Tests.csproj" />
   <Project Path="SunamoCl.Tests/SunamoCl.Tests.csproj" />
   <Project Path="SunamoClipboard.Tests/SunamoClipboard.Tests.csproj" />
-  <Project Path="SunamoCode.Tests/SunamoDevCode.Tests.csproj" />
   <Project Path="SunamoFileIO.Tests2/SunamoFileIO.Tests2.csproj" />
   <Project Path="SunamoGoPay.Tests2/SunamoGoPay.Tests2.csproj" />
   <Project Path="SunamoLogMessage/RunnerLogMessage/RunnerLogMessage.csproj" />

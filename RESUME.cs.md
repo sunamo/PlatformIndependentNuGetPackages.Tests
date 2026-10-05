@@ -1,17 +1,26 @@
 ---
-schema_version: 7
+schema_version: 11
 type: tests
+category_override: none
 file_count: 138
+file_extensions: cs:123, csproj:23, png:21, old:7, noext:5, xaml:5, txt:4, appxmanifest:3, config:3, jsonanddelete:3, ps1:3, slnx:3, xml:3, bigram_freqs:2, bigrams:2, csx:2, json:2, md:2, numbers:2, punc:2, tif:2, training_text:2, unicharambigs:2, unigram_freqs:2, wordlist:2, yml:2, html:1, tests:1, vsixmanifest:1
+file_extensions_updated: 2026-10-04
 avg_lines_per_file: 63
+total_lines: 4173
+metrics_lm: 2026-10-01 16:40:22
 move_to_legacy_percent: 45
-generated_date: 2026-10-01
-generated_time: 16:40:22
-github_source_url: 
+description_updated: 2026-10-01
+links_updated: 2026-10-01
+github_source_url: not found
+origin_status: found
+origin_checked: 2026-10-01
+article_source_url: not run
+article_status: pending
+article_checked: not run
 last_build_ok: no
 last_build_date: 2026-10-02
-last_tests_run_date: n/a
-covered_lines: n/a
-total_lines: 4173
+last_tests_run_date: not run
+covered_lines: not run
 ---
 
 ## Description
