@@ -1,0 +1,12 @@
+﻿global using Microsoft.VisualStudio.TestTools.UnitTesting;
+global using System.Collections.Generic;
+global using System.Linq;
+global using System.Net.Http;
+global using System.Reflection;
+global using System.Runtime.CompilerServices;
+global using System.Runtime.InteropServices;
+global using System.Text;
+global using System.Threading.Tasks;
+global using System.Xml;
+global using System;
+global using System.Runtime.Intrinsics.X86;
