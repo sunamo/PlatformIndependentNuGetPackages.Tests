@@ -11,3 +11,7 @@ tasks:
       - powershell -Command "[Console]::Write([char]27 + ']0;dev' + [char]7)"
       - pwsh -NoProfile "E:\vs\Scripts_Projects\PowershellScripts\dev-preflight.ps1" -TaskName dev
       - dotnet run -c Debug
+  pub:
+    desc: Publikace release verze do D:\SyncTrayzor\_sunamo (logika ve sdilenem skriptu)
+    cmds:
+      - pwsh -NoProfile -File "E:\vs\Scripts_Projects\PowershellScripts\publish-to-synctrayzor.ps1" -WorkingDir "{{.USER_WORKING_DIR}}"
