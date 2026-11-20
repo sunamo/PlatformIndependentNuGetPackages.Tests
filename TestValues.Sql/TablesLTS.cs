@@ -71,7 +71,7 @@ public class LTSLayer
                // can't be primary key coz there will be many days for every days
                MSSloupecDB.CI(SqlDbType2.Int, ColumnNames.IDPageLyrSong),
            MSSloupecDB.CI(SqlDbType2.SmallInt, "Day"),
-           MSSloupecDB.CI(SqlDbType2.Int, XlfKeys.Views)
+           MSSloupecDB.CI(SqlDbType2.Int, "Views")
            ));
 
         //Test_Lyr_Song
@@ -94,7 +94,7 @@ public class LTSLayer
                 MSSloupecDB.CI(SqlDbType2.Int, "IDItem"),
             MSSloupecDB.CI(SqlDbType2.Int, "IDPage"),
             MSSloupecDB.CI(SqlDbType2.SmallInt, "Day"),
-            MSSloupecDB.CI(SqlDbType2.Int, XlfKeys.Views)
+            MSSloupecDB.CI(SqlDbType2.Int, "Views")
             ));
         #endregion
 
@@ -102,7 +102,7 @@ public class LTSLayer
                 MSSloupecDB.CI(SqlDbType2.SmallInt, "IDItem"),
             MSSloupecDB.CI(SqlDbType2.Int, "IDPage"),
             MSSloupecDB.CI(SqlDbType2.SmallInt, "Day"),
-            MSSloupecDB.CI(SqlDbType2.Int, XlfKeys.Views)
+            MSSloupecDB.CI(SqlDbType2.Int, "Views")
             ));
 
         s.Add(tableEntity3, new MSColumnsDB(true,

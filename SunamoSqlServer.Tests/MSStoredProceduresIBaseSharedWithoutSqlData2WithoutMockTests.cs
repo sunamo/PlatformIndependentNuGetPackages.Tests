@@ -16,7 +16,7 @@ public class MSStoredProceduresIBaseSharedWithoutSqlData2WithoutMockTests
             MSSloupecDB.CI(SqlDbType2.TinyInt, "IDTable"),
             MSSloupecDB.CI(SqlDbType2.Int, "IDItem"),
             MSSloupecDB.CI(SqlDbType2.SmallInt, "Day"),
-            MSSloupecDB.CI(SqlDbType2.Int, XlfKeys.Views)
+            MSSloupecDB.CI(SqlDbType2.Int, "Views")
             ));
 
         int IDPage = 0;
