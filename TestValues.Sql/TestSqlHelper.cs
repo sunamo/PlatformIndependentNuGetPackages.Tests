@@ -1,9 +1,10 @@
-﻿public class TestSqlHelper
+public class TestSqlHelper
 {
     //[Fact]
     public static void Init(UnitTestInit i)
     {
-        // todo CryptDataWrapper nemůžu použít protože je v Credentials/Crypting. dočasně vše zakomentuji
+        _ = i;
+        // todo CryptDataWrapper cannot be used because it lives in Credentials/Crypting; everything is commented out for now
 
         //XlfResourcesHSunamo.SaveResouresToRLSunamo(LocalizationLanguagesLoader.Load());
 

@@ -1,5 +1,5 @@
-namespace Roslyn.Tests
-{
+namespace Roslyn.Tests;
+
     public class ChildNodesTests
     {
         [Fact]
@@ -27,4 +27,3 @@ class C1{
             int i = 0;
         }
     }
-}

@@ -11,6 +11,7 @@
     <PackageReference Include="SunamoWinStd" Version="25.2.2.2" />
     <PackageReference Include="xunit.extensibility.core" Version="2.9.3" />
     <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="*" Pack="True" />
+    <PackageReference Include="SunamoClipboard" Version="*" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\PlatformIndependentNuGetPackages-claude\SunamoCl\SunamoCl\SunamoCl.csproj" />

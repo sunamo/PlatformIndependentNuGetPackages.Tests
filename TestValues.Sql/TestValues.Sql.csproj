@@ -13,6 +13,8 @@
     <PackageReference Include="xunit.extensibility.core" Version="2.6.6">
     </PackageReference>
     <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="*" Pack="True" />
+    <PackageReference Include="SunamoValues" Version="*" />
+    <PackageReference Include="SunamoUnderscore" Version="*" />
   </ItemGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
     <DefineConstants>$(DefineConstants);ASYNC</DefineConstants>

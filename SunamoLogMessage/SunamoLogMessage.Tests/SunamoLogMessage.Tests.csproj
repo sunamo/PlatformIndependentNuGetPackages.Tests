@@ -19,6 +19,9 @@
       <PrivateAssets>all</PrivateAssets>
     </PackageReference>
     <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="*" Pack="True" />
+    <PackageReference Include="Moq" Version="4.20.70" />
+    <PackageReference Include="Xunit.SkippableFact" Version="1.5.23" />
+    <ProjectReference Include="..\..\..\PlatformIndependentNuGetPackages-claude\SunamoClipboard\SunamoClipboard\SunamoClipboard.csproj" />
   </ItemGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
     <DefineConstants>$(DefineConstants);ASYNC</DefineConstants>

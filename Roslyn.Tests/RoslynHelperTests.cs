@@ -41,7 +41,7 @@ var1 = 5;
 
 
 
-        var s = RoslynHelper.Format(input);
+        var s = RoslynFormatService.Format(input);
         Debug.WriteLine(s);
     }
 

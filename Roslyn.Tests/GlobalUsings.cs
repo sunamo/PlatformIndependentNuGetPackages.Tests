@@ -1,4 +1,4 @@
-﻿global using Microsoft.Build.Evaluation;
+global using Microsoft.Build.Evaluation;
 global using Microsoft.CodeAnalysis.CSharp.Scripting;
 global using Microsoft.CodeAnalysis.CSharp.Syntax;
 global using Microsoft.CodeAnalysis.CSharp;
@@ -21,3 +21,9 @@ global using System.Threading.Tasks;
 global using System.Windows;
 global using System;
 global using Xunit;
+global using SunamoCollections;
+global using SunamoExceptions;
+global using SunamoRoslyn;
+global using SunamoStringGetLines;
+global using SunamoTextOutputGenerator;
+global using SunamoRoslyn.Services;

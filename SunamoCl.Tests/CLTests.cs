@@ -1,4 +1,4 @@
-﻿namespace SunamoCl.Tests;
+namespace SunamoCl.Tests;
 
 using System;
 
@@ -17,7 +17,6 @@ public class CLTests
         // Ensure temp directory exists (it should, but being safe)
         Directory.CreateDirectory(tempDir);
 
-        Clipbo
         //ClipboardHelper.SetFileToClipboard(tempFilePath);
 
         var clipboardText = "text";
