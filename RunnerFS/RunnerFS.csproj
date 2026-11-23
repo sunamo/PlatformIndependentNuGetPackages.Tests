@@ -7,7 +7,7 @@
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
   </PropertyGroup>
   <ItemGroup>
-    <ProjectReference Include="..\SunamoFileSystem.Tests\SunamoFileSystem.Tests.csproj" />
+    <ProjectReference Include="..\..\PlatformIndependentNuGetPackages-claude\SunamoFileSystem\SunamoFileSystem.Tests\SunamoFileSystem.Tests.csproj" />
     <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="*" Pack="True" />
   </ItemGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">

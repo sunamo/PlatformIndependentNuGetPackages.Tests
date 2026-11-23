@@ -7,8 +7,8 @@
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
   </PropertyGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\PlatformIndependentNuGetPackages\SunamoSolutionsIndexer\SunamoSolutionsIndexer.csproj" />
-    <ProjectReference Include="..\SunamoSolutionsIndexer.Tests\SunamoSolutionsIndexer.Tests.csproj" />
+    <ProjectReference Include="..\..\PlatformIndependentNuGetPackages-claude\SunamoSolutionsIndexer\SunamoSolutionsIndexer\SunamoSolutionsIndexer.csproj" />
+    <ProjectReference Include="..\..\PlatformIndependentNuGetPackages-claude\SunamoSolutionsIndexer\SunamoSolutionsIndexer.Tests\SunamoSolutionsIndexer.Tests.csproj" />
     <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="*" Pack="True" />
   </ItemGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">

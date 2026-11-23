@@ -24,7 +24,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference
-      Include="..\..\..\PlatformIndependentNuGetPackages\SunamoClipboard\SunamoClipboard.csproj" />
+      Include="..\..\PlatformIndependentNuGetPackages-claude\SunamoClipboard\SunamoClipboard\SunamoClipboard.csproj" />
   </ItemGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
     <DefineConstants>$(DefineConstants);ASYNC</DefineConstants>

@@ -20,10 +20,6 @@
     </PackageReference>
     <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="*" Pack="True" />
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference
-      Include="..\..\..\PlatformIndependentNuGetPackages\SunamoTextBuilder\SunamoTextBuilder.csproj" />
-  </ItemGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
     <DefineConstants>$(DefineConstants);ASYNC</DefineConstants>
     <NoWarn>CA1822;CS1573;CS1572;CS1570;CA1866;CA1865;CA1867;CS1998;CA1847;IDE0066</NoWarn>
@@ -32,4 +28,7 @@
     <DefineConstants>$(DefineConstants);ASYNC</DefineConstants>
     <NoWarn>CA1822;CS1573;CS1572;CS1570;CA1866;CA1865;CA1867;CS1998;CA1847;IDE0066</NoWarn>
   </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="SunamoTextOutputGenerator" Version="*" />
+  </ItemGroup>
 </Project>

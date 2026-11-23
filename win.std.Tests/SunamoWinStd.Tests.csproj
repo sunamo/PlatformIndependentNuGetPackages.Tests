@@ -18,7 +18,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference
-      Include="..\..\..\PlatformIndependentNuGetPackages\SunamoWinStd\SunamoWinStd.csproj" />
+      Include="..\..\PlatformIndependentNuGetPackages-claude\SunamoWinStd\SunamoWinStd\SunamoWinStd.csproj" />
   </ItemGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
     <DefineConstants>$(DefineConstants);ASYNC</DefineConstants>
