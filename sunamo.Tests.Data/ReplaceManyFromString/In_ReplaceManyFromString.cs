@@ -98,4 +98,3 @@ namespace sunamo.Tests.Data.ReplaceManyFromString;
             //s = "28.9. 7:19 27.9. 19:19 27.9. 19:19";
         }
     }
-}

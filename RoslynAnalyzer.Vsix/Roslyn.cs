@@ -10,7 +10,7 @@ using Microsoft.CodeAnalysis.CSharp;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
 using sunamo.Constants;
 
-namespace GettingStartedCS
+namespace GettingStartedCS;
 
     class Program
     {
@@ -93,4 +93,3 @@ namespace HelloWorld
             return result;
         }
     }
-}

@@ -96,4 +96,3 @@ namespace SunamoSqlite.Tests;
             int i = 0;
         }
     }
-}
